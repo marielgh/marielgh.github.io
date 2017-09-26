@@ -14,7 +14,7 @@ My approach consisted in processing the text data with regular natural language 
 
 3. [Government Spending Contracts](bud.html)
 
-THe Government Spending Contracts dataset includes over 15 years of contracts, from 2000-2016, with the federal government.    
+The Government Spending Contracts dataset includes over 15 years of contracts, from 2000-2016, with the federal government.    
 
 # Notes
 
