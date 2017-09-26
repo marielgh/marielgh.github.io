@@ -16,7 +16,8 @@ My approach consisted in processing the text data with regular natural language 
 THe Government Spending Contracts dataset includes over 15 years of contracts, from 2000-2016, with the federal government.    
 
 # Notes
-  ## Financial Data in Python
-  ## Supervised Learning (with scikit-learn)
-  ## Unsupervised Learning in Python
-  ## pandas
+
+1. Pandas
+2. Financial Data in Python
+2. Supervised Learning (with scikit-learn)
+3. Unsupervised Learning in Python
