@@ -38,3 +38,8 @@ Video2:
 
 <video src="videos/states.mp4" poster="poster-states.png" width="960" height="540" controls preload></video>
 
+
+Video 3:
+
+<video src="videos/states2.mp4" poster="poster-states.png" width="960" height="540" controls preload></video>
+
