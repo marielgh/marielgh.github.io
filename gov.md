@@ -22,6 +22,4 @@ Plots:
 
 Video:
 
-<video src="videos/states.mp4" poster="videos/poster-states.png" width="100%" height="auto" controls preload></video>
-
 <video src="videos/states.mp4" poster="videos/poster-states.png" style="max-width:100%" controls preload></video>
