@@ -9,11 +9,7 @@
 # Notebooks
 
 1. Pandas
-
 2. Financial Data 
-
 3. Supervised Learning
-
 4. Unsupervised Learning
-
 5. Deep Learning 
