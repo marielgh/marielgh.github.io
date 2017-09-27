@@ -17,7 +17,9 @@ plt.show()
 
 Plots: 
 
-<img src="images/gov/cat.png">
+<img src="images/gov/cat.png" style="max-width:100%">
+
+
 
 
 Video:
