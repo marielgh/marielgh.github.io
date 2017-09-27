@@ -1,2 +1,2 @@
 
-<object type="text/html" data="pandas-notebook.html" width="100%" height="500"></object>
+<object type="text/html" data="pandas-notebook.html" width="150%" height="500"></object>
