@@ -29,19 +29,19 @@
   }
 
   @include large {
-    max-width: 80rem;
-    padding: 2rem 14rem;
+    max-width: 70rem;
+    padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
   }
 
   @include medium {
-    padding: 2rem 12rem;
+    padding: 2rem 4rem;
     font-size: 1.1rem;
   }
 
   @include small {
-    padding: 2rem 11rem;
+    padding: 2rem 1rem;
     font-size: 1rem;
   }
 
