@@ -29,4 +29,4 @@ plt.show()
 
 image 2: 
 
-<img src="output_13_0.png" width=100%>
+<img src="output_13_0.png" width=100%></img>
