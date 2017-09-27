@@ -20,5 +20,8 @@ The Government Spending Contracts dataset includes over 15 years of contracts, f
 
 1. Pandas
 2. Financial Data in Python
-2. Supervised Learning (with scikit-learn)
-3. Unsupervised Learning in Python
+3. Supervised Learning (with scikit-learn)
+4. Unsupervised Learning in Python
+
+ 
+![alt text](images/states.gif "states")
