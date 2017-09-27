@@ -28,4 +28,4 @@ plt.show()
 ![alt text](output_13_0.png "percentage of contracts per agency")
 
 image 2: 
-<img src="output_13_0.png" width=100% height=auto>
+<img src="output_13_0.png" width=100%>
