@@ -33,3 +33,8 @@ Video:
         <source src="videos/states.mp4" type="video/mp4">
     </video>
 </div>
+
+Video2:
+
+<video src="videos/states.mp4" poster="poster-states.png" width="320" height="200" controls preload></video>
+
