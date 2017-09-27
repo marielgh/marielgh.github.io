@@ -1,17 +1,7 @@
 
 https://public.enigma.com/browse/u-s-government-spending-contracts/1a932abc-8398-47ff-ad33-d1eb9a8958cc
 
-
-```python
-import pandas as pd
-import numpy as np
-```
-
-
-```python
-cols = ['maj_agency_cat','unique_transaction_id','base_and_all_options_value','base_and_exercised_options_value']
-```
-
+Code:
 
 ```python
 import matplotlib.pyplot as plt
@@ -25,8 +15,11 @@ plt.show()
 ```
 
 
-![alt text](output_13_0.png "percentage of contracts per agency")
+Plots: 
 
-image 2: 
+<img src="images/gov/cat.png" style="max-width:100%">
 
-<img src="cat.png" width="100%">
+
+Video:
+
+<video src="videos/states.mp4" poster="videos/poster-states.png" width="100%" height="auto" controls preload></video>
