@@ -41,5 +41,5 @@ Video2:
 
 Video 3:
 
-<video src="videos/states2.mp4" poster="videos/poster-states.png" width="960" height="540" controls preload></video>
+<video src="videos/states2.mp4" poster="videos/poster-states.png" width="100%" height="auto" controls preload></video>
 
