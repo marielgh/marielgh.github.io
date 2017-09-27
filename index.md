@@ -25,3 +25,9 @@ The Government Spending Contracts dataset includes over 15 years of contracts, f
 
  
 ![alt text](images/states.gif "states")
+
+<div class="row post-image-bg">
+    <video width="99%" height="540" autoplay loop muted>
+        <source src="videos/states.mp4" type="video/mp4">
+    </video>
+</div>
