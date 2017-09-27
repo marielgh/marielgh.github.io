@@ -22,9 +22,3 @@ My approach consisted in processing the text data with regular natural language 
 2. Financial Data in Python
 3. Supervised Learning (with scikit-learn)
 4. Unsupervised Learning in Python
-
-
-Video animation:
-
-<video src="videos/states.mp4" poster="videos/poster-states.png" width="100%" height="auto" controls preload></video>
-
