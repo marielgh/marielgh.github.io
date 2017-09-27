@@ -24,7 +24,7 @@ The Government Spending Contracts dataset includes over 15 years of contracts, f
 4. Unsupervised Learning in Python
 
  
-![alt text](images/states.gif "states")
+#![alt text](images/states.gif "states")
 
 Video: 
 
