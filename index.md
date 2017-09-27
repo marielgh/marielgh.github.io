@@ -14,11 +14,12 @@ My approach consisted in processing the text data with regular natural language 
 
 3. [Government Spending Contracts](gov.md)
 
-   The Government Spending Contracts dataset includes over 15 years of contracts, from 2000-2016, with the federal government.    
+   The Government Spending Contracts dataset includes over 15 years of contracts, from 2000-2016, with the federal government. In this project I explore the most important agencies that make contracts, the percentage of contracts per state over the years and more.
 
-# Notes
+# Notebooks
 
 1. Pandas
+   Pandas is the most used package in Python to manage datasets. Here I show some of its basic functionality.
 2. Financial Data in Python
 3. Supervised Learning (with scikit-learn)
 4. Unsupervised Learning in Python
