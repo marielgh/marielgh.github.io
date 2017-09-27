@@ -1,2 +1,2 @@
 
-<link rel="import" href="pandas-notebook.html">
+<object type="text/html" data="pandas-notebook.html" width="100%" height="500"></object>
