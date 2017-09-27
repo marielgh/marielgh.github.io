@@ -26,5 +26,5 @@ My approach consisted in processing the text data with regular natural language 
 
 Video animation:
 
-<video src="videos/states2.mp4" poster="videos/poster-states.png" width="100%" height="auto" controls preload></video>
+<video src="videos/states.mp4" poster="videos/poster-states.png" width="100%" height="auto" controls preload></video>
 
