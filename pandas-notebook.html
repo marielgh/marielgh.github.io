@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>pandas Foundations</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>pandas-notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11783,6 +11783,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><em>Datasets provided by DataCamp.com</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><strong> Create DataFrame from scratch </strong></p>
 
 </div>
@@ -17767,7 +17776,6 @@ dtype: datetime64[ns, US/Pacific]
 <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">)</span>
 <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;dew_point_faren&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="s1">&#39;dew_point_faren&#39;</span><span class="p">)</span>
 <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;visibility&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="s1">&#39;visibility&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011 June 20 8:00&#39;</span><span class="p">:</span><span class="s1">&#39;2011 June 20 9:00&#39;</span><span class="p">,</span><span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">])</span>
 
 <span class="c1"># selecting certain sky conditions</span>
 <span class="n">sunny</span> <span class="o">=</span> <span class="n">df_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;sky_condition&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;CLR&#39;</span><span class="p">]</span>  <span class="c1"># equals </span>
@@ -17838,17 +17846,6 @@ sea_level_pressure    10337 non-null object
 dtypes: int64(2), object(15)
 memory usage: 1.4+ MB
 None
-2011-06-20 08:27:00     NaN
-2011-06-20 08:28:00     NaN
-2011-06-20 08:29:00     NaN
-2011-06-20 08:30:00     NaN
-2011-06-20 08:31:00     NaN
-2011-06-20 08:32:00     NaN
-2011-06-20 08:33:00     NaN
-2011-06-20 08:34:00     NaN
-2011-06-20 08:35:00     NaN
-2011-06-20 08:53:00    83.0
-Name: dry_bulb_faren, dtype: float64
                 visibility  dry_bulb_faren
 visibility        1.000000        0.490328
 dry_bulb_faren    0.490328        1.000000
