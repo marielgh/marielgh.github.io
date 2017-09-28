@@ -1,3 +1,5 @@
+<IMG SRC=”images/me.jpg” ALIGN=”right” />
+
 Hello there!
 
 My name is Mariel. I am a biophysics master's graduate and during the last three years I have collaborated with different groups at universities and research institutes, applying computational tools to different fields. 
