@@ -1,6 +1,6 @@
 <a name="Home"></A>
 
-## Projects [&#8594;](projects.md)
+ ## [&#8594;](projects.md) Projects 
 
 1. [New York City Taxi Trip Duration - Kaggle Competition](nyc.md)
 
