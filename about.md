@@ -1,4 +1,4 @@
-<img style="float: right" src="images/me.jpg">
+<img align="right" width="200" src="images/me.jpg">
 
 Hello there!
 
