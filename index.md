@@ -8,7 +8,7 @@
 
 3. [Government Spending Contracts](gov.md)
 
-## Notebooks [&#8594;](notebooks.md)
+## [&#8594;](notebooks.md) Notebooks 
 
 1. [Pandas](pandas.html#bottom)
 2. [Financial Data](finance.html#bottom)
