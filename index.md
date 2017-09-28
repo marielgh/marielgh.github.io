@@ -6,7 +6,7 @@
 
 3. [Government Spending Contracts](gov.md)
 
-## [Notebooks](notebooks.md)
+## Notebooks [&#128279;](notebooks.md)
 
 1. [Pandas](pandas.html#bottom)
 2. [Financial Data](finance.html#bottom)
