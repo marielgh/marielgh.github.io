@@ -1,4 +1,4 @@
-# Projects
+## Projects
 
 1. [New York City Taxi Trip Duration - Kaggle Competition](nyc.md)
 
@@ -6,10 +6,10 @@
 
 3. [Government Spending Contracts](gov.md)
 
-# Notebooks
+## Notebooks
 
-1. Pandas
-2. Financial Data 
-3. Supervised Learning
-4. Unsupervised Learning
-5. Deep Learning 
+1. [Pandas] (pandas.html#bottom)
+2. [Financial Data] (finance.html#bottom)
+3. [Supervised Learning] (supervised.html#bottom)
+4. [Unsupervised Learning] (unsupervised.html#bottom)
+5. [Deep Learning] (deep.html#bottom)
