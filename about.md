@@ -1,4 +1,4 @@
-<IMG SRC=”images/me.jpg” ALIGN=”right” />
+<img src="images/me.jpg" align=”right” />
 
 Hello there!
 
