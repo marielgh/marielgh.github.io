@@ -1,4 +1,4 @@
-<img width="200" src="me.png">
+<img align="right" width="200" src="images/gov/cat.png">
 
 Hello there!
 
