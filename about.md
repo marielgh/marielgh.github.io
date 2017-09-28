@@ -1,4 +1,4 @@
-<img align="right" width="200" src="me.png">
+<img width="200" src="me.png">
 
 Hello there!
 
