@@ -1,4 +1,4 @@
-# Projects
+## Projects
 
 1. [New York City Taxi Trip Duration - Kaggle](nyc.md)
 
