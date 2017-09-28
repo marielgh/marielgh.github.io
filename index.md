@@ -1,4 +1,4 @@
-## Projects
+## [Projects](projects.md)
 
 1. [New York City Taxi Trip Duration - Kaggle Competition](nyc.md)
 
@@ -6,7 +6,7 @@
 
 3. [Government Spending Contracts](gov.md)
 
-## Notebooks
+## [Notebooks](notebooks.md)
 
 1. [Pandas](pandas.html#bottom)
 2. [Financial Data](finance.html#bottom)
