@@ -8,7 +8,7 @@
 
    In this notebook I import financial data from Google Finance and the Federal Reserve Economic Data using pandas Datareader and explore stock trends, the most important companies per sector, compare stock exchanges and more. Plots are produced using the matplotlib and seaborn packages.
    
-3. ### Supervised Learning (with scikit-learn)
+3. ### Supervised Learning (with scikit-learn) [[see notebook](supervised_learning.html#bottom)]
 
    Scikit-learn is one of the most popular libraries for machine learning in Python. In this notebook I show various examples of supervised learning with scikit-learn, including building pipelines and hyperparameter tuning.
    
