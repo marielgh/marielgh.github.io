@@ -17,9 +17,9 @@ plt.show()
 
 Plots: 
 
-<img src="images/gov/cat.png" style="max-width:100%" onclick='this.src="images/gov/cat.png"'>
+<img src="images/gov/cat.png" style="max-width:100%">
 
-
+<a href="images/gov/cat.png" ><img src="images/gov/cat.png"/></a>
 
 
 Video:
