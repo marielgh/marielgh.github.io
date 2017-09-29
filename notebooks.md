@@ -14,4 +14,4 @@
    
 4. ### Unsupervised Learning in Python
 
-   In this notebook I show some of the standard unsupervised learning algorithms in scikit-learn and scipy such as KMeans, hierarchical clustering, t-SNE and non-negative matrix factorization (NMF).
+   In this notebook I show some of the standard unsupervised learning algorithms in scikit-learn and scipy such as k-means, hierarchical clustering, t-SNE and non-negative matrix factorization (NMF).
