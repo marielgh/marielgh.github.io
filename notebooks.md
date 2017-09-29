@@ -12,6 +12,6 @@
 
    Scikit-learn is one of the most popular libraries for machine learning in Python. In this notebook I show various examples of supervised learning with scikit-learn, including building pipelines and hyperparameter tuning.
    
-4. ### Unsupervised Learning in Python
+4. ### Unsupervised Learning in Python [[see notebook](unsupervised_learning.html#bottom)]
 
    In this notebook I show some of the standard unsupervised learning algorithms in scikit-learn and scipy such as k-means, hierarchical clustering, t-SNE, principal component analysis , singular value decomposition and non-negative matrix factorization.
