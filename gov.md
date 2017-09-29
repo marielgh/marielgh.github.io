@@ -17,9 +17,10 @@ plt.show()
 
 Plots: 
 
-<img src="images/gov/cat.png" style="max-width:100%">
+<a href="images/gov/percentage_contracts_per_agency.png" ><img src="images/gov/percentage_contracts_per_agency.png"/></a>
 
 
+<a href="images/gov/cat.png" ><img src="images/gov/cat.png"/></a>
 
 
 Video:
