@@ -11,7 +11,6 @@
 ## Notebooks [&#8592;](notebooks.md) 
 
 1. [Pandas](pandas.html#bottom)
-2. [Financial Data](finance.html#bottom)
-3. [Supervised Learning](supervised.html#bottom)
-4. [Unsupervised Learning](unsupervised.html#bottom)
-5. [Deep Learning](deep.html#bottom)
+2. [Financial Data](financial.html#bottom)
+3. [Supervised Learning](supervised_learning.html#bottom)
+4. [Unsupervised Learning](unsupervised_learning.html#bottom)
