@@ -8,5 +8,4 @@ My name is Mariel. I am a biophysics master's graduate and during the last three
 
 I have completed several courses on the subjects of data science and machine learning and now I am working independently on data science projects (some of them in Kaggle and DrivenData) and learning a lot on the way. 
 
-You can reach me at: <a href="mailto:mgarciahuiman@gmail.com" class="fa fa-google"></a><br>
-My Linkedin profile: <a href="https://www.linkedin.com/in/mgarciahuiman/" class="fa fa-linkedin"></a>
+You can reach me at: <a href="mailto:mgarciahuiman@gmail.com" class="fa fa-google"></a> <a href="https://www.linkedin.com/in/mgarciahuiman/" class="fa fa-linkedin"></a>
