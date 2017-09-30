@@ -130,6 +130,7 @@ train_df.info()
 ```
 
 Out:
+
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 1458644 entries, 0 to 1458643
     Data columns (total 10 columns):
