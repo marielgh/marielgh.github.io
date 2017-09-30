@@ -2,7 +2,7 @@
 
 ## Projects [&#8592;](projects.md)
 
-1. [New York City Taxi Trip Duration - Kaggle Competition](nyc.md)
+1. [New York City Taxi Trip Duration - Kaggle Competition](nyctaxi.md)
 
 2. [Box-Plots for Education - DrivenData Competition](boxplots.md)
 

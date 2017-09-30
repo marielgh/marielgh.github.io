@@ -1,6 +1,6 @@
 ## Projects
 
-1. [New York City Taxi Trip Duration - Kaggle](nyc.md)
+1. [New York City Taxi Trip Duration - Kaggle](nyctaxi.md)
 
    Competition based on building a model that predicts the total ride duration of taxi trips in New York City. The dataset is one released by the NYC Taxi and Limousine Commission, which includes pickup time, geo-coordinates, number of passengers, and several other variables.
 - Exploratory data analysis of the dataset (1.5 million trip records, 8 features).

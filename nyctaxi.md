@@ -1,6 +1,7 @@
 
-# New York City Taxi Trip Duration - Exploratory Data Analysis
+## New York City Taxi Trip Duration 
 
+### Exploratory Data Analysis
 
 ```python
 import numpy as np
@@ -10,13 +11,9 @@ import seaborn as sns
 plt.style.use('seaborn-darkgrid')
 ```
 
-## Exploring the data
-
-
 ```python
 train_df = pd.read_csv('train.csv',parse_dates=["pickup_datetime"])
 test_df = pd.read_csv('test.csv',parse_dates=["pickup_datetime"])
-train_df.drop(['dropoff_datetime'],axis=1,inplace=True)
 print(train_df.shape)
 train_df.head()
 ```
@@ -127,12 +124,12 @@ train_df.head()
 </table>
 </div>
 
-
-
-
+<br>
 ```python
 train_df.info()
 ```
+
+Out:
 
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 1458644 entries, 0 to 1458643
@@ -149,9 +146,25 @@ train_df.info()
     trip_duration         1458644 non-null int64
     dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
     memory usage: 111.3+ MB
+    
 
+<pre><code><class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1458644 entries, 0 to 1458643
+Data columns (total 10 columns):
+id                    1458644 non-null object
+vendor_id             1458644 non-null int64
+pickup_datetime       1458644 non-null datetime64[ns]
+passenger_count       1458644 non-null int64
+pickup_longitude      1458644 non-null float64
+pickup_latitude       1458644 non-null float64
+dropoff_longitude     1458644 non-null float64
+dropoff_latitude      1458644 non-null float64
+store_and_fwd_flag    1458644 non-null object
+trip_duration         1458644 non-null int64
+dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
+memory usage: 111.3+ MB</code></pre>    
 
-** Data fields **
+**Data fields**
 - id - a unique identifier for each trip
 - vendor_id - a code indicating the provider associated with the trip record
 - pickup_datetime - date and time when the meter was engaged
@@ -163,7 +176,7 @@ train_df.info()
 - store_and_fwd_flag - this flag indicates whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a connection to the server - Y=store and forward; N=not a store and forward trip
 - trip_duration - duration of the trip in seconds
 
-** Vendor_id **
+**Vendor id**
 
 
 ```python
@@ -177,7 +190,7 @@ train_df['vendor_id'].value_counts().sort_index()/sum(train_df['vendor_id'].valu
 ```
 
 
-![png](output_7_0.png)
+![png](images/nyc/output_7_0.png)
 
 
 
@@ -189,7 +202,7 @@ train_df['vendor_id'].value_counts().sort_index()/sum(train_df['vendor_id'].valu
 
 
 
-** pickup_datetime**
+**Pickup datetime**
 
 
 ```python
@@ -200,7 +213,7 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![png](images/nyc/output_9_0.png)
 
 
 
@@ -224,12 +237,11 @@ plt.show()
 ```
 
 
-![png](output_11_0.png)
+![png](images/nyc/output_11_0.png)
 
 
-** trip duration vs. pickup datetime **
 
-** pickup_longitude	& pickup_latitude **
+**Pickup longitude	& pickup latitude**
 
 
 ```python
@@ -243,10 +255,10 @@ plt.show()
 ```
 
 
-![png](output_14_0.png)
+![png](images/nyc/output_14_0.png)
 
 
-** dropoff_longitude & dropoff_latitude **
+**Dropoff longitude & dropoff latitude**
 
 
 ```python
@@ -260,10 +272,10 @@ plt.show()
 ```
 
 
-![png](output_16_0.png)
+![png](images/nyc/output_16_0.png)
 
 
-** passenger_count **
+**Passenger count**
 
 
 ```python
@@ -275,7 +287,7 @@ print(train_df['passenger_count'].value_counts().sort_index())
 ```
 
 
-![png](output_18_0.png)
+![png](images/nyc/output_18_0.png)
 
 
     0         60
@@ -291,7 +303,7 @@ print(train_df['passenger_count'].value_counts().sort_index())
     Name: passenger_count, dtype: int64
 
 
-**store_and_fwd_flag**
+**Store and forward flag**
 
 
 ```python
@@ -304,7 +316,7 @@ print(train_df['store_and_fwd_flag'].value_counts().sort_index()/sum(train_df['s
 ```
 
 
-![png](output_20_0.png)
+![png](images/nyc/output_20_0.png)
 
 
     N    99.44846
@@ -322,7 +334,7 @@ plt.show()
 ```
 
 
-![png](output_22_0.png)
+![png](images/nyc/output_22_0.png)
 
 
 
@@ -343,5 +355,5 @@ plt.show()
 ```
 
 
-![png](output_24_0.png)
+![png](images/nyc/output_24_0.png)
 
