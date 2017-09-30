@@ -129,7 +129,7 @@ train_df.head()
 train_df.info()
 ```
 
-<code>
+Out:
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 1458644 entries, 0 to 1458643
     Data columns (total 10 columns):
@@ -145,7 +145,7 @@ train_df.info()
     trip_duration         1458644 non-null int64
     dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
     memory usage: 111.3+ MB
-</code>
+
 
 <code>A piece of computer code</code>
 
