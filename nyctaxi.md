@@ -18,7 +18,7 @@ print(train_df.shape)
 train_df.head()
 ```
 
-    (1458644, 10)
+(1458644, 10)
 
 
 
