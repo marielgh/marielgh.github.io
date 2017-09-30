@@ -129,7 +129,8 @@ train_df.head()
 train_df.info()
 ```
 
-   <code><class 'pandas.core.frame.DataFrame'>
+<code>
+    <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 1458644 entries, 0 to 1458643
     Data columns (total 10 columns):
     id                    1458644 non-null object
@@ -143,8 +144,10 @@ train_df.info()
     store_and_fwd_flag    1458644 non-null object
     trip_duration         1458644 non-null int64
     dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
-    memory usage: 111.3+ MB</code>
+    memory usage: 111.3+ MB
+</code>
 
+<code>A piece of computer code</code>
 
 **Data fields**
 - id - a unique identifier for each trip
