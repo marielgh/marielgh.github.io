@@ -18,7 +18,7 @@ print(train_df.shape)
 train_df.head()
 ```
 
-(1458644, 10)
+   (1458644, 10)
 
 
 
@@ -131,7 +131,7 @@ train_df.head()
 train_df.info()
 ```
 
-    <class 'pandas.core.frame.DataFrame'>
+   <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 1458644 entries, 0 to 1458643
     Data columns (total 10 columns):
     id                    1458644 non-null object
