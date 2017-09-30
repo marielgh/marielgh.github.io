@@ -148,7 +148,7 @@ Out:
     memory usage: 111.3+ MB
     
 
-<pre><code><class 'pandas.core.frame.DataFrame'>
+<pre2><code><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 1458644 entries, 0 to 1458643
 Data columns (total 10 columns):
 id                    1458644 non-null object
@@ -162,7 +162,7 @@ dropoff_latitude      1458644 non-null float64
 store_and_fwd_flag    1458644 non-null object
 trip_duration         1458644 non-null int64
 dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
-memory usage: 111.3+ MB</code></pre>    
+memory usage: 111.3+ MB</code></pre2>    
 
 **Data fields**
 - id - a unique identifier for each trip
