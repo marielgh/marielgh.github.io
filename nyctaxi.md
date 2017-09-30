@@ -1,7 +1,7 @@
 
 ## New York City Taxi Trip Duration 
 
-## Exploratory Data Analysis
+### Exploratory Data Analysis
 
 ```python
 import numpy as np
