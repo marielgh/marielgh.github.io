@@ -124,8 +124,6 @@ train_df.head()
 </table>
 </div>
 
-
-
 <br>
 ```python
 train_df.info()
