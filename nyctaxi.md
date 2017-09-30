@@ -126,7 +126,7 @@ train_df.head()
 
 
 
-
+<br>
 ```python
 train_df.info()
 ```
