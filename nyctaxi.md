@@ -128,26 +128,6 @@ train_df.head()
 ```python
 train_df.info()
 ```
-
-Out:
-
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 1458644 entries, 0 to 1458643
-    Data columns (total 10 columns):
-    id                    1458644 non-null object
-    vendor_id             1458644 non-null int64
-    pickup_datetime       1458644 non-null datetime64[ns]
-    passenger_count       1458644 non-null int64
-    pickup_longitude      1458644 non-null float64
-    pickup_latitude       1458644 non-null float64
-    dropoff_longitude     1458644 non-null float64
-    dropoff_latitude      1458644 non-null float64
-    store_and_fwd_flag    1458644 non-null object
-    trip_duration         1458644 non-null int64
-    dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
-    memory usage: 111.3+ MB
-    
-
 <pre style="background-color:white"><code><class 'pandas.core.frame.DataFrame'>
 RangeIndex: 1458644 entries, 0 to 1458643
 Data columns (total 10 columns):
@@ -195,10 +175,11 @@ train_df['vendor_id'].value_counts().sort_index()/sum(train_df['vendor_id'].valu
 
 
 
-
+<pre style="background-color:white"><code>
     1    46.504973
     2    53.495027
     Name: vendor_id, dtype: float64
+</code></pre>
 
 
 
