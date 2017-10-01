@@ -3,13 +3,6 @@
 
 ### Exploratory Data Analysis
 
-<div style="background-color:white">
-    
-    ssss
-    
-</div>
-    
-
 
 ```python
 import numpy as np
@@ -278,17 +271,17 @@ print(train_df['passenger_count'].value_counts().sort_index())
 ![png](images/nyc/output_18_0.png)
 
 
-<pre style="background-color:white"><code>    0         60
-    1    1033540
-    2     210318
-    3      59896
-    4      28404
-    5      78088
-    6      48333
-    7          3
-    8          1
-    9          1
-    Name: passenger_count, dtype: int64
+<pre style="background-color:white"><code>0         60
+1    1033540
+2     210318
+3      59896
+4      28404
+5      78088
+6      48333
+7          3
+8          1
+9          1
+Name: passenger_count, dtype: int64
 </code></pre>
 
 
@@ -307,11 +300,10 @@ print(train_df['store_and_fwd_flag'].value_counts().sort_index()/sum(train_df['s
 
 ![png](images/nyc/output_20_0.png)
 
-
-    N    99.44846
-    Y     0.55154
-    Name: store_and_fwd_flag, dtype: float64
-
+<pre style="background-color:white"><code>N    99.44846
+Y     0.55154
+Name: store_and_fwd_flag, dtype: float64
+</code></pre>
 
 ** Trip duration**
 
@@ -331,8 +323,8 @@ plt.show()
 print("Maximum trip duration (in hours): {}".format(max(train_df['trip_duration'])//3600))
 ```
 
-    Maximum trip duration (in hours): 979
-
+<pre style="background-color:white"><code>Maximum trip duration (in hours): 979
+</code></pre>
 
 
 ```python
