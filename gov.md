@@ -17,7 +17,7 @@ plt.show()
 
 Plots: 
 
-<a href="images/gov/percentage_contracts_per_agency-100" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
+<a href="images/gov/percentage_contracts_per_agency-100.png" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
 
 
 <a href="images/gov/percentage_budget_per_agency-100.png" ><img src="images/gov/percentage_budget_per_agency-75.png"/></a>
