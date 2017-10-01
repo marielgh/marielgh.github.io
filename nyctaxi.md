@@ -175,10 +175,9 @@ train_df['vendor_id'].value_counts().sort_index()/sum(train_df['vendor_id'].valu
 
 
 
-<pre style="background-color:white"><code>
-    1    46.504973
-    2    53.495027
-    Name: vendor_id, dtype: float64
+<pre style="background-color:white"><code>1    46.504973
+2    53.495027
+Name: vendor_id, dtype: float64
 </code></pre>
 
 
@@ -271,7 +270,7 @@ print(train_df['passenger_count'].value_counts().sort_index())
 ![png](images/nyc/output_18_0.png)
 
 
-    0         60
+<pre style="background-color:white"><code>    0         60
     1    1033540
     2     210318
     3      59896
@@ -282,6 +281,7 @@ print(train_df['passenger_count'].value_counts().sort_index())
     8          1
     9          1
     Name: passenger_count, dtype: int64
+</code></pre>
 
 
 **Store and forward flag**
