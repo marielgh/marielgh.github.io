@@ -18,11 +18,8 @@ test_df = pd.read_csv('test.csv',parse_dates=["pickup_datetime"])
 print(train_df.shape)
 train_df.head()
 ```
-
-    (1458644, 10)
-
-
-
+<pre style="background-color:white"><code>(1458644, 10)
+</code></pre>
 
 
 <div>
