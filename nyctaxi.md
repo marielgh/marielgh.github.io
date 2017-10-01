@@ -124,7 +124,6 @@ train_df.head()
   </tbody>
 </table>
 </div>
-
 <br>
 ```python
 train_df.info()
@@ -159,7 +158,6 @@ memory usage: 111.3+ MB</code></pre>
 
 **Vendor id**
 
-
 ```python
 train_df['vendor_id'].value_counts().sort_index().plot(kind='bar')
 plt.xticks(rotation='horizontal')
@@ -170,21 +168,14 @@ plt.show()
 train_df['vendor_id'].value_counts().sort_index()/sum(train_df['vendor_id'].value_counts().sort_index())*100
 ```
 
-
 ![png](images/nyc/output_7_0.png)
-
-
-
 
 <pre style="background-color:white"><code>1    46.504973
 2    53.495027
 Name: vendor_id, dtype: float64
 </code></pre>
 
-
-
 **Pickup datetime**
-
 
 ```python
 train_df.resample('D',on='pickup_datetime').count()['id'].plot(style='o-')
@@ -192,11 +183,7 @@ plt.ylabel('Counts per day')
 plt.xlabel('Pickup datetime')
 plt.show()
 ```
-
-
 ![png](images/nyc/output_9_0.png)
-
-
 
 ```python
 np.argmin(train_df.resample('D',on='pickup_datetime').count()['id'])
@@ -204,9 +191,8 @@ np.argmin(train_df.resample('D',on='pickup_datetime').count()['id'])
 
 
 
-
-    Timestamp('2016-01-23 00:00:00', freq='D')
-
+<pre style="background-color:white"><code>Timestamp('2016-01-23 00:00:00', freq='D')
+</code></pre>
 
 
 
@@ -267,7 +253,6 @@ plt.show()
 print(train_df['passenger_count'].value_counts().sort_index())
 ```
 
-
 ![png](images/nyc/output_18_0.png)
 
 
@@ -297,7 +282,6 @@ plt.show()
 print(train_df['store_and_fwd_flag'].value_counts().sort_index()/sum(train_df['store_and_fwd_flag'].value_counts().sort_index())*100)
 ```
 
-
 ![png](images/nyc/output_20_0.png)
 
 <pre style="background-color:white"><code>N    99.44846
@@ -307,17 +291,13 @@ Name: store_and_fwd_flag, dtype: float64
 
 ** Trip duration**
 
-
 ```python
 np.log(train_df['trip_duration']).plot(kind='hist',bins=200,figsize=(15,5))
 plt.xlabel('log(trip duration)')
 plt.show()
 ```
 
-
 ![png](images/nyc/output_22_0.png)
-
-
 
 ```python
 print("Maximum trip duration (in hours): {}".format(max(train_df['trip_duration'])//3600))
@@ -326,7 +306,6 @@ print("Maximum trip duration (in hours): {}".format(max(train_df['trip_duration'
 <pre style="background-color:white"><code>Maximum trip duration (in hours): 979
 </code></pre>
 
-
 ```python
 df = train_df[train_df.trip_duration < np.exp(11)]
 plt.hist(np.log(df.trip_duration),bins=100)
@@ -334,7 +313,6 @@ plt.xlabel('log(trip duration)')
 plt.ylabel('Frequency')
 plt.show()
 ```
-
 
 ![png](images/nyc/output_24_0.png)
 
