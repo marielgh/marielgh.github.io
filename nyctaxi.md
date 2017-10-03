@@ -517,7 +517,7 @@ plt.show()
 ```
 
 
-![png](output_10_0.png)
+![png](images/nyc/output_10_0.png)
 
 
 **Manhattan distance **
@@ -825,7 +825,7 @@ plt.show()
 ```
 
 
-![png](output_32_0.png)
+![png](images/nyc/output_32_0.png)
 
 
 
@@ -1160,7 +1160,7 @@ plt.show()
 ```
 
 
-![png](output_41_0.png)
+![png](images/nyc/output_41_0.png)
 
 
 
@@ -1452,7 +1452,7 @@ plt.show()
 ```
 
 
-![png](output_47_0.png)
+![png](images/nyc/output_47_0.png)
 
 
 
@@ -1488,5 +1488,5 @@ plt.show()
 ```
 
 
-![png](output_50_0.png)
+![png](images/nyc/output_50_0.png)
 
