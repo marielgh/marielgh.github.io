@@ -2,8 +2,8 @@
 ## New York City Taxi Trip Duration 
 
 - [Exploratory data analysis of the dataset](#exploratory-data-analysis)
-- [Feature extraction and engineering](### Feature Engineering)
-- [Modelling using gradient boosted trees](### Modelling)
+- [Feature extraction and engineering](#feature-engineering)
+- [Modelling using gradient boosted trees](#modelling)
 
 ### Exploratory Data Analysis
 
