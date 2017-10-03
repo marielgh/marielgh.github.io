@@ -1,6 +1,7 @@
 
 ## New York City Taxi Trip Duration 
 
+This project consists of the following parts: 
 - [Exploratory data analysis of the dataset](#exploratory-data-analysis)
 - [Feature extraction and engineering](#feature-engineering)
 - [Modelling using gradient boosted trees](#modelling)
