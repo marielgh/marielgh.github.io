@@ -286,7 +286,7 @@ Y     0.55154
 Name: store_and_fwd_flag, dtype: float64
 </code></pre>
 
-** Trip duration**
+**Trip duration**
 
 ```python
 np.log(train_df['trip_duration']).plot(kind='hist',bins=200,figsize=(15,5))
@@ -313,3 +313,4 @@ plt.show()
 
 ![png](images/nyc/output_24_0.png)
 
+### Feature Engineering
