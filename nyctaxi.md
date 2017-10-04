@@ -1,3 +1,5 @@
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/0.1/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
 
 ## New York City Taxi Trip Duration 
 
@@ -324,8 +326,6 @@ where
 
 $$y_j = \text{Observed values}$$
 $$\hat{y}_j = \text{Predicted values}$$
-
-$$ \underset{w}{min\,} {|| X w - y||_2}^2 $$
 
 
 ```python
