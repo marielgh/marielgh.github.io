@@ -149,16 +149,16 @@ We see there are no missing values. Out target variable is *trip_duration*.
 On the documentation of the competition in Kaggle, we can find the following description for the dataset fields. In this exploratory data analysis we will explore each of them.
 
 **Data fields**
-- *id*: a unique identifier for each trip.
-- *vendor_id*: a code indicating the provider associated with the trip record.
-- *pickup_datetime*: date and time when the meter was engaged.
-- *passenger_count*: the number of passengers in the vehicle (driver entered value).
-- *pickup_longitude*: the longitude where the meter was engaged.
-- *pickup_latitude*: the latitude where the meter was engaged.
-- *dropoff_longitude*: the longitude where the meter was disengaged.
-- *dropoff_latitude*: the latitude where the meter was disengaged.
-- *store_and_fwd_flag*: this flag indicates whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a connection to the server.
-- *trip_duration*: duration of the trip in seconds.
+- *id* : a unique identifier for each trip.
+- *vendor_id* : a code indicating the provider associated with the trip record.
+- *pickup_datetime* : date and time when the meter was engaged.
+- *passenger_count* : the number of passengers in the vehicle (driver entered value).
+- *pickup_longitude* : the longitude where the meter was engaged.
+- *pickup_latitude* : the latitude where the meter was engaged.
+- *dropoff_longitude* : the longitude where the meter was disengaged.
+- *dropoff_latitude* : the latitude where the meter was disengaged.
+- *store_and_fwd_flag* : this flag indicates whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a connection to the server.
+- *trip_duration* : duration of the trip in seconds.
 
 
 **Vendor id**
@@ -171,13 +171,15 @@ plt.xticks(rotation='horizontal')
 plt.ylabel('Frequency')
 plt.xlabel('Vendor')
 plt.show()
-
-train_df['vendor_id'].value_counts().sort_index()/sum(train_df['vendor_id'].value_counts().sort_index())*100
 ```
 
 ![png](images/nyc/output_7_0.png)
 
 We calculate the percentage of trip records corresponding to each vendor.
+
+```python
+train_df['vendor_id'].value_counts().sort_index()/sum(train_df['vendor_id'].value_counts().sort_index())*100
+```
 
 <pre style="background-color:white"><code>1    46.504973
 2    53.495027
@@ -196,7 +198,7 @@ plt.show()
 ```
 ![png](images/nyc/output_9_0.png)
 
-We see the training data extends from January 2016 to July. There is a significant drop in some days in January. We find out the exact day using the *argmin* function.
+We see the training data extends from January 2016 to June 2016. There is a significant drop in January. We find out the exact day using the *argmin* function.
 
 ```python
 np.argmin(train_df.resample('D',on='pickup_datetime').count()['id'])
@@ -208,7 +210,7 @@ Doing some internet research reveals us that on this date a historic blizzard to
 <pre style="background-color:white"><code>Timestamp('2016-01-23 00:00:00', freq='D')
 </code></pre>
 
-A natural question to ask now is if the datetime range for the test set is the same. 
+A natural question to ask now is if the datetime range for the test set is the same, so we resample per day for the test set as well.
 
 ```python
 test_df.resample('D',on='pickup_datetime').count()['id'].plot(style='o-',c='green')
@@ -223,6 +225,7 @@ Yes, it is indeed. These are good news, because it allow us to use algorithms as
 
 **Pickup longitude & pickup latitude**
 
+We plot the pickup coordinates together. 
 
 ```python
 plt.figure(figsize=(15,10))
@@ -234,12 +237,13 @@ plt.ylabel('Pickup latitude')
 plt.show()
 ```
 
-
 ![png](images/nyc/output_14_0.png)
 
+We can easily recognize Manhattan with its typical rectangular grid plan. We also can see the two nearest airport, JFK and LaGuardia Airports.
 
 **Dropoff longitude & dropoff latitude**
 
+We do the same for the dropoff locations. 
 
 ```python
 plt.figure(figsize=(15,10))
@@ -251,9 +255,9 @@ plt.ylabel('Dropoff latitude')
 plt.show()
 ```
 
-
 ![png](images/nyc/output_16_0.png)
 
+We get something really similar. The dropoff locations are a little bit more spread out, but also focused in Manhattan.
 
 **Passenger count**
 
@@ -263,11 +267,15 @@ train_df['passenger_count'].value_counts().sort_index().plot(kind='bar')
 plt.ylabel('Frequency')
 plt.xlabel('Number of passengers')
 plt.show()
-print(train_df['passenger_count'].value_counts().sort_index())
 ```
 
 ![png](images/nyc/output_18_0.png)
 
+We see most of the trips have 1 or 2 passengers. The exact counts are:
+
+```python
+train_df['passenger_count'].value_counts().sort_index()
+```
 
 <pre style="background-color:white"><code>0         60
 1    1033540
