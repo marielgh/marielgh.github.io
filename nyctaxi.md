@@ -351,8 +351,9 @@ We plot the trip duration distribution without these outliers.
 
 ### Feature Engineering
 
-**Concatenate train and test data**
+This section consists in encoding the features in an efficient way for the machine learning algorithm and extracting and engineering new features from the ones we already have.
 
+Our first step is to concatenate the train and test sets to make the same transformations in both datasets.
 
 ```python
 df = pd.concat((train_df, test_df))
@@ -360,12 +361,12 @@ df = pd.concat((train_df, test_df))
 
 **Get dummies**
 
+We will encode our categorical features (vendor id and store and forward flag) as boolean features since they just have two possible values. For that, we use the *get_dummies* method in pandas with the *drop_first=True* attribute. 
 
 ```python
 df = pd.get_dummies(df, columns=['vendor_id','store_and_fwd_flag'],drop_first=True)
 df.head()
 ```
-
 
 
 <div>
@@ -470,8 +471,10 @@ df.head()
 
 
 
-**datetime features**
+**Datetime features**
 
+From the pickup datetime, we can extract a lot of features such as the weekday (encoded in a number from 0 to 6), the hour, the minute and the time difference since the first trip record of the dataset. We combine the hour and the minute to get an *hour of type float* feature. 
+Since the hour (float) and the weekday are cyclical features we encode them in a special way using the sinus and cosinus functions. This helps the algorithm understand that Monday comes after Sunday for example.
 
 ```python
 import datetime as dt
