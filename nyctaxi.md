@@ -368,21 +368,6 @@ df = pd.get_dummies(df, columns=['vendor_id','store_and_fwd_flag'],drop_first=Tr
 df.head()
 ```
 
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -467,13 +452,11 @@ df.head()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 **Datetime features**
 
-From the pickup datetime, we can extract a lot of features such as the weekday (encoded in a number from 0 to 6), the hour, the minute and the time difference since the first trip record of the dataset. We combine the hour and the minute to get an *hour of type float* feature. 
+From the pickup datetime, we can extract a lot of features such as the weekday (encoded in a number from 0, Monday, to 6, Sunday), the hour, the minute and the time difference since the first trip record of the dataset. We combine the hour and the minute to get an *hour of type float* feature. 
 Since the hour (float) and the weekday are cyclical features we encode them in a special way using the sinus and cosinus functions. This helps the algorithm understand that Monday comes after Sunday for example.
 
 ```python
@@ -492,7 +475,7 @@ df['x_weekday']=np.sin(2.*np.pi*df.weekday/7)
 df['y_weekday']=np.cos(2.*np.pi*df.weekday/7)
 ```
 
-**coordinate features**
+**Coordinate features**
 
 
 ```python
@@ -500,17 +483,15 @@ from sklearn.decomposition import PCA
 
 pca = PCA(n_components=2)
 
-X = np.vstack((df[['pickup_latitude', 'pickup_longitude']], 
-               df[['dropoff_latitude', 'dropoff_longitude']]))
+X = np.vstack((train_df[['pickup_latitude', 'pickup_longitude']], 
+               train_df[['dropoff_latitude', 'dropoff_longitude']]))
 
 #remove abnormal locations
 min_lat, min_lng = np.array([40.7493,-73.9894]) - 1*X.std(axis=0)
 max_lat, max_lng = np.array([40.7493,-73.9894]) + 1*X.std(axis=0)
 X = X[(X[:,0] > min_lat) & (X[:,0] < max_lat) & (X[:,1] > min_lng) & (X[:,1] < max_lng)]
 
-
 pca.fit(X)
-X_pca = pca.transform(X)
 
 df['pickup_pca0'] = pca.transform(df[['pickup_latitude', 'pickup_longitude']])[:,0]
 df['pickup_pca1'] = pca.transform(df[['pickup_latitude', 'pickup_longitude']])[:,1]
@@ -521,7 +502,6 @@ df['dropoff_pca1'] = pca.transform(df[['dropoff_latitude', 'dropoff_longitude']]
 
 
 ```python
-plt.style.use('seaborn-darkgrid')
 plt.figure(figsize=(15,10))
 plt.scatter(df.loc[:,'pickup_pca0'],df.loc[:,'pickup_pca1'],s=0.4,alpha=0.1,color='green')
 plt.xlim(-0.15, 0.1)
@@ -532,7 +512,7 @@ plt.show()
 ```
 
 
-![png](output_10_0.png)
+![png](images/nyc/output_10_0.png)
 
 
 **Manhattan distance**
@@ -575,7 +555,7 @@ df['haversine'] = haversine_np(
     df['dropoff_latitude'], df['dropoff_longitude'])
 ```
 
-**bearing**
+**Bearing**
 
 
 ```python
@@ -599,7 +579,7 @@ df['bearing'] = arrays_bearing(
     df['dropoff_latitude'], df['dropoff_longitude'])
 ```
 
-**clusters**
+**Clusters**
 
 
 ```python
@@ -659,22 +639,6 @@ df_pickup_counts.head()
 ```
 
 
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -723,9 +687,6 @@ df_pickup_counts.head()
     </tr>
   </tbody>
 </table>
-</div>
-
-
 
 
 ```python
@@ -749,23 +710,6 @@ df_dropoff_counts = df \
 df_dropoff_counts.head()
 ```
 
-
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -814,9 +758,6 @@ df_dropoff_counts.head()
     </tr>
   </tbody>
 </table>
-</div>
-
-
 
 
 ```python
@@ -824,7 +765,7 @@ df = df.merge(df_dropoff_counts,on=['hour', 'dropoff_cluster','weekday'],how='le
 df['dropoff_cluster_hourcount'] = df['dropoff_cluster_hourcount'].fillna(0)
 ```
 
-**general traffic**
+**General traffic**
 
 
 ```python
@@ -840,7 +781,7 @@ plt.show()
 ```
 
 
-![png](output_32_0.png)
+![png](images/nyc/output_32_0.png)
 
 
 
@@ -887,21 +828,6 @@ X_test = df[df['trip_duration'].isnull()][features]
 X_train.head()
 ```
 
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1053,11 +979,9 @@ X_train.head()
   </tbody>
 </table>
 <p>5 rows × 27 columns</p>
-</div>
 
 
-
-**speed**
+**Median speed between clusters**
 
 
 ```python
@@ -1077,23 +1001,6 @@ speed_pickdrop = speed_pickdrop[speed_pickdrop.id>10]
 speed_pickdrop.head()
 ```
 
-
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1142,9 +1049,6 @@ speed_pickdrop.head()
     </tr>
   </tbody>
 </table>
-</div>
-
-
 
 
 ```python
@@ -1173,7 +1077,7 @@ plt.show()
 ```
 
 
-![png](output_41_0.png)
+![png](images/nyc/output_41_0.png)
 
 
 
@@ -1182,23 +1086,6 @@ speed_pickdrop.drop(['id'],axis=1,inplace=True)
 speed_pickdrop.sort_values(['avg_speed'],ascending=False).head()
 ```
 
-
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1241,8 +1128,6 @@ speed_pickdrop.sort_values(['avg_speed'],ascending=False).head()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 
@@ -1263,22 +1148,6 @@ X_train.head()
 ```
 
 
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1429,19 +1298,7 @@ X_train.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 25 columns</p>
-</div>
 
-
-
-
-```python
-X_train = X_train.drop(['dropoff_latitude', 'dropoff_longitude', 'passenger_count',
-           'pickup_latitude', 'pickup_longitude','hour','weekday'],axis=1)
-
-X_test = X_test.drop(['dropoff_latitude', 'dropoff_longitude', 'passenger_count',
-           'pickup_latitude', 'pickup_longitude','hour','weekday'],axis=1)
-```
 
 **Correlation**
 
@@ -1496,9 +1353,9 @@ plt.show()
 import numpy as np
 import pandas as pd
 import xgboost as xgb
-from sklearn.model_selection import train_test_split
 import datetime as dt
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
 X_train = pd.read_csv('X_train.csv')
 X_test = pd.read_csv('X_test.csv')
