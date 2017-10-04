@@ -118,7 +118,6 @@ The training set consists of 10 features and almost 1.5 million rows. Here we ca
   </tbody>
 </table>
 
-<br>
 ```python
 train_df.info()
 ```
