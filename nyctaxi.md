@@ -560,7 +560,7 @@ df['haversine'] = haversine_np(
     df['dropoff_latitude'], df['dropoff_longitude'])
 ```
 
-**bearing** 
+**bearing**
 
 
 ```python
@@ -627,7 +627,7 @@ plt.show()
 
 <a href="images/nyc/cluster_map-300.png" ><img src="images/nyc/cluster_map-100.png"/></a>
 
-** counts per cluster and hour and weekday**
+**counts per cluster and hour and weekday**
 
 
 ```python
@@ -718,7 +718,7 @@ df = df.merge(df_pickup_counts,on=['hour','weekday','pickup_cluster'],how='left'
 df['pickup_cluster_hourcount'] = df['pickup_cluster_hourcount'].fillna(0)
 ```
 
-** 
+**
 
 
 ```python
@@ -1044,7 +1044,7 @@ X_train.head()
 
 
 
-** speed** 
+**speed**
 
 
 ```python
@@ -1430,7 +1430,7 @@ X_test = X_test.drop(['dropoff_latitude', 'dropoff_longitude', 'passenger_count'
            'pickup_latitude', 'pickup_longitude','hour','weekday'],axis=1)
 ```
 
-** Correlation**
+**Correlation**
 
 
 ```python
@@ -1452,7 +1452,7 @@ plt.show()
 ```
 
 
-![png](output_47_0.png)
+![png](correlation_values-100.png)
 
 
 
@@ -1488,5 +1488,5 @@ plt.show()
 ```
 
 
-![png](correlation_map_100.png)
+![png](correlation_map-100.png)
 
