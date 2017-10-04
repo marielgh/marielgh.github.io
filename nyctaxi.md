@@ -1452,7 +1452,7 @@ plt.show()
 ```
 
 
-![png](correlation_values-100.png)
+![png](images/nyc/correlation_values-100.png)
 
 
 
@@ -1487,6 +1487,103 @@ plt.savefig('correlation_map.pdf', bbox_inches='tight')
 plt.show()
 ```
 
+![png](images/nyc/correlation_map-100.png)
 
-![png](correlation_map-100.png)
+
+### Modelling
+
+```python
+import numpy as np
+import pandas as pd
+import xgboost as xgb
+from sklearn.model_selection import train_test_split
+import datetime as dt
+import matplotlib.pyplot as plt
+
+X_train = pd.read_csv('X_train.csv')
+X_test = pd.read_csv('X_test.csv')
+y_train = pd.read_csv('y_train.csv',squeeze=True)
+
+opt_params = {'booster' : 'gbtree',
+'colsample_bytree': 0.4,
+'learning_rate': 0.1,
+'max_depth':20,
+'min_child_weight':150,
+'n_estimators':1000,
+'n_jobs':1,
+'objective':'reg:linear',
+'reg_lambda':2,
+'silent':True,
+'subsample':0.9}
+
+t0 = dt.datetime.now()
+
+y_train_log = np.log(y_train.values + 1)
+
+Xtr, Xv, ytr_log, yv_log = train_test_split(X_train, y_train_log, test_size=0.2, random_state=42)
+dtrain = xgb.DMatrix(Xtr, label=ytr_log)
+dvalid = xgb.DMatrix(Xv, label=yv_log)
+dtest = xgb.DMatrix(X_test)
+watchlist = [(dtrain, 'train'), (dvalid, 'valid')]
+
+model = xgb.train(opt_params, dtrain, 10000, watchlist, early_stopping_rounds=100,
+                  maximize=False, verbose_eval=50)
+
+print('Modeling best RMSE: %.5f' % model.best_score)
+
+ytr_pred_log = model.predict(dtrain,ntree_limit=model.best_ntree_limit)
+yv_pred_log = model.predict(dvalid,ntree_limit=model.best_ntree_limit)
+
+ytest_pred_log = model.predict(dtest,ntree_limit=model.best_ntree_limit)
+
+ypredlog = pd.DataFrame({'log prediction': ytest_pred_log})
+ypredlog.to_csv('web/ypredlog.csv',index=False)
+ytest_pred_log[ytest_pred_log<0]=0
+
+t1 = dt.datetime.now()
+print('XGB time: %i seconds' % (t1 - t0).seconds)
+```
+
+```python
+[0]	train-rmse:5.41337	valid-rmse:5.41232
+Multiple eval metrics have been passed: 'valid-rmse' will be used for early stopping.
+
+Will train until valid-rmse hasn't improved in 100 rounds.
+[50]	train-rmse:0.32018	valid-rmse:0.342499
+[100]	train-rmse:0.291905	valid-rmse:0.330681
+[150]	train-rmse:0.282829	valid-rmse:0.32874
+[200]	train-rmse:0.278097	valid-rmse:0.328308
+[250]	train-rmse:0.274564	valid-rmse:0.328012
+[300]	train-rmse:0.271481	valid-rmse:0.327854
+[350]	train-rmse:0.268262	valid-rmse:0.327751
+[400]	train-rmse:0.265581	valid-rmse:0.327746
+[450]	train-rmse:0.263218	valid-rmse:0.327961
+Stopping. Best iteration:
+[359]	train-rmse:0.267784	valid-rmse:0.327704
+
+Modeling best RMSE: 0.32770
+XGB time: 1477 seconds
+```
+
+
+```python
+plt.figure(figsize=(15,10))
+plt.scatter(yv_log, yv_pred_log, s=1, alpha=0.1)
+plt.xlim(0,12)
+plt.ylim(0,12)
+plt.xlabel('y validation true (log)')
+plt.ylabel('y validation predicted (log)')
+plt.show()
+```
+
+![png](images/nyc/predicted-true.png)
+
+
+```python
+xgb.plot_importance(model, height=0.8)
+```
+
+![png](images/nyc/featureimp-100.png)
+
+
 
