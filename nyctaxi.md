@@ -323,7 +323,7 @@ plt.show()
 ### Feature Engineering
 
 
-**Remove outliers (trip duration) **
+**Remove outliers (trip duration)**
 
 
 ```python
@@ -345,7 +345,7 @@ max(np.log(train_df.trip_duration))
 df = pd.concat((train_df, test_df))
 ```
 
-**Get dummies **
+**Get dummies**
 
 
 ```python
@@ -458,7 +458,7 @@ df.head()
 
 
 
-**datetime features **
+**datetime features**
 
 
 ```python
@@ -477,7 +477,7 @@ df['x_weekday']=np.sin(2.*np.pi*df.weekday/7)
 df['y_weekday']=np.cos(2.*np.pi*df.weekday/7)
 ```
 
-**coordinate features **
+**coordinate features**
 
 
 ```python
@@ -520,7 +520,7 @@ plt.show()
 ![png](output_10_0.png)
 
 
-**Manhattan distance **
+**Manhattan distance**
 
 
 ```python
@@ -529,7 +529,7 @@ df['manhattan_pca'] = \
     (df['dropoff_pca1'] - df['pickup_pca1']).abs()
 ```
 
-**Haversine distance **
+**Haversine distance**
 
 
 ```python
@@ -560,7 +560,7 @@ df['haversine'] = haversine_np(
     df['dropoff_latitude'], df['dropoff_longitude'])
 ```
 
-**bearing ** 
+**bearing** 
 
 
 ```python
@@ -584,7 +584,7 @@ df['bearing'] = arrays_bearing(
     df['dropoff_latitude'], df['dropoff_longitude'])
 ```
 
-**clusters **
+**clusters**
 
 
 ```python
@@ -627,7 +627,7 @@ plt.show()
 
 <a href="images/nyc/cluster_map-300.png" ><img src="images/nyc/cluster_map-100.png"/></a>
 
-** counts per cluster and hour and weekday **
+** counts per cluster and hour and weekday**
 
 
 ```python
@@ -809,7 +809,7 @@ df = df.merge(df_dropoff_counts,on=['hour', 'dropoff_cluster','weekday'],how='le
 df['dropoff_cluster_hourcount'] = df['dropoff_cluster_hourcount'].fillna(0)
 ```
 
-**general traffic **
+**general traffic**
 
 
 ```python
@@ -1044,7 +1044,7 @@ X_train.head()
 
 
 
-** speed ** 
+** speed** 
 
 
 ```python
@@ -1430,7 +1430,7 @@ X_test = X_test.drop(['dropoff_latitude', 'dropoff_longitude', 'passenger_count'
            'pickup_latitude', 'pickup_longitude','hour','weekday'],axis=1)
 ```
 
-** Correlation **
+** Correlation**
 
 
 ```python
