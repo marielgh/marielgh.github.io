@@ -351,7 +351,7 @@ We plot the trip duration distribution without these outliers.
 
 ### Feature Engineering
 
-This section consists in encoding the features in an efficient way for the machine learning algorithm and extracting and engineering new features from the ones we already have.
+This section consists in encoding the features in an efficient way for the machine learning algorithm and in extracting and engineering new features from the ones we already have.
 
 Our first step is to concatenate the train and test sets to make the same transformations in both datasets.
 
@@ -978,8 +978,6 @@ X_train.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 27 columns</p>
-
 
 **Median speed between clusters**
 
