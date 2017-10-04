@@ -146,7 +146,7 @@ memory usage: 111.3+ MB</code></pre>
 
 We see there are no missing values. Out target variable is *trip_duration*.
 
-On the documentation of the competition in Kaggle, we can find the following description for the dataset features. In this exploratory data analysis we will explore each of them.
+On the documentation of the competition in Kaggle, we can find the following description for the dataset fields. In this exploratory data analysis we will explore each of them.
 
 **Data fields**
 - id - a unique identifier for each trip
