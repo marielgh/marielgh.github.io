@@ -579,7 +579,7 @@ df['bearing'] = arrays_bearing(
     df['dropoff_latitude'], df['dropoff_longitude'])
 ```
 
-**Clusters**
+**Clustering**
 
 
 ```python
@@ -622,7 +622,7 @@ plt.show()
 
 <a href="images/nyc/cluster_map-300.png" ><img src="images/nyc/cluster_map-100.png"/></a>
 
-**counts per cluster and hour and weekday**
+**Counts per cluster and hour and weekday**
 
 
 ```python
@@ -1050,26 +1050,6 @@ speed_pickdrop.head()
 
 
 ```python
-speed_pickdrop['avg_speed'].describe()
-```
-
-
-
-
-    count    2311.000000
-    mean        0.003655
-    std         0.002138
-    min         0.000544
-    25%         0.002009
-    50%         0.003137
-    75%         0.004579
-    max         0.011081
-    Name: avg_speed, dtype: float64
-
-
-
-
-```python
 speed_pickdrop['avg_speed'].plot(kind='hist',bins=50)
 plt.show()
 ```
@@ -1399,8 +1379,7 @@ t1 = dt.datetime.now()
 print('XGB time: %i seconds' % (t1 - t0).seconds)
 ```
 
-```
-[0]	train-rmse:5.41337	valid-rmse:5.41232
+<pre style="background-color:white"><code>[0]	train-rmse:5.41337	valid-rmse:5.41232
 Multiple eval metrics have been passed: 'valid-rmse' will be used for early stopping.
 
 Will train until valid-rmse hasn't improved in 100 rounds.
@@ -1418,7 +1397,7 @@ Stopping. Best iteration:
 
 Modeling best RMSE: 0.32770
 XGB time: 1477 seconds
-```
+</code></pre>
 
 
 ```python
