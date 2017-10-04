@@ -239,7 +239,7 @@ plt.show()
 
 ![png](images/nyc/output_14_0.png)
 
-We can easily recognize Manhattan with its typical rectangular grid plan. We also can see the two nearest airport, JFK and LaGuardia Airports.
+We can easily recognize Manhattan with its typical rectangular grid plan. We also can see the two nearest airports, JFK and LaGuardia Airports.
 
 **Dropoff longitude & dropoff latitude**
 
@@ -293,7 +293,6 @@ Name: passenger_count, dtype: int64
 
 **Store and forward flag**
 
-
 ```python
 train_df['store_and_fwd_flag'].value_counts().sort_index().plot(kind='bar')
 plt.xticks(rotation='horizontal')
@@ -305,12 +304,16 @@ print(train_df['store_and_fwd_flag'].value_counts().sort_index()/sum(train_df['s
 
 ![png](images/nyc/output_20_0.png)
 
+Only in a very few cases, the store and forward flag is positive, meaning that the trip record was not directly sent to the server but held in memory before forwarding (due to a faulty connection to the server). We calculate the percentage of trip records with each flag.
+
 <pre style="background-color:white"><code>N    99.44846
 Y     0.55154
 Name: store_and_fwd_flag, dtype: float64
 </code></pre>
 
 **Trip duration**
+
+Trip duration is our target variable. It is continuous, which makes this problem a regression problem. 
 
 ```python
 np.log(train_df['trip_duration']).plot(kind='hist',bins=200,figsize=(15,5))
