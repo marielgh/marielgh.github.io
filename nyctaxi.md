@@ -1544,7 +1544,7 @@ t1 = dt.datetime.now()
 print('XGB time: %i seconds' % (t1 - t0).seconds)
 ```
 
-```python
+```
 [0]	train-rmse:5.41337	valid-rmse:5.41232
 Multiple eval metrics have been passed: 'valid-rmse' will be used for early stopping.
 
