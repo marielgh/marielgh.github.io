@@ -330,6 +330,8 @@ plt.show()
 
 ![png](images/nyc/output_22_0.png)
 
+We can see there are a few trips with extremely long durations. The maximum trip duration we find is:
+
 ```python
 print("Maximum trip duration (in hours): {}".format(max(train_df['trip_duration'])//3600))
 ```
@@ -337,33 +339,17 @@ print("Maximum trip duration (in hours): {}".format(max(train_df['trip_duration'
 <pre style="background-color:white"><code>Maximum trip duration (in hours): 979
 </code></pre>
 
+I don't expect any trip to last more than 24 hours so I opt for removing all trip records with a duration higher as that.
+
 ```python
-df = train_df[train_df.trip_duration < np.exp(11)]
-plt.hist(np.log(df.trip_duration),bins=100)
-plt.xlabel('log(trip duration)')
-plt.ylabel('Frequency')
-plt.show()
+train_df = train_df[train_df.trip_duration < np.exp(11)]
 ```
+
+We plot the trip duration distribution without these outliers.
 
 ![png](images/nyc/output_24_0.png)
 
 ### Feature Engineering
-
-
-**Remove outliers (trip duration)**
-
-
-```python
-train_df = train_df[train_df.trip_duration < np.exp(11)]
-max(np.log(train_df.trip_duration))
-```
-
-
-
-
-    10.99958000240877
-
-
 
 **Concatenate train and test data**
 
