@@ -19,19 +19,23 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 plt.style.use('seaborn-darkgrid')
 ```
-We read the datasets provided, a training set and a test set, into pandas dataframes. 
+We read the datasets provided, a training set and a test set, into pandas dataframes.
 
 ```python
 train_df = pd.read_csv('train.csv',parse_dates=["pickup_datetime"])
 test_df = pd.read_csv('test.csv',parse_dates=["pickup_datetime"])
+
+```python
 print(train_df.shape)
-train_df.head()
 ```
 <pre style="background-color:white"><code>(1458644, 10)
 </code></pre>
 
-The training set consists of 10 features and almost 1.5 million rows. Here we can see the first 5 rows:
+The training set consists of 10 features and almost 1.5 million rows. Let's print out the first 5 rows.
 
+```python
+train_df.head()
+```
 
 <table border="1" class="dataframe">
   <thead>
@@ -117,6 +121,8 @@ The training set consists of 10 features and almost 1.5 million rows. Here we ca
     </tr>
   </tbody>
 </table>
+
+We can get a concise summary of the dataframe with the *info()* method.
 
 ```python
 train_df.info()
