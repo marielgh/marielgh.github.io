@@ -1457,19 +1457,6 @@ plt.show()
 
 
 ```python
-import heapq
-heapq.nlargest(3, correlation_values)
-```
-
-
-
-
-    [0.63811040928643148, 0.60999272480400824, 0.45666108033546654]
-
-
-
-
-```python
 # correlation matrix
 train = pd.concat([X_train, y_train], axis=1)
 corrmat = train.corr()
