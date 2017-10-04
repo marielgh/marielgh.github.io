@@ -32,20 +32,7 @@ train_df.head()
 
 The training set consists of 10 features and almost 1.5 million rows. Here we can see the first 5 rows:
 
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
 
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -130,7 +117,7 @@ The training set consists of 10 features and almost 1.5 million rows. Here we ca
     </tr>
   </tbody>
 </table>
-</div>
+
 <br>
 ```python
 train_df.info()
