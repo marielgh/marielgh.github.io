@@ -10,6 +10,7 @@ This project consists of the following parts:
 
 ### Exploratory Data Analysis
 
+Fist of all we import the necessary packages for the analysis.
 
 ```python
 import numpy as np
@@ -18,6 +19,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 plt.style.use('seaborn-darkgrid')
 ```
+We read the datasets provided, a training set and a test set, into pandas dataframes. 
 
 ```python
 train_df = pd.read_csv('train.csv',parse_dates=["pickup_datetime"])
@@ -28,6 +30,7 @@ train_df.head()
 <pre style="background-color:white"><code>(1458644, 10)
 </code></pre>
 
+The training set consists of 10 features and almost 1.5 million rows. Here we can see the first 5 rows:
 
 <div>
 <style>
@@ -352,7 +355,6 @@ df = pd.concat((train_df, test_df))
 df = pd.get_dummies(df, columns=['vendor_id','store_and_fwd_flag'],drop_first=True)
 df.head()
 ```
-
 
 
 
@@ -871,8 +873,6 @@ X_test = df[df['trip_duration'].isnull()][features]
 ```python
 X_train.head()
 ```
-
-
 
 
 <div>
