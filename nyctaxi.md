@@ -186,6 +186,8 @@ Name: vendor_id, dtype: float64
 
 **Pickup datetime**
 
+We will resample per day counting the records for each day.
+
 ```python
 train_df.resample('D',on='pickup_datetime').count()['id'].plot(style='o-')
 plt.ylabel('Counts per day')
@@ -194,10 +196,13 @@ plt.show()
 ```
 ![png](images/nyc/output_9_0.png)
 
+We see the training data extends from January 2016 to July. There is a significant drop in some days in January. We find out the exact day using the *argmin* function.
+
 ```python
 np.argmin(train_df.resample('D',on='pickup_datetime').count()['id'])
 ```
 
+Doing some internet research reveals us that on this date a historic blizzard took place, with snowfall amounts of over 2 feet. There was actually a travel ban in New York City for January 23–24. 
 
 
 <pre style="background-color:white"><code>Timestamp('2016-01-23 00:00:00', freq='D')
