@@ -318,9 +318,9 @@ Name: store_and_fwd_flag, dtype: float64
 
 The trip duration is our target variable. It is continuous, which makes this problem a regression problem. We will actually work with the logarithm of the trip duration since the evaluation metric of the competition is the root mean squared log error, defined as:
 
-$$ \text{RMSLE} = \sqrt{ \frac{1}{n} \sum^{n}_{j=1}{\( \log\(y_j + 1\) - \log\( \hat{y}_j + 1 \) \)^{2}}}$$
+$$\text{RMSLE} = \sqrt{ \frac{1}{n} \sum^{n}_{j=1}{\( \log\(y_j + 1\) - \log\( \hat{y}_j + 1 \) \)^{2}}}$$
 
-Where 
+where
 
 $$y_j = \text{Observed values}$$
 $$\hat{y}_j = \text{Predicted values}$$
