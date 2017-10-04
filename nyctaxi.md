@@ -579,6 +579,26 @@ df['bearing'] = arrays_bearing(
     df['dropoff_latitude'], df['dropoff_longitude'])
 ```
 
+**General traffic**
+
+
+```python
+df_counts = df.set_index('pickup_datetime')[['id']].sort_index()
+df_counts['count_60min'] = df_counts.isnull().rolling('60min').count()['id']
+df = df.merge(df_counts, on='id', how='left')
+```
+
+
+```python
+df_counts['count_60min'].head(8000).plot(figsize=(15,5))
+plt.show()
+```
+
+
+![png](images/nyc/output_32_0.png)
+
+
+
 **Clustering**
 
 
@@ -764,43 +784,6 @@ df_dropoff_counts.head()
 df = df.merge(df_dropoff_counts,on=['hour', 'dropoff_cluster','weekday'],how='left')
 df['dropoff_cluster_hourcount'] = df['dropoff_cluster_hourcount'].fillna(0)
 ```
-
-**General traffic**
-
-
-```python
-df_counts = df.set_index('pickup_datetime')[['id']].sort_index()
-df_counts['count_60min'] = df_counts.isnull().rolling('60min').count()['id']
-df = df.merge(df_counts, on='id', how='left')
-```
-
-
-```python
-df_counts['count_60min'].head(8000).plot(figsize=(15,5))
-plt.show()
-```
-
-
-![png](images/nyc/output_32_0.png)
-
-
-
-```python
-df.columns
-```
-
-
-
-
-    Index(['dropoff_latitude', 'dropoff_longitude', 'id', 'passenger_count',
-           'pickup_datetime', 'pickup_latitude', 'pickup_longitude',
-           'trip_duration', 'vendor_id_2', 'store_and_fwd_flag_Y', 'weekday',
-           'hour', 'minute', 'dt', 'hourfloat', 'x_hour', 'y_hour', 'x_weekday',
-           'y_weekday', 'pickup_pca0', 'pickup_pca1', 'dropoff_pca0',
-           'dropoff_pca1', 'manhattan_pca', 'haversine', 'bearing',
-           'pickup_cluster', 'dropoff_cluster', 'pickup_cluster_hourcount',
-           'dropoff_cluster_hourcount', 'count_60min'],
-          dtype='object')
 
 
 
