@@ -456,7 +456,7 @@ df.head()
 
 **Datetime features**
 
-From the pickup datetime, we can extract a lot of features such as the weekday (encoded in a number from 0, Monday, to 6, Sunday), the hour, the minute and the time difference since the first trip record of the dataset. We combine the hour and the minute to get an *hour of type float* feature. 
+From the pickup datetime, we can extract a lot of features such as the weekday (encoded in a number from 0, Monday, to 6, Sunday), the hour, the minute and the time difference since the first trip record of the dataset. We combine the hour and the minute to get an decimal hour (*hourfloat*) feature. 
 Since the hour (float) and the weekday are cyclical features we encode them in a special way using the sinus and cosinus functions. This helps the algorithm understand that Monday comes after Sunday for example.
 
 ```python
