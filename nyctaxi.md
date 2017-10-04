@@ -299,12 +299,15 @@ plt.xticks(rotation='horizontal')
 plt.ylabel('Frequency')
 plt.xlabel('Store and forward flag')
 plt.show()
-print(train_df['store_and_fwd_flag'].value_counts().sort_index()/sum(train_df['store_and_fwd_flag'].value_counts().sort_index())*100)
 ```
 
 ![png](images/nyc/output_20_0.png)
 
 Only in a very few cases, the store and forward flag is positive, meaning that the trip record was not directly sent to the server but held in memory before forwarding (due to a faulty connection to the server). We calculate the percentage of trip records with each flag.
+
+```python
+train_df['store_and_fwd_flag'].value_counts().sort_index()/sum(train_df['store_and_fwd_flag'].value_counts().sort_index())*100
+```
 
 <pre style="background-color:white"><code>N    99.44846
 Y     0.55154
