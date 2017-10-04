@@ -24,6 +24,7 @@ We read the datasets provided, a training set and a test set, into pandas datafr
 ```python
 train_df = pd.read_csv('train.csv',parse_dates=["pickup_datetime"])
 test_df = pd.read_csv('test.csv',parse_dates=["pickup_datetime"])
+```
 
 ```python
 print(train_df.shape)
@@ -143,6 +144,10 @@ trip_duration         1458644 non-null int64
 dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
 memory usage: 111.3+ MB</code></pre>
 
+We see there are no missing values. Out target variable is *trip_duration*.
+
+On the documentation of the competition in Kaggle, we can find the following description for the dataset features.
+
 **Data fields**
 - id - a unique identifier for each trip
 - vendor_id - a code indicating the provider associated with the trip record
@@ -154,6 +159,8 @@ memory usage: 111.3+ MB</code></pre>
 - dropoff_latitude - the latitude where the meter was disengaged
 - store_and_fwd_flag - this flag indicates whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a connection to the server - Y=store and forward; N=not a store and forward trip
 - trip_duration - duration of the trip in seconds
+
+We will explore each of them. 
 
 **Vendor id**
 
