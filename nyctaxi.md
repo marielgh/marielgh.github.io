@@ -208,7 +208,7 @@ Doing some internet research reveals us that on this date a historic blizzard to
 <pre style="background-color:white"><code>Timestamp('2016-01-23 00:00:00', freq='D')
 </code></pre>
 
-
+A natural question to ask now is if the datetime range for the test set is the same. 
 
 ```python
 test_df.resample('D',on='pickup_datetime').count()['id'].plot(style='o-',c='green')
@@ -217,12 +217,11 @@ plt.xlabel('Pickup datetime')
 plt.show()
 ```
 
-
 ![png](images/nyc/output_11_0.png)
 
+Yes, it is indeed. These are good news, because it allow us to use algorithms as decision trees which are not well-suited if the time range was different.
 
-
-**Pickup longitude	& pickup latitude**
+**Pickup longitude & pickup latitude**
 
 
 ```python
