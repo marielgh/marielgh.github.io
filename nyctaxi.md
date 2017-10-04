@@ -146,7 +146,7 @@ memory usage: 111.3+ MB</code></pre>
 
 We see there are no missing values. Out target variable is *trip_duration*.
 
-On the documentation of the competition in Kaggle, we can find the following description for the dataset features.
+On the documentation of the competition in Kaggle, we can find the following description for the dataset features. In this exploratory data analysis we will explore each of them.
 
 **Data fields**
 - id - a unique identifier for each trip
@@ -160,9 +160,10 @@ On the documentation of the competition in Kaggle, we can find the following des
 - store_and_fwd_flag - this flag indicates whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a connection to the server - Y=store and forward; N=not a store and forward trip
 - trip_duration - duration of the trip in seconds
 
-We will explore each of them. 
 
 **Vendor id**
+
+The vendor id can be 1 or 2. 
 
 ```python
 train_df['vendor_id'].value_counts().sort_index().plot(kind='bar')
@@ -175,6 +176,8 @@ train_df['vendor_id'].value_counts().sort_index()/sum(train_df['vendor_id'].valu
 ```
 
 ![png](images/nyc/output_7_0.png)
+
+We calculate the percentage of trip records corresponding to each vendor.
 
 <pre style="background-color:white"><code>1    46.504973
 2    53.495027
