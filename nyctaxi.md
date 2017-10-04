@@ -325,6 +325,8 @@ where
 $$y_j = \text{Observed values}$$
 $$\hat{y}_j = \text{Predicted values}$$
 
+$$ \underset{w}{min\,} {|| X w - y||_2}^2 $$
+
 
 ```python
 np.log(train_df['trip_duration']).plot(kind='hist',bins=200,figsize=(15,5))
