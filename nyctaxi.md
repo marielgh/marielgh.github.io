@@ -517,7 +517,7 @@ plt.show()
 ```
 
 
-![png](images/nyc/output_10_0.png)
+![png](output_10_0.png)
 
 
 **Manhattan distance **
@@ -622,10 +622,10 @@ for i in np.arange(50):
         plt.annotate(i,xy=(x[i],y[i]),fontsize=10)    
 plt.xlim(-74.03, -73.75)
 plt.ylim(40.63, 40.85)
-plt.savefig('cluster_map-100.png', bbox_inches='tight',dpi=100)
-plt.savefig('cluster_map-300.png', bbox_inches='tight',dpi=300)
-plt.close
+plt.show()
 ```
+
+<a href="images/nyc/cluster_map-300.png" ><img src="images/nyc/cluster_map-100.png"/></a>
 
 ** counts per cluster and hour and weekday **
 
@@ -825,7 +825,7 @@ plt.show()
 ```
 
 
-![png](images/nyc/output_32_0.png)
+![png](output_32_0.png)
 
 
 
@@ -1160,7 +1160,7 @@ plt.show()
 ```
 
 
-![png](images/nyc/output_41_0.png)
+![png](output_41_0.png)
 
 
 
@@ -1452,7 +1452,7 @@ plt.show()
 ```
 
 
-![png](images/nyc/output_47_0.png)
+![png](output_47_0.png)
 
 
 
@@ -1488,5 +1488,5 @@ plt.show()
 ```
 
 
-![png](images/nyc/output_50_0.png)
+![png](correlation_map_100.png)
 
