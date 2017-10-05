@@ -1,9 +1,9 @@
 
-# School budgets  (multi-class-multi-label classification)
+## School budgets  (multi-class-multi-label classification)
 
 Objective is to predict the probability that a certain label is attached to a budget line item. Each row in the budget has mostly free-form text features, except for two that are noted as float. Any of the fields may or may not be empty.
 
-** Features **
+**Features**
 
 - FTE (float) - If an employee, the percentage of full-time that the employee works.
 - Facility_or_Department - If expenditure is tied to a department/facility, that department/facility.
@@ -22,7 +22,7 @@ Objective is to predict the probability that a certain label is attached to a bu
 - Text_4 - Any additional text supplied by the district.
 - Total (float) - The total cost of the expenditure.
 
-** Labels ** 
+**Labels**
     
 Function:
 
@@ -155,9 +155,6 @@ Use:
 - Pupil Services & Enrichment
 - Untracked Budget Set-Aside
 
-** Goal **
-Our goal is to predict a probability for each possible label in the dataset given a row of new data. Each of these probabilities goes in a separate column in the submission file. The submission must be 50064x104 where 50064 is the number of rows in the test dataset (excluding the header) and 104 is the number of columns (excluding a first column of row ids). The columns in the submission have the format : ColumnName__PossibleLabel
-
 
 ```python
 import pandas as pd
@@ -272,7 +269,7 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![png](images/boxplots/missing1.png)
 
 
 
@@ -282,11 +279,10 @@ plt.xlabel('Percentage of missing values')
 plt.show()
 ```
 
+![png](images/boxplots/missing2.png)
 
-![png](output_10_0.png)
 
-
-** y_train: dummy encoding of labels **
+**y_train: dummy encoding of labels**
 
 
 ```python
@@ -334,7 +330,7 @@ X_tr = X_tr.copy()
 X_val = X_val.copy()
 ```
 
-** Feature: FTE **
+**Feature: FTE**
 
 
 ```python
@@ -343,7 +339,7 @@ X_val.loc[:,'FTE'] = np.clip(X_val['FTE'],0,1)
 X_test.loc[:,'FTE'] = np.clip(X_test['FTE'],0,1)
 ```
 
-** Impute numeric columns and join text columns **
+**Impute numeric columns and join text columns**
 
 
 ```python
@@ -514,7 +510,7 @@ X_val.head()
 
 
 
-** NLP **
+**NLP**
 
 
 ```python
@@ -691,7 +687,7 @@ X_val.head()
 
 
 
-** Process text_data **
+**Process text_data**
 
 
 ```python
@@ -970,7 +966,7 @@ with open("train_vocab_select.txt", "w") as output:
      'youth title' 'yr' 'yr garage']
 
 
-** find similar **
+**find similar**
 
 
 ```python
@@ -1106,7 +1102,7 @@ print(Xt_test.shape)
     (50064, 1000)
 
 
-** Combine numeric and text data **
+**Combine numeric and text data**
 
 
 ```python
@@ -1128,7 +1124,7 @@ X_test = hstack([Xt_test,X_test_num])
     (50064, 1002)
 
 
-** MaxAbsScaler ** 
+**MaxAbsScaler**
 
 
 ```python
@@ -1158,7 +1154,7 @@ print(X_test.shape)
     (50064, 1002)
 
 
-** Modelling **
+**Modelling**
 
 
 ```python
@@ -1486,7 +1482,7 @@ print('\n'+str((t1 - t0).seconds/60)+' minutes')
     123.71666666666667 minutes
 
 
-** multi multi log loss **
+**multi multi log loss**
 
 
 ```python
