@@ -155,6 +155,9 @@ Use:
 - Pupil Services & Enrichment
 - Untracked Budget Set-Aside
 
+**Evaluation metric**
+$$Multi-multiclass log loss = \frac{1}{K}\sum_{k=1}^{K} \left[ - \frac{1}{N} \sum_{n=0}^{N} \sum_{c=1}^{C} y_{k, c, n} \log(\hat{y}_{k, c, n}) \right]$$ 
+
 
 ```python
 import pandas as pd
