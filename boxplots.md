@@ -172,10 +172,6 @@ print(df_train.info())
 print(df_test.info())
 ```
 
-    /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/IPython/core/interactiveshell.py:2698: DtypeWarning: Columns (5,11) have mixed types. Specify dtype option on import or set low_memory=False.
-      interactivity=interactivity, compiler=compiler, result=result)
-
-
     <class 'pandas.core.frame.DataFrame'>
     Int64Index: 400277 entries, 134338 to 415831
     Data columns (total 25 columns):
@@ -230,27 +226,6 @@ print(df_test.info())
     memory usage: 6.5+ MB
     None
 
-
-
-```python
-nolabels = ['FTE',
- 'Total',
- 'Object_Description',
- 'SubFund_Description',
- 'Job_Title_Description',
- 'Sub_Object_Description',
- 'Location_Description',
- 'Function_Description',
- 'Facility_or_Department',
- 'Position_Extra',
- 'Program_Description',
- 'Fund_Description',
- 'Text_1',
- 'Text_2',
- 'Text_3',
- 'Text_4',
-]
-```
 
 
 ```python
