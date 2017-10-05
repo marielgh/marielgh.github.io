@@ -1,7 +1,7 @@
 
 ## School budgets  (multi-class-multi-label classification)
 
-Objective is to predict the probability that a certain label is attached to a budget line item. Each row in the budget has mostly free-form text features, except for two that are noted as float. Any of the fields may or may not be empty.
+The **goal** is to predict the probability that a certain label is attached to a budget line item. Each row in the budget has mostly free-form text features, except for two that are noted as float. Any of the fields may or may not be empty.
 
 **Features**
 
@@ -156,7 +156,8 @@ Use:
 - Untracked Budget Set-Aside
 
 **Evaluation metric**
-$$Multi-multiclass log loss = \frac{1}{K}\sum_{k=1}^{K} \left[ - \frac{1}{N} \sum_{n=0}^{N} \sum_{c=1}^{C} y_{k, c, n} \log(\hat{y}_{k, c, n}) \right]$$ 
+
+Multi-multiclass log loss $$= \frac{1}{K}\sum_{k=1}^{K} \left[ - \frac{1}{N} \sum_{n=0}^{N} \sum_{c=1}^{C} y_{k, c, n} \log(\hat{y}_{k, c, n}) \right]$$ 
 
 
 ```python
