@@ -169,7 +169,7 @@ Multi-multiclass log loss $$= \frac{1}{K}\sum_{k=1}^{K} \left[ - \frac{1}{N} \su
 
 In this calculation, *K* is the number of dependent variables, *N* is the number of rows being evaluated, and *C* is the number of class values *k* can take on. 
 
-###Exploratory data analysis and preprocessing
+### Exploratory data analysis and preprocessing
 
 
 ```python
@@ -1145,7 +1145,7 @@ print(X_test.shape)
     (50064, 1002)
 
 
-###Modelling
+### Modelling
 
 
 ```python
