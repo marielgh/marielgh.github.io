@@ -1,6 +1,12 @@
 
 ## School budgets  (multi-class-multi-label classification)
 
+- [Problem description](#problem-description)
+- [Exploratory data analysis and preprocessing](#exploratory-data-analysis-and-preprocessing)
+- [Modelling](#modelling)
+
+### Problem description 
+
 The **goal** is to predict the probability that a certain label is attached to a budget line item. Each row in the budget has mostly free-form text features, except for two that are noted as float. Any of the fields may or may not be empty.
 
 **Features**
@@ -157,7 +163,13 @@ Use:
 
 **Evaluation metric**
 
+In this competition we have multiple variables, and each of these variables can take on one of multiple labels. The evaluation metric will be: 
+
 Multi-multiclass log loss $$= \frac{1}{K}\sum_{k=1}^{K} \left[ - \frac{1}{N} \sum_{n=0}^{N} \sum_{c=1}^{C} y_{k, c, n} \log(\hat{y}_{k, c, n}) \right]$$ 
+
+In this calculation, *K* is the number of dependent variables, *N* is the number of rows being evaluated, and *C* is the number of class values *k* can take on. 
+
+###Exploratory data analysis and preprocessing
 
 
 ```python
@@ -1133,7 +1145,7 @@ print(X_test.shape)
     (50064, 1002)
 
 
-**Modelling**
+###Modelling
 
 
 ```python
@@ -1195,7 +1207,7 @@ print('\n'+str((t1 - t0).seconds/60)+' minutes')
 ```
 
     
-    
+<pre style="background-color:white"><code>    
     Round 1:
     
     
@@ -1459,6 +1471,7 @@ print('\n'+str((t1 - t0).seconds/60)+' minutes')
     [0.192463, 0.067384, 0.047313, 0.092311, 0.030696, 0.110794, 0.153392, 0.099932, 0.168922]
     
     123.71666666666667 minutes
+	</code></pre>
 
 
 **multi multi log loss**
@@ -1468,13 +1481,8 @@ print('\n'+str((t1 - t0).seconds/60)+' minutes')
 from multiloss import *
 
 print(multimultiloss(y_val.values,pred_prob_val))
-print(multimultiloss(y_val.values,pred_prob_val2))
 ```
+<pre style="background-color:white"><code>
+0.107023050371</code></pre>
 
-    [ 0.19246346  0.06738434  0.04731264  0.09231058  0.03069647  0.11079395
-      0.15339215  0.09993167  0.16892221]
-    0.107023050371
-    [ 0.1924602   0.06738393  0.04731239  0.0923099   0.03069594  0.1107928
-      0.15339097  0.09993061  0.16891682]
-    0.107021508256
 
