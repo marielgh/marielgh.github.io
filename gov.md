@@ -69,8 +69,8 @@ These contracts are mutually binding agreements between the federal government a
 9594, Court Services and offender Supervision Agency
 9700, Department of Defense</code></pre>
 </details>
-<br>
 
+<br style="line-height:0.5cm;" />
 
 ```python
 dep = ['9700', '4700', '1500', '3600', '1400', '1200']
