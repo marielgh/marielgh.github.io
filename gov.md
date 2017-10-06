@@ -6,8 +6,8 @@ These contracts are mutually binding agreements between the federal government a
 ###  Contracts per agency
 
 <details>
-	<summary>Click to see the complete list of agencies</summary>
-	<pre style="background-color:white"><code>ind_agency,name_agency
+<summary>Click to see the complete list of agencies</summary>
+<pre style="background-color:white"><code>ind_agency,name_agency
 1100, Executive Office of the President
 1145, Peace Corps
 1153, Trade and Development Agency
@@ -70,7 +70,7 @@ These contracts are mutually binding agreements between the federal government a
 9700, Department of Defense</code></pre>
 </details>
 
-<br style="line-height:2px;" />
+<br style="line-height:0.5px;" />
 
 ```python
 dep = ['9700', '4700', '1500', '3600', '1400', '1200']
