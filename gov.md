@@ -7,7 +7,7 @@ These contracts are mutually binding agreements between the federal government a
 
 <details>
 <summary>Click to see the complete list of agencies</summary>
-<pre style="background-color:white";><code>ind_agency,name_agency
+<pre style="background-color:white"><code>ind_agency,name_agency
 1100, Executive Office of the President
 1145, Peace Corps
 1153, Trade and Development Agency
@@ -110,4 +110,5 @@ for df in list_df:
 **Percentage of contracts per state over time**
 
 <video src="videos/states.mp4" poster="videos/poster-states.png" style="max-width:100%" controls preload></video>
+
 
