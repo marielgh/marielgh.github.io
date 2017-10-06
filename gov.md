@@ -5,21 +5,6 @@ These contracts are mutually binding agreements between the federal government a
 
 ###  Contracts per agency
 
-<style>
-    summary {
-        font-weight: normal;
-        font-size: 1em;
-        font-family: 'adobe-clean','HelveticaNeue',Helvetica,Arial,sans-serif;
-    }
-    
-    p {
-        font-family: 'adobe-clean','HelveticaNeue',Helvetica,Arial,sans-serif;      
-    }
-    
-    details {
-        margin-bottom: 20px;    
-    }
-</style>
 
 <details>
 <summary>Click to see the complete list of agencies</summary>
