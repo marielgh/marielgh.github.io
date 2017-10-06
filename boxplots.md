@@ -7,7 +7,7 @@
 
 ### Problem description 
 
-The **goal** is to predict the probability that a certain label is attached to a budget line item. Each row in the budget has mostly free-form text features, except for two that are noted as float. Any of the fields may or may not be empty.
+The goal is to predict the probability that a certain label is attached to a budget line item. Each row in the budget has mostly free-form text features, except for two that are noted as float. Any of the fields may or may not be empty.
 
 **Features**
 
@@ -242,13 +242,7 @@ plt.show()
 
 ![png](images/boxplots/missing1.png)
 
-
-
-```python
-((X_test.isnull().sum())/X_test.shape[0]*100).plot(kind='barh')
-plt.xlabel('Percentage of missing values')
-plt.show()
-```
+We do the same for the test set.
 
 ![png](images/boxplots/missing2.png)
 
@@ -290,9 +284,7 @@ y_tr.sum().min()
 
 
 
-<pre style="background-color:white"><code>
-    24
-</code></pre>
+<pre style="background-color:white"><code>24</code></pre>
 
 
 
@@ -861,7 +853,7 @@ with open("train_vocab_select.txt", "w") as output:
      'youth title' 'yr' 'yr garage']
 
 
-**find similar**
+**Find similar words**
 
 
 ```python
@@ -948,10 +940,6 @@ print(features_new_test)
 with open("test_vs_train.txt", "w") as output:
     for i in features_new_test:
         output.write(i+'\n')
-                
-#selected_features_missing = set(features_train_selected)-set(features_test)
-#print(len(selected_features_missing))
-#print(selected_features_missing)
 ```
 
     (1145,)
@@ -986,7 +974,6 @@ Xt_test = count_train.transform(X_test['text_data'])
 
 Xt_val = kbest.transform(Xt_val)
 Xt_test = kbest.transform(Xt_test)
-
 ```
 
 
@@ -1036,8 +1023,7 @@ print(X_test.shape)
 (320221, 104)
 (80056, 1002)
 (80056, 104)
-(50064, 1002)
-	</code></pre>
+(50064, 1002)</code></pre>
 
 
 ### Modelling
@@ -1100,12 +1086,10 @@ print('\n'+str((t1 - t0).seconds/60)+' minutes')
 ```
 
     
-<pre style="background-color:white"><code>    
-
-    scores = [0.192463, 0.067384, 0.047313, 0.092311, 0.030696, 0.110794, 0.153392, 0.099932, 0.168922]
+<pre style="background-color:white"><code>scores = [0.192463, 0.067384, 0.047313, 0.092311, 0.030696, 0.110794, 0.153392, 0.099932, 0.168922]
     
-    123.71666666666667 minutes
-	</code></pre>
+123.71666666666667 minutes
+</code></pre>
 
 
 **Evaluation metric**
@@ -1116,7 +1100,6 @@ from multiloss import *
 
 print(multimultiloss(y_val.values,pred_prob_val))
 ```
-<pre style="background-color:white"><code>
-0.107023050371</code></pre>
+<pre style="background-color:white"><code>0.107023050371</code></pre>
 
 
