@@ -7,8 +7,8 @@ These contracts are mutually binding agreements between the federal government a
 
 <style>
     summary {
-        font-weight: bold;
-        font-size: 2em;
+        font-weight: normal;
+        font-size: 1em;
         font-family: 'adobe-clean','HelveticaNeue',Helvetica,Arial,sans-serif;
     }
     
