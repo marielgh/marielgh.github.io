@@ -188,7 +188,8 @@ print(df_train.info())
 print(df_test.info())
 ```
 
-    <class 'pandas.core.frame.DataFrame'>
+<pre style="background-color:white"><code>
+	<class 'pandas.core.frame.DataFrame'>
     Int64Index: 400277 entries, 134338 to 415831
     Data columns (total 25 columns):
     Function                  400277 non-null object
@@ -219,28 +220,7 @@ print(df_test.info())
     dtypes: float64(2), object(23)
     memory usage: 79.4+ MB
     None
-    <class 'pandas.core.frame.DataFrame'>
-    Int64Index: 50064 entries, 180042 to 249087
-    Data columns (total 16 columns):
-    Object_Description        48330 non-null object
-    Program_Description       44811 non-null object
-    SubFund_Description       16111 non-null object
-    Job_Title_Description     32317 non-null object
-    Facility_or_Department    2839 non-null object
-    Sub_Object_Description    33612 non-null object
-    Location_Description      37316 non-null object
-    FTE                       19605 non-null float64
-    Function_Description      46866 non-null object
-    Position_Extra            13813 non-null object
-    Text_4                    2814 non-null object
-    Total                     49404 non-null float64
-    Text_2                    4641 non-null object
-    Text_3                    9486 non-null object
-    Fund_Description          39586 non-null object
-    Text_1                    15378 non-null object
-    dtypes: float64(2), object(14)
-    memory usage: 6.5+ MB
-    None
+</code></pre>
 
 
 
@@ -310,9 +290,9 @@ y_tr.sum().min()
 
 
 
-
+<pre style="background-color:white"><code>
     24
-
+</code></pre>
 
 
 
@@ -371,22 +351,6 @@ X_tr.head()
 ```
 
 
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -429,8 +393,6 @@ X_tr.head()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 
@@ -440,21 +402,6 @@ X_val.head()
 
 
 
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -497,7 +444,7 @@ X_val.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 
 
@@ -524,22 +471,12 @@ def nlp(s):
 
 
 ```python
-t0 = dt.datetime.now()
-
 X_tr['text_data'] = X_tr['text_data'].apply(nlp)
 print('done NLP train')
 X_val['text_data'] = X_val['text_data'].apply(nlp)
 print('done NLP validation')
 X_test['text_data'] = X_test['text_data'].apply(nlp)
-
-t1 = dt.datetime.now()
-print('\n'+str((t1 - t0).seconds/60)+' minutes')
 ```
-
-    done NLP train
-    done NLP validation
-    
-    0.9 minutes
 
 
 
@@ -549,21 +486,6 @@ X_tr.head()
 
 
 
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -606,7 +528,6 @@ X_tr.head()
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -616,22 +537,6 @@ X_val.head()
 ```
 
 
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -674,7 +579,6 @@ X_val.head()
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -1083,14 +987,8 @@ Xt_test = count_train.transform(X_test['text_data'])
 Xt_val = kbest.transform(Xt_val)
 Xt_test = kbest.transform(Xt_test)
 
-print(Xt_tr.shape)
-print(Xt_val.shape)
-print(Xt_test.shape)
 ```
 
-    (320221, 1000)
-    (80056, 1000)
-    (50064, 1000)
 
 
 **Combine numeric and text data**
@@ -1109,10 +1007,6 @@ X_val = hstack([Xt_val,X_val_num])
 X_test_num = sparse.csr_matrix(X_test[num_columns].values)
 X_test = hstack([Xt_test,X_test_num])
 ```
-
-    (320221, 1002)
-    (80056, 1002)
-    (50064, 1002)
 
 
 **MaxAbsScaler**
@@ -1138,11 +1032,12 @@ print(y_val.shape)
 print(X_test.shape)
 ```
 
-    (320221, 1002)
-    (320221, 104)
-    (80056, 1002)
-    (80056, 104)
-    (50064, 1002)
+<pre style="background-color:white"><code>(320221, 1002)
+(320221, 104)
+(80056, 1002)
+(80056, 104)
+(50064, 1002)
+	</code></pre>
 
 
 ### Modelling
@@ -1199,282 +1094,21 @@ for i in np.arange(9):
     
 t1 = dt.datetime.now()
 
-print(opt_params)
-
-print(scores)
+print("scores = {}".format(scores))
 
 print('\n'+str((t1 - t0).seconds/60)+' minutes')
 ```
 
     
 <pre style="background-color:white"><code>    
-    Round 1:
-    
-    
-    [0]	train-mlogloss:1.83189	valid-mlogloss:1.8447
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.695993	valid-mlogloss:0.703255
-    [20]	train-mlogloss:0.462728	valid-mlogloss:0.468333
-    [30]	train-mlogloss:0.373847	valid-mlogloss:0.37963
-    [40]	train-mlogloss:0.323967	valid-mlogloss:0.329918
-    [50]	train-mlogloss:0.294816	valid-mlogloss:0.300973
-    [60]	train-mlogloss:0.272547	valid-mlogloss:0.279186
-    [70]	train-mlogloss:0.257236	valid-mlogloss:0.264195
-    [80]	train-mlogloss:0.245271	valid-mlogloss:0.2528
-    [90]	train-mlogloss:0.234834	valid-mlogloss:0.242691
-    [100]	train-mlogloss:0.225999	valid-mlogloss:0.234173
-    [110]	train-mlogloss:0.218523	valid-mlogloss:0.227144
-    [120]	train-mlogloss:0.212077	valid-mlogloss:0.221059
-    [130]	train-mlogloss:0.206698	valid-mlogloss:0.21604
-    [140]	train-mlogloss:0.201852	valid-mlogloss:0.211608
-    [150]	train-mlogloss:0.197371	valid-mlogloss:0.207527
-    [160]	train-mlogloss:0.193158	valid-mlogloss:0.20364
-    [170]	train-mlogloss:0.189474	valid-mlogloss:0.200267
-    [180]	train-mlogloss:0.186184	valid-mlogloss:0.197283
-    [190]	train-mlogloss:0.183197	valid-mlogloss:0.194778
-    [199]	train-mlogloss:0.180511	valid-mlogloss:0.192463
-    
-    
-    Round 2:
-    
-    
-    [0]	train-mlogloss:1.71356	valid-mlogloss:1.71445
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.51052	valid-mlogloss:0.51381
-    [20]	train-mlogloss:0.283994	valid-mlogloss:0.287166
-    [30]	train-mlogloss:0.203949	valid-mlogloss:0.206559
-    [40]	train-mlogloss:0.16047	valid-mlogloss:0.162981
-    [50]	train-mlogloss:0.134928	valid-mlogloss:0.137256
-    [60]	train-mlogloss:0.117562	valid-mlogloss:0.119893
-    [70]	train-mlogloss:0.106343	valid-mlogloss:0.108755
-    [80]	train-mlogloss:0.098102	valid-mlogloss:0.100658
-    [90]	train-mlogloss:0.091924	valid-mlogloss:0.094463
-    [100]	train-mlogloss:0.08695	valid-mlogloss:0.089491
-    [110]	train-mlogloss:0.082835	valid-mlogloss:0.085541
-    [120]	train-mlogloss:0.07973	valid-mlogloss:0.08257
-    [130]	train-mlogloss:0.076884	valid-mlogloss:0.079867
-    [140]	train-mlogloss:0.074152	valid-mlogloss:0.077248
-    [150]	train-mlogloss:0.071887	valid-mlogloss:0.075129
-    [160]	train-mlogloss:0.069972	valid-mlogloss:0.073379
-    [170]	train-mlogloss:0.067973	valid-mlogloss:0.071514
-    [180]	train-mlogloss:0.066306	valid-mlogloss:0.069886
-    [190]	train-mlogloss:0.064885	valid-mlogloss:0.068582
-    [199]	train-mlogloss:0.063557	valid-mlogloss:0.067384
-    
-    
-    Round 3:
-    
-    
-    [0]	train-mlogloss:0.869076	valid-mlogloss:0.869651
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.210947	valid-mlogloss:0.21284
-    [20]	train-mlogloss:0.116852	valid-mlogloss:0.118408
-    [30]	train-mlogloss:0.090686	valid-mlogloss:0.091979
-    [40]	train-mlogloss:0.078855	valid-mlogloss:0.080028
-    [50]	train-mlogloss:0.072176	valid-mlogloss:0.073395
-    [60]	train-mlogloss:0.06763	valid-mlogloss:0.068735
-    [70]	train-mlogloss:0.064361	valid-mlogloss:0.065412
-    [80]	train-mlogloss:0.061189	valid-mlogloss:0.062174
-    [90]	train-mlogloss:0.05898	valid-mlogloss:0.059972
-    [100]	train-mlogloss:0.057177	valid-mlogloss:0.058201
-    [110]	train-mlogloss:0.055187	valid-mlogloss:0.056235
-    [120]	train-mlogloss:0.053674	valid-mlogloss:0.054717
-    [130]	train-mlogloss:0.052336	valid-mlogloss:0.053367
-    [140]	train-mlogloss:0.05121	valid-mlogloss:0.052274
-    [150]	train-mlogloss:0.050078	valid-mlogloss:0.051187
-    [160]	train-mlogloss:0.049006	valid-mlogloss:0.050152
-    [170]	train-mlogloss:0.048225	valid-mlogloss:0.049409
-    [180]	train-mlogloss:0.047369	valid-mlogloss:0.048521
-    [190]	train-mlogloss:0.046669	valid-mlogloss:0.047868
-    [199]	train-mlogloss:0.046074	valid-mlogloss:0.047313
-    
-    
-    Round 4:
-    
-    
-    [0]	train-mlogloss:1.81125	valid-mlogloss:1.81307
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.552062	valid-mlogloss:0.554879
-    [20]	train-mlogloss:0.307052	valid-mlogloss:0.309735
-    [30]	train-mlogloss:0.225357	valid-mlogloss:0.227455
-    [40]	train-mlogloss:0.184634	valid-mlogloss:0.186465
-    [50]	train-mlogloss:0.162026	valid-mlogloss:0.163958
-    [60]	train-mlogloss:0.147728	valid-mlogloss:0.149749
-    [70]	train-mlogloss:0.135598	valid-mlogloss:0.137862
-    [80]	train-mlogloss:0.127325	valid-mlogloss:0.129841
-    [90]	train-mlogloss:0.120695	valid-mlogloss:0.123422
-    [100]	train-mlogloss:0.114898	valid-mlogloss:0.117693
-    [110]	train-mlogloss:0.110466	valid-mlogloss:0.113422
-    [120]	train-mlogloss:0.106526	valid-mlogloss:0.109667
-    [130]	train-mlogloss:0.103268	valid-mlogloss:0.106579
-    [140]	train-mlogloss:0.100305	valid-mlogloss:0.103794
-    [150]	train-mlogloss:0.097507	valid-mlogloss:0.101175
-    [160]	train-mlogloss:0.095114	valid-mlogloss:0.098945
-    [170]	train-mlogloss:0.093045	valid-mlogloss:0.097068
-    [180]	train-mlogloss:0.091057	valid-mlogloss:0.095257
-    [190]	train-mlogloss:0.089385	valid-mlogloss:0.093739
-    [199]	train-mlogloss:0.087787	valid-mlogloss:0.092311
-    
-    
-    Round 5:
-    
-    
-    [0]	train-mlogloss:0.867108	valid-mlogloss:0.86706
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.192972	valid-mlogloss:0.193516
-    [20]	train-mlogloss:0.096586	valid-mlogloss:0.096969
-    [30]	train-mlogloss:0.071443	valid-mlogloss:0.071777
-    [40]	train-mlogloss:0.059419	valid-mlogloss:0.059565
-    [50]	train-mlogloss:0.051957	valid-mlogloss:0.051986
-    [60]	train-mlogloss:0.04686	valid-mlogloss:0.046802
-    [70]	train-mlogloss:0.043325	valid-mlogloss:0.043278
-    [80]	train-mlogloss:0.040881	valid-mlogloss:0.0408
-    [90]	train-mlogloss:0.038726	valid-mlogloss:0.038674
-    [100]	train-mlogloss:0.036999	valid-mlogloss:0.036998
-    [110]	train-mlogloss:0.035732	valid-mlogloss:0.035792
-    [120]	train-mlogloss:0.034726	valid-mlogloss:0.034868
-    [130]	train-mlogloss:0.033799	valid-mlogloss:0.03402
-    [140]	train-mlogloss:0.033036	valid-mlogloss:0.033347
-    [150]	train-mlogloss:0.03234	valid-mlogloss:0.032698
-    [160]	train-mlogloss:0.031824	valid-mlogloss:0.032259
-    [170]	train-mlogloss:0.031277	valid-mlogloss:0.031777
-    [180]	train-mlogloss:0.030778	valid-mlogloss:0.031326
-    [190]	train-mlogloss:0.030419	valid-mlogloss:0.031032
-    [199]	train-mlogloss:0.030025	valid-mlogloss:0.030696
-    
-    
-    Round 6:
-    
-    
-    [0]	train-mlogloss:0.954778	valid-mlogloss:0.955099
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.437242	valid-mlogloss:0.438067
-    [20]	train-mlogloss:0.313599	valid-mlogloss:0.314242
-    [30]	train-mlogloss:0.254341	valid-mlogloss:0.254987
-    [40]	train-mlogloss:0.220908	valid-mlogloss:0.221693
-    [50]	train-mlogloss:0.199904	valid-mlogloss:0.200768
-    [60]	train-mlogloss:0.184353	valid-mlogloss:0.185367
-    [70]	train-mlogloss:0.173047	valid-mlogloss:0.174017
-    [80]	train-mlogloss:0.163112	valid-mlogloss:0.164025
-    [90]	train-mlogloss:0.154151	valid-mlogloss:0.155072
-    [100]	train-mlogloss:0.147522	valid-mlogloss:0.14858
-    [110]	train-mlogloss:0.141823	valid-mlogloss:0.142757
-    [120]	train-mlogloss:0.136913	valid-mlogloss:0.137833
-    [130]	train-mlogloss:0.131553	valid-mlogloss:0.132553
-    [140]	train-mlogloss:0.127283	valid-mlogloss:0.128321
-    [150]	train-mlogloss:0.123489	valid-mlogloss:0.124493
-    [160]	train-mlogloss:0.120327	valid-mlogloss:0.121382
-    [170]	train-mlogloss:0.117566	valid-mlogloss:0.11866
-    [180]	train-mlogloss:0.114854	valid-mlogloss:0.115947
-    [190]	train-mlogloss:0.11164	valid-mlogloss:0.112748
-    [199]	train-mlogloss:0.109665	valid-mlogloss:0.110794
-    
-    
-    Round 7:
-    
-    
-    [0]	train-mlogloss:1.33327	valid-mlogloss:1.3335
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.569265	valid-mlogloss:0.568829
-    [20]	train-mlogloss:0.401161	valid-mlogloss:0.400819
-    [30]	train-mlogloss:0.331677	valid-mlogloss:0.331406
-    [40]	train-mlogloss:0.289329	valid-mlogloss:0.288929
-    [50]	train-mlogloss:0.263074	valid-mlogloss:0.262719
-    [60]	train-mlogloss:0.244071	valid-mlogloss:0.243621
-    [70]	train-mlogloss:0.229372	valid-mlogloss:0.228851
-    [80]	train-mlogloss:0.217543	valid-mlogloss:0.217054
-    [90]	train-mlogloss:0.207569	valid-mlogloss:0.20711
-    [100]	train-mlogloss:0.198864	valid-mlogloss:0.198477
-    [110]	train-mlogloss:0.192391	valid-mlogloss:0.192096
-    [120]	train-mlogloss:0.186143	valid-mlogloss:0.185908
-    [130]	train-mlogloss:0.180806	valid-mlogloss:0.180689
-    [140]	train-mlogloss:0.175709	valid-mlogloss:0.175692
-    [150]	train-mlogloss:0.171196	valid-mlogloss:0.171183
-    [160]	train-mlogloss:0.166892	valid-mlogloss:0.166954
-    [170]	train-mlogloss:0.162734	valid-mlogloss:0.162839
-    [180]	train-mlogloss:0.15927	valid-mlogloss:0.159593
-    [190]	train-mlogloss:0.155926	valid-mlogloss:0.156388
-    [199]	train-mlogloss:0.152871	valid-mlogloss:0.153392
-    
-    
-    Round 8:
-    
-    
-    [0]	train-mlogloss:1.65386	valid-mlogloss:1.65543
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.529184	valid-mlogloss:0.53424
-    [20]	train-mlogloss:0.319581	valid-mlogloss:0.325238
-    [30]	train-mlogloss:0.246304	valid-mlogloss:0.252363
-    [40]	train-mlogloss:0.210337	valid-mlogloss:0.216095
-    [50]	train-mlogloss:0.18524	valid-mlogloss:0.190788
-    [60]	train-mlogloss:0.169223	valid-mlogloss:0.174726
-    [70]	train-mlogloss:0.155227	valid-mlogloss:0.160643
-    [80]	train-mlogloss:0.145104	valid-mlogloss:0.150405
-    [90]	train-mlogloss:0.136828	valid-mlogloss:0.142209
-    [100]	train-mlogloss:0.129524	valid-mlogloss:0.134875
-    [110]	train-mlogloss:0.123576	valid-mlogloss:0.128932
-    [120]	train-mlogloss:0.118346	valid-mlogloss:0.123676
-    [130]	train-mlogloss:0.113878	valid-mlogloss:0.11912
-    [140]	train-mlogloss:0.110354	valid-mlogloss:0.115557
-    [150]	train-mlogloss:0.1065	valid-mlogloss:0.111701
-    [160]	train-mlogloss:0.103781	valid-mlogloss:0.109081
-    [170]	train-mlogloss:0.100798	valid-mlogloss:0.106205
-    [180]	train-mlogloss:0.098499	valid-mlogloss:0.103994
-    [190]	train-mlogloss:0.096311	valid-mlogloss:0.101824
-    [199]	train-mlogloss:0.09444	valid-mlogloss:0.099932
-    
-    
-    Round 9:
-    
-    
-    [0]	train-mlogloss:1.63653	valid-mlogloss:1.63994
-    Multiple eval metrics have been passed: 'valid-mlogloss' will be used for early stopping.
-    
-    Will train until valid-mlogloss hasn't improved in 20 rounds.
-    [10]	train-mlogloss:0.643074	valid-mlogloss:0.651387
-    [20]	train-mlogloss:0.433549	valid-mlogloss:0.442204
-    [30]	train-mlogloss:0.348896	valid-mlogloss:0.357313
-    [40]	train-mlogloss:0.301434	valid-mlogloss:0.309171
-    [50]	train-mlogloss:0.27382	valid-mlogloss:0.281547
-    [60]	train-mlogloss:0.254183	valid-mlogloss:0.262071
-    [70]	train-mlogloss:0.239157	valid-mlogloss:0.247
-    [80]	train-mlogloss:0.227133	valid-mlogloss:0.234914
-    [90]	train-mlogloss:0.217452	valid-mlogloss:0.225287
-    [100]	train-mlogloss:0.209509	valid-mlogloss:0.217383
-    [110]	train-mlogloss:0.201956	valid-mlogloss:0.209807
-    [120]	train-mlogloss:0.195389	valid-mlogloss:0.203268
-    [130]	train-mlogloss:0.188818	valid-mlogloss:0.196734
-    [140]	train-mlogloss:0.183668	valid-mlogloss:0.191683
-    [150]	train-mlogloss:0.179504	valid-mlogloss:0.187592
-    [160]	train-mlogloss:0.174763	valid-mlogloss:0.182827
-    [170]	train-mlogloss:0.170457	valid-mlogloss:0.178577
-    [180]	train-mlogloss:0.166788	valid-mlogloss:0.174985
-    [190]	train-mlogloss:0.163264	valid-mlogloss:0.171625
-    [199]	train-mlogloss:0.160436	valid-mlogloss:0.168922
-    {'booster': 'gbtree', 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'learning_rate': 0.2, 'n_estimators': 1000, 'colsample_bytree': 0.3, 'max_depth': 5, 'min_child_weight': 32, 'reg_lambda': 1, 'subsample': 0.9, 'n_jobs': 1, 'silent': True, 'num_class': 8}
-    [0.192463, 0.067384, 0.047313, 0.092311, 0.030696, 0.110794, 0.153392, 0.099932, 0.168922]
+
+    scores = [0.192463, 0.067384, 0.047313, 0.092311, 0.030696, 0.110794, 0.153392, 0.099932, 0.168922]
     
     123.71666666666667 minutes
 	</code></pre>
 
 
-**multi multi log loss**
+**Evaluation metric**
 
 
 ```python
