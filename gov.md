@@ -70,7 +70,7 @@ These contracts are mutually binding agreements between the federal government a
 9700, Department of Defense</code></pre>
 </details>
 
-<br style="line-height:0.1px"/>
+<div style="height:1px;">&nbsp;</div>
 
 ```python
 dep = ['9700', '4700', '1500', '3600', '1400', '1200']
