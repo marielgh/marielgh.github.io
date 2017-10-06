@@ -97,6 +97,10 @@ for df in list_df:
 
 **Percentage of contracts per agency**
 
+```
+
+```
+
 <a href="images/gov/percentage_contracts_per_agency-100.png" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
 
 **Percentage of budget per agency**
