@@ -17,7 +17,7 @@ These contracts are mutually binding agreements between the federal government a
     }
     
     details {
-        margin-bottom: 10px;    
+        margin-bottom: 20px;    
     }
 </style>
 
