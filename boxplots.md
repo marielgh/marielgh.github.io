@@ -1,5 +1,5 @@
 
-## School budgets  (multi-class-multi-label classification)
+## School budgets 
 
 - [Problem description](#problem-description)
 - [Exploratory data analysis and preprocessing](#exploratory-data-analysis-and-preprocessing)
@@ -7,7 +7,7 @@
 
 ### Problem description 
 
-The goal is to predict the probability that a certain label is attached to a budget line item. Each row in the budget has mostly free-form text features, except for two that are noted as float. Any of the fields may or may not be empty.
+The goal is to predict the probability that a certain label is attached to a budget line item. For each budget item, 9 labels need to be attached from a collection of predefined labels. Thus, this is a **multi-class-multi-label classification** problem. Each row in the budget has mostly free-form text features, except for two that are noted as float. Any of the fields may or may not be empty.
 
 **Features**
 

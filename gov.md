@@ -1,5 +1,9 @@
+## Government Spending Contracts
 
-[Dataset source](https://public.enigma.com/browse/u-s-government-spending-contracts/1a932abc-8398-47ff-ad33-d1eb9a8958cc)
+The Government Spending Contracts dataset includes over 15 years of contracts, from 2000-2016, with the federal government. The data is publicly available at https://www.usaspending.gov and [here](https://public.enigma.com/browse/u-s-government-spending-contracts/1a932abc-8398-47ff-ad33-d1eb9a8958cc).
+These contracts are mutually binding agreements between the federal government and another party (the seller) that obligates the seller to furnish supplies and services for the direct benefit of the government and obligates the government to pay for these services.
+
+###  Contracts per agency
 
 <pre style="background-color:white"><code>ind_agency,name_agency
 1100, Executive Office of the President
@@ -85,14 +89,18 @@ for df in list_df:
 ```
 
 
-Plots: 
+**Percentage of contracts per agency**
 
 <a href="images/gov/percentage_contracts_per_agency-100.png" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
 
+**Percentage of budget per agency**
 
 <a href="images/gov/percentage_budget_per_agency-100.png" ><img src="images/gov/percentage_budget_per_agency-75.png"/></a>
 
 
-Video:
+###  Contracts per state
+
+
+**Percentage of contracts per state over time**
 
 <video src="videos/states.mp4" poster="videos/poster-states.png" style="max-width:100%" controls preload></video>
