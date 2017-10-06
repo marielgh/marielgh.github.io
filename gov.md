@@ -7,7 +7,7 @@ These contracts are mutually binding agreements between the federal government a
 
 <details>
 <summary>Click to see the complete list of agencies</summary>
-<pre style="background-color:white";>ind_agency,name_agency
+<pre style="background-color:white";><code>ind_agency,name_agency
 1100, Executive Office of the President
 1145, Peace Corps
 1153, Trade and Development Agency
@@ -67,7 +67,7 @@ These contracts are mutually binding agreements between the federal government a
 9568, Broadcasting Board of Governors
 9577, Corporation for National and Community Service
 9594, Court Services and offender Supervision Agency
-9700, Department of Defense</pre>
+9700, Department of Defense</code></pre>
 </details>
 
 <td style="padding-top: 2px;">&nbsp;</td>
