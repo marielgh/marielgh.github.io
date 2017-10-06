@@ -2,66 +2,67 @@
 [Dataset source](https://public.enigma.com/browse/u-s-government-spending-contracts/1a932abc-8398-47ff-ad33-d1eb9a8958cc)
 
 <pre style="background-color:white"><code>ind_agency,name_agency
-1100, Executive Office of the President
-1145, Peace Corps
-1153, Trade and Development Agency
-1200, Department of Agriculture
-1300, Department of Commerce
-1400, Department of the Interior 
-1500, Department of Justice
-1600, Department of Labor
-1900, Department of State
-2000, Department of the Treasury
-2400, Office of Personnel Management
-2700, Federal Communications Commission
-2800, Social Security Administration
-2900, Federal Trade Commission
-3100, Nuclear Regulatory Commission
-3300, Smithsonian Institution
-3352, J. F. Kennedy Center for the Performing Arts
-3355, National Gallery of Art
-3400, International Trade Commission
-3600, Department of Veterans Affairs
-4100, Merit Systems Protection Board
-4500, Equal Employment Opportunity Commission
-4700, General Services Administration
-4900, National Science Foundation
-5000, Securities and Exchange Commission
-5800, Federal Emergency Management Agency
-5900, National Foundation on the Arts and the Humanities
-5920, National Endowment for the Arts
-5940, National Endowment for the Humanities
-6000, Railroad Retirement Board
-6100, Consumer Product Safety Commission
-6300, National Labor Relations Board
-6400, Tennessee Valley Authority
-6500, Federal Maritime Commission
-6800, Environmental Protection Agency
-6900, Department of Transportation
-7000, Department of Homeland Security 
-7200, Agency for International Development
-7300, Small Business Administration
-7400, American Battle Monuments Commission
-7500, Department of Health and Human Services
-8000, National Aeronautics and Space Administration
-8400, United States Soldiers' and Airmen's Home
-84af, Armed forces Retirement Home
-8600, Department of Housing and Urban Development
-8800, National Archives and Records Administration
-8900, Department of Energy
-8961, Federal Energy Regulatory Commission
-9000, Selective Service System
-9100, Department of Education
-9506, Federal Election Commission
-9514, Occupational Safety and Health Review Commission
-9516, Defense Nuclear Facilities Safety Board
-9517, Commission on Civil Rights
-9524, National Mediation Board
-9531, United States Holocaust Memorial Museum
-9568, Broadcasting Board of Governors
-9577, Corporation for National and Community Service
-9594, Court Services and offender Supervision Agency
-9700, Department of Defense</code></pre>
+1100,EXECUTIVE OFFICE OF THE PRESIDENT
+1145,PEACE CORPS
+1153,TRADE AND DEVELOPMENT AGENCY
+1200,Department of Agriculture
+1300,Department of Commerce
+1400,Department of the Interior 
+1500,Department of Justice
+1600,Department of Labor
+1900,Department of State
+2000,Department of the Treasury
+2400,Office of Personnel Management
+2700,FEDERAL COMMUNICATIONS COMMISSION
+2800,SOCIAL SECURITY ADMINISTRATION
+2900,FEDERAL TRADE COMMISSION
+3100,NUCLEAR REGULATORY COMMISSION
+3300,SMITHSONIAN INSTITUTION
+3352,J. F. KENNEDY CENTER FOR THE PERFORMING ARTS
+3355,NATIONAL GALLERY OF ART
+3400,INTERNATIONAL TRADE COMMISSION
+3600,Department of Veterans Affairs
+4100,MERIT SYSTEMS PROTECTION BOARD
+4500,EQUAL EMPLOYMENT OPPORTUNITY COMMISSION
+4700,GENERAL SERVICES ADMINISTRATION
+4900,NATIONAL SCIENCE FOUNDATION
+5000,SECURITIES AND EXCHANGE COMMISSION
+5800,FEDERAL EMERGENCY MANAGEMENT AGENCY
+5900,National Foundation on the Arts and the Humanities
+5920,NATIONAL ENDOWMENT FOR THE ARTS
+5940,NATIONAL ENDOWMENT FOR THE HUMANITIES
+6000,RAILROAD RETIREMENT BOARD
+6100,CONSUMER PRODUCT SAFETY COMMISSION
+6300,NATIONAL LABOR RELATIONS BOARD
+6400,TENNESSEE VALLEY AUTHORITY
+6500,FEDERAL MARITIME COMMISSION
+6800,ENVIRONMENTAL PROTECTION AGENCY
+6900,Department of Transportation
+7000,DEPARTMENT OF HOMELAND SECURITY 
+7200,AGENCY FOR INTERNATIONAL DEVELOPMENT
+7300,SMALL BUSINESS ADMINISTRATION
+7400,AMERICAN BATTLE MONUMENTS COMMISSION
+7500,Department of Health and Human Services
+8000,NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+8400,United States Soldiers' and Airmen's Home
+84AF,ARMED FORCES RETIREMENT HOME
+8600,Department of Housing and Urban Development
+8800,NATIONAL ARCHIVES AND RECORDS ADMINISTRATION
+8900,Department of Energy
+8961,FEDERAL ENERGY REGULATORY COMMISSION
+9000,SELECTIVE SERVICE SYSTEM
+9100,Department of Education
+9506,FEDERAL ELECTION COMMISSION
+9514,OCCUPATIONAL SAFETY AND HEALTH REVIEW COMMISSION
+9516,DEFENSE NUCLEAR FACILITIES SAFETY BOARD
+9517,COMMISSION ON CIVIL RIGHTS
+9524,NATIONAL MEDIATION BOARD
+9531,UNITED STATES HOLOCAUST MEMORIAL MUSEUM
+9568,BROADCASTING BOARD OF GOVERNORS
+9577,CORPORATION FOR NATIONAL AND COMMUNITY SERVICE
+9594,COURT SERVICES AND OFFENDER SUPERVISION AGENCY
+9700,Department of Defense
+others,OTHERS</code></pre>
 
 
 ```python
