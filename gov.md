@@ -97,10 +97,14 @@ for df in list_df:
 
 <a href="images/gov/percentage_budget_per_agency-100.png" ><img src="images/gov/percentage_budget_per_agency-75.png"/></a>
 
+### Contracts for women and minorities
+
+<img src="images/gov/percentage_minorities-100.png"/>
 
 ###  Contracts per state
-
 
 **Percentage of contracts per state over time**
 
 <video src="videos/states.mp4" poster="videos/poster-states.png" style="max-width:100%" controls preload></video>
+
+
