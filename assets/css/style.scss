@@ -232,3 +232,21 @@ table.dataframe {
 font-size:80%;
 margin-bottom: 0.5cm;
 }
+
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: '\25B6';
+  padding-right: 0.5em;
+}
+
+details[open] > summary::before {
+  content: '\25BC';
+}
