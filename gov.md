@@ -97,9 +97,9 @@ for df in list_df:
 
 <a href="images/gov/percentage_contracts_per_agency-100.png" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
 
-**Percentage of budget per agency**
+**Percentage of contracts per industry**
 
-<a href="images/gov/percentage_budget_per_agency-100.png" ><img src="images/gov/percentage_budget_per_agency-75.png"/></a>
+<a href="images/gov/percentage_budget_per_industry-100.png" ><img src="images/gov/percentage_budget_per_industry-65.png"/></a>
 
 ### Contracts for women and minorities
 
