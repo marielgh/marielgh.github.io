@@ -5,6 +5,22 @@ These contracts are mutually binding agreements between the federal government a
 
 ###  Contracts per agency
 
+<style>
+summary {
+    font-weight: normal;
+    font-size: 1em;
+    font-family: 'adobe-clean','HelveticaNeue',Helvetica,Arial,sans-serif;
+}
+
+p {
+    font-family: 'adobe-clean','HelveticaNeue',Helvetica,Arial,sans-serif;      
+}
+
+details {
+    margin-bottom: 20px;    
+}
+</style>
+
 
 <details>
 <summary>Click to see the complete list of agencies</summary>
@@ -99,7 +115,7 @@ for df in list_df:
 
 **Percentage of contracts per industry**
 
-<a href="images/gov/percentage_contracts_per_industry-100.png" ><img src="images/gov/percentage_contracts_per_industry-75.png"/></a>
+<a href="images/gov/percentage_contracts_per_industry-100.png" ><img src="images/gov/percentage_contracts_per_industry-70.png"/></a>
 
 ### Contracts for women and minorities
 
