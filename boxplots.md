@@ -32,7 +32,7 @@ The goal is to predict the probability that a certain label is attached to a bud
 
 <details>
 <summary>Click to see the complete list of labels</summary>    
-Function:
+<pre>Function:
 
 - Aides Compensation
 - Career & Academic Counseling
@@ -161,7 +161,7 @@ Use:
 - NO_LABEL
 - O&M
 - Pupil Services & Enrichment
-- Untracked Budget Set-Aside
+- Untracked Budget Set-Aside</pre>
 </details>
 
 **Evaluation metric**
