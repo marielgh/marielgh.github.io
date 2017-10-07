@@ -3,9 +3,36 @@
 The objective is to build a model that predicts the total ride duration of taxi trips in New York City. The dataset was released by the NYC Taxi and Limousine Commission, which includes pickup time, geo-coordinates, number of passengers, and several other variables.
 
 This project consists of the following parts: 
+- [Problem description](#problem-description)
 - [Exploratory data analysis of the dataset](#exploratory-data-analysis)
 - [Feature extraction and engineering](#feature-engineering)
 - [Modelling using gradient boosted trees](#modelling)
+
+
+### Problem Description 
+
+On the documentation of the competition in Kaggle, we can find the following description for the dataset fields. In this exploratory data analysis we will explore each of them.
+
+**Data fields**
+- *id* : a unique identifier for each trip.
+- *vendor_id* : a code indicating the provider associated with the trip record.
+- *pickup_datetime* : date and time when the meter was engaged.
+- *passenger_count* : the number of passengers in the vehicle (driver entered value).
+- *pickup_longitude* : the longitude where the meter was engaged.
+- *pickup_latitude* : the latitude where the meter was engaged.
+- *dropoff_longitude* : the longitude where the meter was disengaged.
+- *dropoff_latitude* : the latitude where the meter was disengaged.
+- *store_and_fwd_flag* : this flag indicates whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a connection to the server.
+- *trip_duration* : duration of the trip in seconds.
+
+Our target variable is *trip_duration*. It is continuous, which makes this problem a regression problem. 
+
+We will actually work with the logarithm of the trip duration since the evaluation metric of the competition is the **root mean squared log error**, defined as:
+
+$$\text{RMSLE} = \sqrt{ \frac{1}{n} \sum^{n}_{j=1}{(log(y_j + 1) - log( \hat{y}_j + 1 ) )^{2}}}$$
+
+where $$y_j$$ are the observed values and $$\hat{y}_j$$ are the predicted values.
+
 
 ### Exploratory Data Analysis
 
@@ -143,22 +170,7 @@ trip_duration         1458644 non-null int64
 dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
 memory usage: 111.3+ MB</code></pre>
 
-We see there are no missing values. Out target variable is *trip_duration*.
-
-On the documentation of the competition in Kaggle, we can find the following description for the dataset fields. In this exploratory data analysis we will explore each of them.
-
-**Data fields**
-- *id* : a unique identifier for each trip.
-- *vendor_id* : a code indicating the provider associated with the trip record.
-- *pickup_datetime* : date and time when the meter was engaged.
-- *passenger_count* : the number of passengers in the vehicle (driver entered value).
-- *pickup_longitude* : the longitude where the meter was engaged.
-- *pickup_latitude* : the latitude where the meter was engaged.
-- *dropoff_longitude* : the longitude where the meter was disengaged.
-- *dropoff_latitude* : the latitude where the meter was disengaged.
-- *store_and_fwd_flag* : this flag indicates whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a connection to the server.
-- *trip_duration* : duration of the trip in seconds.
-
+We see there are no missing values. 
 
 **Vendor id**
 
@@ -314,13 +326,6 @@ Name: store_and_fwd_flag, dtype: float64
 </code></pre>
 
 **Trip duration**
-
-The trip duration is our target variable. It is continuous, which makes this problem a regression problem. We will actually work with the logarithm of the trip duration since the evaluation metric of the competition is the root mean squared log error, defined as:
-
-$$\text{RMSLE} = \sqrt{ \frac{1}{n} \sum^{n}_{j=1}{(log(y_j + 1) - log( \hat{y}_j + 1 ) )^{2}}}$$
-
-where $$y_j$$ are the observed values and $$\hat{y}_j$$ are the predicted values.
-
 
 ```python
 np.log(train_df['trip_duration']).plot(kind='hist',bins=200,figsize=(15,5))
