@@ -29,7 +29,9 @@ The goal is to predict the probability that a certain label is attached to a bud
 - Total (float) - The total cost of the expenditure.
 
 **Labels**
-    
+
+<details>
+<summary>Click to see the complete list of labels</summary>    
 Function:
 
 - Aides Compensation
@@ -160,6 +162,7 @@ Use:
 - O&M
 - Pupil Services & Enrichment
 - Untracked Budget Set-Aside
+</details>
 
 **Evaluation metric**
 
