@@ -191,38 +191,37 @@ print(df_train.info())
 print(df_test.info())
 ```
 
-<pre style="background-color:white"><code>
-	<class 'pandas.core.frame.DataFrame'>
-    Int64Index: 400277 entries, 134338 to 415831
-    Data columns (total 25 columns):
-    Function                  400277 non-null object
-    Use                       400277 non-null object
-    Sharing                   400277 non-null object
-    Reporting                 400277 non-null object
-    Student_Type              400277 non-null object
-    Position_Type             400277 non-null object
-    Object_Type               400277 non-null object
-    Pre_K                     400277 non-null object
-    Operating_Status          400277 non-null object
-    Object_Description        375493 non-null object
-    Text_2                    88217 non-null object
-    SubFund_Description       306855 non-null object
-    Job_Title_Description     292743 non-null object
-    Text_3                    179964 non-null object
-    Text_4                    53746 non-null object
-    Sub_Object_Description    91603 non-null object
-    Location_Description      162054 non-null object
-    FTE                       126071 non-null float64
-    Function_Description      342195 non-null object
-    Facility_or_Department    53886 non-null object
-    Position_Extra            264764 non-null object
-    Total                     395722 non-null float64
-    Program_Description       304660 non-null object
-    Fund_Description          202877 non-null object
-    Text_1                    292285 non-null object
-    dtypes: float64(2), object(23)
-    memory usage: 79.4+ MB
-    None
+<pre style="background-color:white"><code><class 'pandas.core.frame.DataFrame'>
+Int64Index: 400277 entries, 134338 to 415831
+Data columns (total 25 columns):
+Function                  400277 non-null object
+Use                       400277 non-null object
+Sharing                   400277 non-null object
+Reporting                 400277 non-null object
+Student_Type              400277 non-null object
+Position_Type             400277 non-null object
+Object_Type               400277 non-null object
+Pre_K                     400277 non-null object
+Operating_Status          400277 non-null object
+Object_Description        375493 non-null object
+Text_2                    88217 non-null object
+SubFund_Description       306855 non-null object
+Job_Title_Description     292743 non-null object
+Text_3                    179964 non-null object
+Text_4                    53746 non-null object
+Sub_Object_Description    91603 non-null object
+Location_Description      162054 non-null object
+FTE                       126071 non-null float64
+Function_Description      342195 non-null object
+Facility_or_Department    53886 non-null object
+Position_Extra            264764 non-null object
+Total                     395722 non-null float64
+Program_Description       304660 non-null object
+Fund_Description          202877 non-null object
+Text_1                    292285 non-null object
+dtypes: float64(2), object(23)
+memory usage: 79.4+ MB
+None
 </code></pre>
 
 
