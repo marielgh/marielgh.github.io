@@ -442,7 +442,7 @@ X_val.head()
 
 
 
-**NLP**
+**Natural Language Processing**
 
 
 ```python
@@ -466,9 +466,7 @@ def nlp(s):
 
 ```python
 X_tr['text_data'] = X_tr['text_data'].apply(nlp)
-print('done NLP train')
 X_val['text_data'] = X_val['text_data'].apply(nlp)
-print('done NLP validation')
 X_test['text_data'] = X_test['text_data'].apply(nlp)
 ```
 
@@ -840,19 +838,19 @@ for i in np.arange(9):
     pred_prob_test[:,b[i]:b[i+1]] = model_xgb.predict(dtest,ntree_limit=model_xgb.best_ntree_limit).reshape(X_test.shape[0],w)
     pred_prob_val[:,b[i]:b[i+1]] = model_xgb.predict(dvalid,ntree_limit=model_xgb.best_ntree_limit).reshape(X_val.shape[0],w)
     scores.append(model_xgb.best_score)
-    joblib.dump(model_xgb, 'xgb_less_sim_2gram'+str(i+1)+'.model')
+    joblib.dump(model_xgb, 'model_xgb'+str(i+1)+'.model')
     
 t1 = dt.datetime.now()
 
 print("scores = {}".format(scores))
 
-print('\n'+str((t1 - t0).seconds/60)+' minutes')
+print('\n'+str((t1 - t0).seconds//60)+' minutes')
 ```
 
     
 <pre style="background-color:white"><code>scores = [0.192463, 0.067384, 0.047313, 0.092311, 0.030696, 0.110794, 0.153392, 0.099932, 0.168922]
     
-123.71666666666667 minutes
+124 minutes
 </code></pre>
 
 
