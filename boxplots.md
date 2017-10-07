@@ -32,7 +32,7 @@ The goal is to predict the probability that a certain label is attached to a bud
 
 <details>
 <summary>Click to see the complete list of labels</summary>    
-<pre>Function:
+<pre style="background-color:white">Function:
 
 - Aides Compensation
 - Career & Academic Counseling
