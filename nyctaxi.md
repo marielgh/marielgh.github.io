@@ -9,9 +9,7 @@ This project consists of the following parts:
 - [Modelling using gradient boosted trees](#modelling)
 
 
-### Problem Description 
-
-On the documentation of the competition in Kaggle, we can find the following description for the dataset fields. In this exploratory data analysis we will explore each of them.
+### Problem Description
 
 **Data fields**
 - **id** : a unique identifier for each trip.
@@ -171,6 +169,8 @@ dtypes: datetime64[ns](1), float64(4), int64(3), object(2)
 memory usage: 111.3+ MB</code></pre>
 
 We see there are no missing values. 
+
+In this exploratory data analysis we will explore each of the features of the dataset.
 
 **Vendor id**
 
