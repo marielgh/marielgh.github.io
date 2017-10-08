@@ -9,6 +9,4 @@ My name is Mariel. I am a biophysics master's graduate and during the last three
 I have completed several courses on the subjects of data science and machine learning and now I am working independently on data science projects and learning a lot on the way. 
 
 You can reach me at &emsp; &#8594; &emsp; <a href="mailto:mgarciahuiman@gmail.com" class="fa fa-google"></a> &emsp; <a href="https://www.linkedin.com/in/mgarciahuiman/" class="fa fa-linkedin"></a>
-
-
 My github account &emsp; &#8594; &emsp; <a href="https://github.com/marielgh" class="fa fa-github"></a>
