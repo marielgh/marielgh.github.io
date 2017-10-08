@@ -127,4 +127,8 @@ for df in list_df:
 
 <video src="videos/states.mp4" poster="videos/poster-states.png" style="max-width:100%" controls preload></video>
 
+### Seasonality of contracts
+
+<a href="images/gov/timeseries-150.png" ><img src="images/gov/timeseries-85.png"/></a>
+
 
