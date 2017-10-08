@@ -129,6 +129,6 @@ for df in list_df:
 
 ### Seasonality of contracts
 
-<a href="images/gov/timeseries-150.png" ><img src="images/gov/timeseries-85.png"/></a>
+<a href="images/gov/timeseries-120.png" ><img src="images/gov/timeseries-85.png"/></a>
 
 
