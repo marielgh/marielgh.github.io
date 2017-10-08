@@ -113,6 +113,9 @@ for df in list_df:
 
 <a href="images/gov/percentage_contracts_per_agency-100.png" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
 
+###  Contracts per industry
+
+
 **Percentage of contracts per industry**
 
 <a href="images/gov/percentage_contracts_per_industry-100.png" ><img src="images/gov/percentage_contracts_per_industry-70.png"/></a>
