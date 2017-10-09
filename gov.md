@@ -180,8 +180,7 @@ plt.legend(loc='upper left', bbox_to_anchor=(0.6,0.3))
 plt.xlim(2000,2016.5)
 plt.xlabel('Year')
 plt.ylabel('Percentage of contracts awarded')
-plt.show()
-</code></pre>
+plt.show()</code></pre>
 </details>
 
 ###  Contracts per state
