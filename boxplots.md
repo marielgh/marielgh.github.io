@@ -629,20 +629,11 @@ print(features_val.shape)
 features_new_val = set(features_val)-set(features_1gram)
 print(len(features_new_val))
 print(features_new_val)
-
-with open("val_vs_train.txt", "w") as output:
-    for i in features_new_val:
-        output.write(i+'\n')
-
-#selected_features_missing = set(features_train_selected)-set(features_val)
-#print(len(selected_features_missing))
-#print(selected_features_missing)
 ```
 
-    (1361,)
-    1
-    {'provide'}
-
+<pre style="background-color:white"><code>1
+{'provide'}
+</code></pre>
 
 
 ```python
@@ -661,30 +652,10 @@ def find_similar_val(s):
 
 
 ```python
-sim_list = []
-with open("similar_val.txt", "w") as output:
-    not_found_val = 0
-    for i in features_new_val:
-        sim_word = " ".join(difflib.get_close_matches(i,features_1gram,1,0.8))
-        sim_list.append(sim_word)
-        output.write(i+" "+sim_word+'\n')
-        if not sim_word:
-            not_found_val = not_found_val + 1 
-
-print(sim_list)
-print(list(set(sim_list) & set(features_train_selected)))
-```
-
-    ['provided']
-    []
-
-
-
-```python
 X_val['text_data'] = X_val['text_data'].apply(find_similar_val)
 ```
 
-**
+We do the same for the test set:
 
 
 ```python
@@ -698,21 +669,14 @@ print(features_test.shape)
 features_new_test = set(features_test)-set(features_train)
 print(len(features_new_test))
 print(features_new_test)
-
-with open("test_vs_train.txt", "w") as output:
-    for i in features_new_test:
-        output.write(i+'\n')
 ```
-
-    (1145,)
-    140
-    {'nwsppr', 'sc', 'cl', 'chem', 'beh', 'inclus', 'alarm', 'abc', 'occup', 'house', '6th', 'im', 'faci', 'theater', 'footbl', 'digital', 'proc', 'consulting', 'theat', 'cell', 'abd', 'overcrowding', 'diagnosticia', 'meal', 'tv', 'chi', 'spe', 'cate', 'vfb', 'mariachi', 'grds', 'nondisciplinary', 'volleyb', 'ther', 'astii', 'lan', 'dose', 'cdr', 'wastewater', 'spiii', 'bb', 'se', 'services', 'au', 'specia', 'score', 'lssp', 'struggler', 'geography', 'dramatics', 'volly', 'pri', 'inn', 'detention', 'ad', 'supprt', 'ahc', 'adapt', 'vh', 'bil', 'publication', 'cor', 'theatre', 'baccalaureate', 'trainr', 'equity', 'sb', 'cycle', 'phone', 'jr', 'tm', 'netwrk', 'srvc', 'ssig', 'aep', 'volbl', 'yrbk', 'trustee', 'unacceptable', 'ely', 'prod', 'laundry', 'honor', 'busn', 'independence', 'pal', 'cch', 'wrest', 'trainee', 'agricul', 'acctg', 'fac', 'op', 'includes', 'footbll', 'uil', 'architect', 'jrvar', 'government', 'delta', 'bsktbl', 'commercial', 'attend', 'analy', 'mn', 'signing', 'fr', 'kin', 'sk', 'nat', 'emotional', 'carry', 'housekeeping', 'groundskeeper', 'money', 'ni', 'reproduction', 'badge', 'ml', 'nvfb', 'journalism', 'dram', 'priority', 'courier', 'used', 'ah', 'coun', 'room', 'hc', 'dropout', 'refreshment', 'expend', 'ofcr', 'culinary', 'varfb', 'englsh', 'facil', 'demonstration', 'fto', 'baseb'}
-
+<pre style="background-color:white"><code>(1145,)
+140
+{'nwsppr', 'sc', 'cl', 'chem', 'beh', 'inclus', 'alarm', 'abc', 'occup', 'house', '6th', 'im', 'faci', 'theater', 'footbl', 'digital', 'proc', 'consulting', 'theat', 'cell', 'abd', 'overcrowding', 'diagnosticia', 'meal', 'tv', 'chi', 'spe', 'cate', 'vfb', 'mariachi', 'grds', 'nondisciplinary', 'volleyb', 'ther', 'astii', 'lan', 'dose', 'cdr', 'wastewater', 'spiii', 'bb', 'se', 'services', 'au', 'specia', 'score', 'lssp', 'struggler', 'geography', 'dramatics', 'volly', 'pri', 'inn', 'detention', 'ad', 'supprt', 'ahc', 'adapt', 'vh', 'bil', 'publication', 'cor', 'theatre', 'baccalaureate', 'trainr', 'equity', 'sb', 'cycle', 'phone', 'jr', 'tm', 'netwrk', 'srvc', 'ssig', 'aep', 'volbl', 'yrbk', 'trustee', 'unacceptable', 'ely', 'prod', 'laundry', 'honor', 'busn', 'independence', 'pal', 'cch', 'wrest', 'trainee', 'agricul', 'acctg', 'fac', 'op', 'includes', 'footbll', 'uil', 'architect', 'jrvar', 'government', 'delta', 'bsktbl', 'commercial', 'attend', 'analy', 'mn', 'signing', 'fr', 'kin', 'sk', 'nat', 'emotional', 'carry', 'housekeeping', 'groundskeeper', 'money', 'ni', 'reproduction', 'badge', 'ml', 'nvfb', 'journalism', 'dram', 'priority', 'courier', 'used', 'ah', 'coun', 'room', 'hc', 'dropout', 'refreshment', 'expend', 'ofcr', 'culinary', 'varfb', 'englsh', 'facil', 'demonstration', 'fto', 'baseb'}
+</code></pre>
 
 
 ```python
-import difflib
-
 def find_similar_test(s):
     tokenizer = RegexpTokenizer('(?u)\\b\\w\\w+\\b')
     tokens = tokenizer.tokenize(s)
@@ -737,7 +701,6 @@ Xt_test = count_train.transform(X_test['text_data'])
 Xt_val = kbest.transform(Xt_val)
 Xt_test = kbest.transform(Xt_test)
 ```
-
 
 
 **Combine numeric and text data**
