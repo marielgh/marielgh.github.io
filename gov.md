@@ -163,6 +163,9 @@ plt.show()</code></pre>
 
 <img src="images/gov/percentage_minorities-100.png"/>
 
+
+
+<details>
 <summary>Click to see the code that produced the plot above</summary>
 <pre><code>minorities = []
 women = []
@@ -182,6 +185,7 @@ plt.xlabel('Year')
 plt.ylabel('Percentage of contracts awarded')
 plt.show()</code></pre>
 </details>
+
 
 ###  Contracts per state
 
