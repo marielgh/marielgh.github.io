@@ -249,7 +249,7 @@ for k,df in enumerate(list_df):
 
 ### Seasonality of contracts
 
-The dotted vertical lines correspond to the end of the business month on September in each year.
+The dotted vertical lines correspond to the end of the business month on September of each year.
 <a href="images/gov/timeseries-120.png" ><img src="images/gov/timeseries-85.png"/></a>
 
 
