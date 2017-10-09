@@ -1,4 +1,6 @@
 <a name="Home"></A>
+	
+# Table of Contents
 
 ## [Projects](projects.md)
 <hr>
