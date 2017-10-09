@@ -11,22 +11,22 @@ The goal is to predict the probability that a certain label is attached to a bud
 
 **Features**
 
-- FTE (float) - If an employee, the percentage of full-time that the employee works.
-- Facility_or_Department - If expenditure is tied to a department/facility, that department/facility.
-- Function_Description - A description of the function the expenditure was serving.
-- Fund_Description - A description of the source of the funds.
-- Job_Title_Description - If this is an employee, a description of that employee's job title.
-- Location_Description - A description of where the funds were spent.
-- Object_Description - A description of what the funds were used for.
-- Position_Extra - Any extra information about the position that we have.
-- Program_Description - A description of the program that the funds were used for.
-- SubFund_Description - More detail on Fund_Description
-- Sub_Object_Description - More detail on Object_Description
-- Text_1 - Any additional text supplied by the district.
-- Text_2 - Any additional text supplied by the district.
-- Text_3 - Any additional text supplied by the district.
-- Text_4 - Any additional text supplied by the district.
-- Total (float) - The total cost of the expenditure.
+- **FTE (float)** - If an employee, the percentage of full-time that the employee works.
+- **Facility_or_Department** - If expenditure is tied to a department/facility, that department/facility.
+- **Function_Description** - A description of the function the expenditure was serving.
+- **Fund_Description** - A description of the source of the funds.
+- **Job_Title_Description** - If this is an employee, a description of that employee's job title.
+- **Location_Description** - A description of where the funds were spent.
+- **Object_Description** - A description of what the funds were used for.
+- **Position_Extra** - Any extra information about the position that we have.
+- **Program_Description** - A description of the program that the funds were used for.
+- **SubFund_Description** - More detail on Fund_Description
+- **Sub_Object_Description** - More detail on Object_Description
+- **Text_1** - Any additional text supplied by the district.
+- **Text_2** - Any additional text supplied by the district.
+- **Text_3** - Any additional text supplied by the district.
+- **Text_4** - Any additional text supplied by the district.
+- **Total (float)** - The total cost of the expenditure.
 
 **Labels**
 
