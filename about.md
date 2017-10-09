@@ -8,7 +8,7 @@ My name is Mariel. I am a biophysics master's graduate and during the last three
 
 I am a scientist at heart, really curious about almost everything that surrounds me, from the most fundamental science to the latest technology. That's why I studied physics for my Bachelor's degree, at University of Barcelona. After that, I looked for new challenges abroad and I moved on to do a Master's degree in Munich, Germany. During the last term of my Master's, I became increasingly interested in data science and machine learning. I find really exciting the potential of data to generate knowledge and how machine learning helps us make predictions and find meaning in data.
 
-I have completed several courses on the subjects of data science and machine learning and now I am working independently on data science projects and learning a lot on the way. 
+I have completed several courses on the subjects of data science and machine learning and now I am working independently on data science projects and learning a lot on the way. I am open to professional opportunities in New York City and surroundings.
 
 You can reach me at &#8594; &emsp;<a href="mailto:mgarciahuiman@gmail.com" class="fa fa-google"></a> &emsp; <a href="https://www.linkedin.com/in/mgarciahuiman/" class="fa fa-linkedin"></a><br>
 My github account &#8594; &emsp;<a href="https://github.com/marielgh" class="fa fa-github"></a>
