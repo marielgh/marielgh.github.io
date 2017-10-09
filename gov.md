@@ -159,7 +159,30 @@ plt.show()</code></pre>
 
 ### Contracts for women and minorities
 
+**Percentage of contracts for women and minorities owned businesses**
+
 <img src="images/gov/percentage_minorities-100.png"/>
+
+<summary>Click to see the code that produced the plot above</summary>
+<pre><code>minorities = []
+women = []
+for df in list_df:
+    minorities.append(df.minority_owned_business_flag.value_counts().loc['Y']/df.shape[0]*100)
+    women.append(df.women_owned_flag.value_counts().loc['Y']/df.shape[0]*100)
+	
+years = np.arange(2000,2017)
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-darkgrid')
+plt.figure(figsize=(8,6))
+plt.plot(years,minorities,label='minority owned business')
+plt.plot(years,women,label='women owned business')
+plt.legend(loc='upper left', bbox_to_anchor=(0.6,0.3))
+plt.xlim(2000,2016.5)
+plt.xlabel('Year')
+plt.ylabel('Percentage of contracts awarded')
+plt.show()
+</code></pre>
+</details>
 
 ###  Contracts per state
 
@@ -178,9 +201,7 @@ for df in list_df:
 for k,df in enumerate(list_df):
     df.columns = ['vendor_state_code','proportion']
     df['percentage'] = df['percentage']/(df['percentage'].sum())*100
-    
-    #df = df[df.base_and_all_options_value>0]
-    
+        
     df = df[df['vendor_state_code'].isin(states)].copy()
     
     df['vendor_state_code'] = df['vendor_state_code'].apply(lambda x: x.upper())
@@ -225,7 +246,9 @@ for k,df in enumerate(list_df):
 
 ### Seasonality of contracts
 
+The dotted vertical lines correspond to the end of the business month on September in each year.
 <a href="images/gov/timeseries-120.png" ><img src="images/gov/timeseries-85.png"/></a>
+
 
 <details>
 <summary>Click to see the code that produced the plot above</summary>
