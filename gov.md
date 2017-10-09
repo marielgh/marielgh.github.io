@@ -87,11 +87,13 @@ details {
 9700, Department of Defense</code></pre>
 </details>
 
+**Percentage of contracts per agency**
+
+<a href="images/gov/percentage_contracts_per_agency-100.png" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
+
 <details>
-<summary>Click to see the code that produced the plot above</summary>
-```python
+<summary>Click to see the code that produced the plot above</summary>```python
 dep = ['9700', '4700', '1500', '3600', '1400', '1200']
-list_df = [df00,df01,df02,df03,df04,df05,df06,df07,df08,df09,df10,df11,df12,df13,df14,df15,df16]
 list_g = []
 for df in list_df:
     g_cat = df.groupby('maj_agency_cat').unique_transaction_id.count().reset_index()
@@ -123,11 +125,6 @@ plt.savefig('percentage_contracts_per_agency.pdf', bbox_inches='tight')
 plt.show()
 ```
 </details>
-
-
-**Percentage of contracts per agency**
-
-<a href="images/gov/percentage_contracts_per_agency-100.png" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
 
 ###  Contracts per industry
 
