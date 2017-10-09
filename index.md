@@ -1,6 +1,6 @@
 <a name="Home"></A>
 
-##[Projects](projects.md)
+## [Projects](projects.md)
 
 <hr>
 
@@ -10,7 +10,7 @@
 
 3. [Government Spending Contracts](gov.md)
 
-##[Notebooks](notebooks.md) 
+## [Notebooks](notebooks.md) 
 
 <hr>
 
