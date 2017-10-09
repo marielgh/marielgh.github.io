@@ -188,7 +188,7 @@ plt.show()</code></pre>
 **Percentage of contracts per state over time**
 
 <video src="videos/states.mp4" poster="videos/poster-states.png" style="max-width:100%" controls preload></video>
-
+<br>
 <details>
 <summary>Click to see the code that produced the plots of the video</summary>
 <pre><code>list_df2 = []
