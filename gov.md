@@ -93,8 +93,7 @@ details {
 
 <details>
 <summary>Click to see the code that produced the plot above</summary>
-```python
-dep = ['9700', '4700', '1500', '3600', '1400', '1200']
+<pre><code>dep = ['9700', '4700', '1500', '3600', '1400', '1200']
 list_g = []
 for df in list_df:
     g_cat = df.groupby('maj_agency_cat').unique_transaction_id.count().reset_index()
@@ -123,8 +122,7 @@ chartBox = ax.get_position()
 ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.7, chartBox.height])
 ax.legend(loc='right', bbox_to_anchor=(1.55, 0.5), shadow=False, ncol=1,prop={'size': 12},framealpha=0)
 plt.savefig('percentage_contracts_per_agency.pdf', bbox_inches='tight')
-plt.show()
-```
+plt.show()</code></pre>
 </details>
 
 ###  Contracts per industry
