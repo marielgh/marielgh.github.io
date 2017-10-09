@@ -1,6 +1,7 @@
 <a name="Home"></A>
 
-## Projects [&#8592;](projects.md)
+[Projects](projects.md)
+-----------------------
 
 1. [New York City Taxi Trip Duration - Kaggle Competition](nyctaxi.md)
 
@@ -8,7 +9,8 @@
 
 3. [Government Spending Contracts](gov.md)
 
-## Notebooks [&#8592;](notebooks.md) 
+[Notebooks](notebooks.md)
+------------------------- 
 
 1. [Pandas](pandas.html#bottom)
 2. [Financial Data](financial.html#bottom)
