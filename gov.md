@@ -92,7 +92,8 @@ details {
 <a href="images/gov/percentage_contracts_per_agency-100.png" ><img src="images/gov/percentage_contracts_per_agency-75.png"/></a>
 
 <details>
-<summary>Click to see the code that produced the plot above</summary>```python
+<summary>Click to see the code that produced the plot above</summary>
+```python
 dep = ['9700', '4700', '1500', '3600', '1400', '1200']
 list_g = []
 for df in list_df:
