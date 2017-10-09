@@ -167,8 +167,89 @@ plt.show()</code></pre>
 
 <video src="videos/states.mp4" poster="videos/poster-states.png" style="max-width:100%" controls preload></video>
 
+<details>
+<summary>Click to see the code that produced the plots of the video</summary>
+<pre><code>list_df2 = []
+for df in list_df:
+    df = df[(df.vendor_country_code=='USA: UNITED STATES OF AMERICA')|(df.vendor_country_code=='UNITED STATES')]\
+    .groupby('vendor_state_code').vendor_country_code.count().reset_index()
+    list_df2.append(df)	
+		
+for k,df in enumerate(list_df):
+    df.columns = ['vendor_state_code','proportion']
+    df['percentage'] = df['percentage']/(df['percentage'].sum())*100
+    
+    #df = df[df.base_and_all_options_value>0]
+    
+    df = df[df['vendor_state_code'].isin(states)].copy()
+    
+    df['vendor_state_code'] = df['vendor_state_code'].apply(lambda x: x.upper())
+    df['state'] = df['vendor_state_code'].apply(lambda x: states[x])
+
+    df['text'] = df['state'].astype(str)
+
+
+    data = [ dict(
+        type='choropleth',
+        colorscale = scl,
+        autocolorscale = True,
+        locations = df['vendor_state_code'],
+        z = df['percentage'].astype(float),
+        zmin=0,
+        zmax=20,
+        locationmode = 'USA-states',
+        text = df['text'],
+        marker = dict(
+            line = dict (
+                color = 'rgb(255,255,255)',
+                width = 2
+            ) ),
+        colorbar = dict(
+            title = "% of contracts", thickness=40, len=0.8, titlefont =dict(size=15), tickfont =dict(size=15))
+        ) ]
+
+    layout = dict(
+        title = 'Percentage of contracts per state in year '+str(2000+k),
+        titlefont = dict(size=20),
+        geo = dict(
+            scope='usa',
+            projection=dict( type='albers usa' ),
+            showlakes = True,
+            lakecolor = 'rgb(255, 255, 255)'),
+             )
+    
+    fig = dict( data=data, layout=layout)
+    offline.iplot(fig, image='png',image_width=960,image_height=540,filename='states_map')
+</code></pre>
+</details>
+
 ### Seasonality of contracts
 
 <a href="images/gov/timeseries-120.png" ><img src="images/gov/timeseries-85.png"/></a>
 
+<details>
+<summary>Click to see the code that produced the plot above</summary>
+<pre><code>list_g = []
+for df in list_df:
+    df = df.set_index(pd.DatetimeIndex(df.signed_date))
+    df = df.resample('BM').count().unique_transaction_id # BM = business month end frequency
+    list_g.append(df)
+ts = pd.concat(list_g).resample('BM').sum()
+
+sept = ts[ts.index.map(lambda x: x.month) == 9].index.tolist()
+
+plt.style.use('seaborn-darkgrid')
+fig, ax = plt.subplots()
+ts.plot(figsize=(12,6))
+xposition = sept
+for xc in xposition:
+    plt.axvline(x=xc, color='grey', linestyle=':',alpha=0.4)
+plt.xlim(pd.to_datetime('2001-01-01'),pd.to_datetime('2016-12-31'))
+plt.xlabel('Date')
+plt.yticks([100000,300000,500000])
+ax.set_yticklabels(['100k','300k','500k'])
+plt.ylabel('Number of contracts')
+plt.savefig('timeseries.pdf', bbox_inches='tight')
+plt.show()</code></pre>
+</details>
 
