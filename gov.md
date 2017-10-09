@@ -87,7 +87,8 @@ details {
 9700, Department of Defense</code></pre>
 </details>
 
-
+<details>
+<summary>Click to see the code that produced the plot above</summary>
 ```python
 dep = ['9700', '4700', '1500', '3600', '1400', '1200']
 list_df = [df00,df01,df02,df03,df04,df05,df06,df07,df08,df09,df10,df11,df12,df13,df14,df15,df16]
@@ -106,7 +107,22 @@ for df in list_df:
     g_cat['name_agency'] = g_cat['ind_agency'].apply(lambda x: dict_agency[x])
     g_cat = g_cat[['name_agency','percentage']].set_index('name_agency')
     list_g.append(g_cat)
+	
+g_cat = pd.concat(list_g,axis=1)
+g_cat = g_cat.fillna(0)
+g_cat = g_cat.transpose()
+
+import matplotlib.pyplot as plt
+g_cat.plot.bar(figsize=(15,7),stacked=True)
+ax = plt.subplot(111)
+plt.ylabel('% of contracts')
+chartBox = ax.get_position()
+ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.7, chartBox.height])
+ax.legend(loc='right', bbox_to_anchor=(1.55, 0.5), shadow=False, ncol=1,prop={'size': 12},framealpha=0)
+plt.savefig('percentage_contracts_per_agency.pdf', bbox_inches='tight')
+plt.show()
 ```
+</details>
 
 
 **Percentage of contracts per agency**
