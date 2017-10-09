@@ -13,6 +13,9 @@
 <hr>
 
 1. [Pandas](pandas.html#bottom)
+
 2. [Financial Data](financial.html#bottom)
+
 3. [Supervised Learning](supervised_learning.html#bottom)
+
 4. [Unsupervised Learning](unsupervised_learning.html#bottom)
