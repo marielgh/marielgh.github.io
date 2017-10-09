@@ -612,7 +612,7 @@ with open("train_vocab_select.txt", "w") as output:
 ```
 
 Some of the selected features by *KBest* are:
-['assistance', 'benefit', 'bus driver', 'childhood', 'clinic assistant', 'counselor', 'custodian', 'disadvantaged', 'driver', 'early childhood', 'employee benefit', 'food service', 'gifted', 'medium', 'nurse', 'nutrition', 'overtime', 'personnel', 'principal', 'psychological', 'recruitment', 'regular', 'security', 'service', 'social', 'social worker', 'special education', 'speech', 'substitute', 'substitute teacher', 'supply', 'support personnel', 'talented', 'targeted', 'targeted assistance', 'teacher', 'title', 'transportation']
+<pre style="background-color:white">'assistance', 'benefit', 'bus driver', 'childhood', 'clinic assistant', 'counselor', 'custodian', 'disadvantaged', 'driver', 'early childhood', 'employee benefit', 'food service', 'gifted', 'medium', 'nurse', 'nutrition', 'overtime', 'personnel', 'principal', 'psychological', 'recruitment', 'regular', 'security', 'service', 'social', 'social worker', 'special education', 'speech', 'substitute', 'substitute teacher', 'supply', 'support personnel', 'talented', 'targeted', 'targeted assistance', 'teacher', 'title', 'transportation'</pre>
 
 
 **Find similar words**
