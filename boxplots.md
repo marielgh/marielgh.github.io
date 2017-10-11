@@ -584,34 +584,24 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_selection import chi2, SelectKBest
 
 count_1gram = CountVectorizer(ngram_range=(1,1),token_pattern='(?u)\\b\\w\\w+\\b',stop_words='english',min_df=10)
-Xt_tr = count_1gram.fit_transform(X_tr['text_data'])
+count_1gram.fit(X_tr['text_data'])
 features_1gram = np.array(count_1gram.get_feature_names())
 print(features_1gram.shape)
-
-with open("train_vocab_1gram.txt", "w") as output:
-    for i in features_1gram:
-        output.write(i+'\n')
 
 count_train = CountVectorizer(ngram_range=(1,2),token_pattern='(?u)\\b\\w\\w+\\b',stop_words='english',min_df=10)
 Xt_tr = count_train.fit_transform(X_tr['text_data'])
 features_train = np.array(count_train.get_feature_names())
 print(features_train.shape)
 
-with open("train_vocab_2gram.txt", "w") as output:
-    for i in features_train:
-        output.write(i+'\n')
-
 kbest = SelectKBest(chi2, k=1000)
 Xt_tr = kbest.fit_transform(Xt_tr,y_tr.values)
 
 features_train_selected = features_train[kbest.get_support()]
-print(features_train_selected.shape)
-print(features_train_selected)
-
-with open("train_vocab_select.txt", "w") as output:
-    for i in features_train_selected:
-        output.write(i+'\n')
 ```
+<pre style="background-color:white"><code>(1954,)
+(12726,)</code></pre>
+
+
 
 Some of the selected features by *KBest* are:
 <pre style="background-color:white">'assistance', 'benefit', 'bus driver', 'childhood', 'clinic assistant', 'counselor', 'custodian', 'disadvantaged', 'driver', 'early childhood', 'employee benefit', 'food service', 'gifted', 'medium', 'nurse', 'nutrition', 'overtime', 'personnel', 'principal', 'psychological', 'recruitment', 'regular', 'security', 'service', 'social', 'social worker', 'special education', 'speech', 'substitute', 'substitute teacher', 'supply', 'support personnel', 'talented', 'targeted', 'targeted assistance', 'teacher', 'title', 'transportation'</pre>
