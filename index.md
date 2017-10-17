@@ -19,3 +19,5 @@
 * [Supervised Learning](supervised_learning.html#bottom)
 
 * [Unsupervised Learning](unsupervised_learning.html#bottom)
+
+* [Cleaning Data](cleaning_data.html#bottom)

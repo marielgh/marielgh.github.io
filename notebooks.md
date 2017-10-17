@@ -3,6 +3,10 @@
 * [Pandas](pandas.html#bottom)
    
    Pandas is the most widely used package in Python to manage datasets. Here I show some of its basic functionality (managing time series data, different plotting methods, etc.) with various examples. 
+
+* [Cleaning Data in Python](cleaning_data.html#bottom)
+
+   A vital component of data science involves acquiring raw data and getting it into a form ready for analysis. In this notebook, I show some of the tools available in Python to clean data, which involves dealing with outliers, missing values or duplicates, pivoting and melting, formatting using regular expressions, etc.
    
 * [Financial Data in Python](financial.html#bottom)
 
