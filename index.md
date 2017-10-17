@@ -14,10 +14,10 @@
 
 * [Pandas](pandas.html#bottom)
 
+* [Cleaning Data](cleaning_data.html#bottom)
+
 * [Financial Data](financial.html#bottom)
 
 * [Supervised Learning](supervised_learning.html#bottom)
 
 * [Unsupervised Learning](unsupervised_learning.html#bottom)
-
-* [Cleaning Data](cleaning_data.html#bottom)
