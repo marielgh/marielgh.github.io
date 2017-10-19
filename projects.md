@@ -2,7 +2,7 @@
 
 * [New York City Taxi Trip Duration - Kaggle Competition](nyctaxi.md)
 
-   Competition based on building a model that predicts the total ride duration of taxi trips in New York City. The dataset is one released by the NYC Taxi and Limousine Commission, which includes pickup time, geo-coordinates, number of passengers, and several other variables.
+   Competition based on building a model that predicts the total ride duration of taxi trips in New York City. The dataset includes pickup time, geo-coordinates, number of passengers, and several other variables.
 
 * [Box-Plots for Education - DrivenData Competition](boxplots.md)
 
