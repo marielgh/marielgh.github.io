@@ -1,5 +1,6 @@
 <a name="Home"></A>
 
+<i class="fa fa-chevron-circle-right" style="font-size:48px;color:red"></i>
 ## [Projects](projects.md)
 <hr>
 
