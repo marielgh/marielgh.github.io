@@ -21,3 +21,5 @@
 * [Supervised Learning](supervised_learning.html#bottom)
 
 * [Unsupervised Learning](unsupervised_learning.html#bottom)
+
+* [SQL](sql.md)
