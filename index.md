@@ -3,9 +3,9 @@
 <h1 align="center"><a href="projects.html">Projects</a></h1>	
 <hr>
 
-* [New York City Taxi Trip Duration - Kaggle Competition](nyctaxi.md)
+* [New York City Taxi Trip Duration](nyctaxi.md)
 
-* [Box-Plots for Education - DrivenData Competition](boxplots.md)
+* [Box-Plots for Education](boxplots.md)
 
 * [Government Spending Contracts](gov.md)
 
