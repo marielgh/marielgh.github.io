@@ -6152,7 +6152,7 @@ pd.read_sql("SELECT name, urbanarea_pop\
 
 
 
-<table style="width:100%">
+<table font size="10">
   <thead>
     <tr style="text-align: right;">
       <th></th>
