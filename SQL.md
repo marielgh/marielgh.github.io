@@ -13,7 +13,7 @@ Table of Contents:
     
 3. [Set Theory Clauses](#set-theory-clauses)
 
-    Key words: UNION, UNION ALL, INTERSECTION, EXCEPT
+    Key words: UNION, UNION ALL, INTERSECTION, EXCEPT.
 
 
 4. [Subqueries](#subqueries)
@@ -6151,21 +6151,8 @@ pd.read_sql("SELECT name, urbanarea_pop\
 
 
 
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
 
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
+<table style="width:100%">
   <thead>
     <tr style="text-align: right;">
       <th></th>
