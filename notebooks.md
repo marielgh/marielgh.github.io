@@ -20,7 +20,7 @@
 
    In this notebook I show some of the standard unsupervised learning algorithms in scikit-learn and scipy such as k-means, hierarchical clustering, t-SNE, principal component analysis , singular value decomposition and non-negative matrix factorization.
    
-* [SQL](sql.md)
+* [SQL](SQL.md)
 
    Structured Query Language (SQL) is the standard language for relational database management systems. In this notebook I review basic types of queries and joins and more advanced topics such as set theory clauses and subqueries.
 	

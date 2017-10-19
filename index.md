@@ -22,4 +22,4 @@
 
 * [Unsupervised Learning](unsupervised_learning.html#bottom)
 
-* [SQL](sql.md)
+* [SQL](SQL.md)
