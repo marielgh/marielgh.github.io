@@ -1,8 +1,9 @@
 <a name="Home"></A>
 
 <i class="fa fa-chevron-circle-right" style="font-size:48px;color:red"></i>
+<h2>Projects</h2>
 
-<p class="center">## [Projects](projects.md)
+## [Projects](projects.md)
 <hr>
 
 * [New York City Taxi Trip Duration - Kaggle Competition](nyctaxi.md)
@@ -25,4 +26,3 @@
 * [Unsupervised Learning](unsupervised_learning.html#bottom)
 
 * [SQL](SQL.md)
-</p>
