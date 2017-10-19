@@ -1,7 +1,14 @@
 <a name="Home"></A>
 
-<i class="fa fa-chevron-circle-right" style="font-size:48px;color:red"></i>
-<h2>Projects</h2>
+<p class="center">
+<i class="fa fa-chevron-circle-right" style="font-size:48px;color:red"></i><h2> [Projects](projects.md)</h2>
+
+<ul>
+  <li>[New York City Taxi Trip Duration - Kaggle Competition](nyctaxi.md)</li>
+  <li>[Box-Plots for Education - DrivenData Competition](boxplots.md)</li>
+  <li>[Government Spending Contracts](gov.md)</li>
+</ul>
+</p>
 
 ## [Projects](projects.md)
 <hr>
