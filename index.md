@@ -9,7 +9,7 @@
 
 * [Government Spending Contracts](gov.md)
 
-<h1 align="center"><a href="Notebooks.html">Notebooks</a></h1>	
+<h1 align="center"><a href="notebooks.html">Notebooks</a></h1>	
 <hr>
 
 * [Pandas](pandas.html#bottom)
