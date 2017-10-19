@@ -1,6 +1,6 @@
 <a name="Home"></A>
 	
-<h1 align="center"><a href="projects.md">Projects</a></h1>	
+<h1 align="center"><a href="projects.html">Projects</a></h1>	
 <hr>
 
 * [New York City Taxi Trip Duration - Kaggle Competition](nyctaxi.md)
@@ -9,7 +9,7 @@
 
 * [Government Spending Contracts](gov.md)
 
-## [Notebooks](notebooks.md) 
+<h1 align="center"><a href="Notebooks.html">Notebooks</a></h1>	
 <hr>
 
 * [Pandas](pandas.html#bottom)
