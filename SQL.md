@@ -65,7 +65,7 @@ pd.read_sql('SELECT * FROM census', engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -194,7 +194,7 @@ pd.read_sql('SELECT * FROM state_fact LIMIT 5', engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -348,7 +348,7 @@ pd.read_sql('SELECT state, sex FROM census LIMIT 5', engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -412,7 +412,7 @@ pd.read_sql("SELECT 'Learning SQL, yay!' as example", engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -453,7 +453,7 @@ pd.read_sql("SELECT 10/3 as result", engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -494,7 +494,7 @@ pd.read_sql("SELECT 10/3. as result", engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -536,7 +536,7 @@ pd.read_sql('SELECT DISTINCT state FROM census', engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -619,7 +619,7 @@ pd.read_sql('SELECT COUNT(*) FROM census', engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -659,7 +659,7 @@ pd.read_sql('SELECT COUNT(DISTINCT state) FROM census', engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -699,7 +699,7 @@ pd.read_sql("SELECT state, age, MAX(pop2000) FROM census", engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -743,7 +743,7 @@ pd.read_sql("SELECT state, age, MIN(pop2008) FROM census", engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -789,7 +789,7 @@ pd.read_sql("SELECT * FROM census WHERE state = 'New York'", engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -920,7 +920,7 @@ pd.read_sql("SELECT * FROM census WHERE state = 'New York' AND age < 2", engine)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -997,7 +997,7 @@ pd.read_sql("SELECT * FROM census\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1130,7 +1130,7 @@ pd.read_sql("SELECT * FROM census\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1263,7 +1263,7 @@ pd.read_sql("SELECT * FROM census\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1356,7 +1356,7 @@ pd.read_sql("SELECT * FROM state_fact \
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1634,7 +1634,7 @@ pd.read_sql("SELECT * FROM state_fact \
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1771,7 +1771,7 @@ pd.read_sql("SELECT SUM(pop2000/1e6) as 'pop2000 in millions' , SUM(pop2008/1e6)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1817,7 +1817,7 @@ pd.read_sql("SELECT * FROM census \
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1951,7 +1951,7 @@ pd.read_sql("SELECT state, SUM(pop2000), SUM(pop2008) FROM census \
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2064,7 +2064,7 @@ pd.read_sql("SELECT state, SUM(pop2000), SUM(pop2008) FROM census \
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2146,7 +2146,7 @@ pd.read_sql('SELECT * FROM cities', engine2)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2275,7 +2275,7 @@ pd.read_sql('SELECT * FROM countries', engine2)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2476,7 +2476,7 @@ pd.read_sql('SELECT * FROM economies', engine2)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2677,7 +2677,7 @@ pd.read_sql('SELECT * FROM populations', engine2)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2818,7 +2818,7 @@ pd.read_sql('SELECT * FROM languages', engine2)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2947,7 +2947,7 @@ pd.read_sql('SELECT * FROM currencies', engine2)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3104,7 +3104,7 @@ pd.read_sql("SELECT cities.name AS city, countries.name AS country, region\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3212,7 +3212,7 @@ pd.read_sql("SELECT c.code AS country_code, name, year, inflation_rate\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3334,7 +3334,7 @@ pd.read_sql("SELECT c.code, name, region, e.year, fertility_rate, unemployment_r
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3480,7 +3480,7 @@ pd.read_sql("SELECT c.name AS country, continent, l.name AS language, official\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3606,7 +3606,7 @@ pd.read_sql("SELECT p1.country_code, \
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3748,7 +3748,7 @@ pd.read_sql("SELECT name, continent, code, surface_area,\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3885,7 +3885,7 @@ pd.read_sql("SELECT country_code, size,\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3996,7 +3996,7 @@ pd.read_sql("SELECT country_code,\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4132,7 +4132,7 @@ pd.read_sql("SELECT country_code,\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4258,7 +4258,7 @@ pd.read_sql("SELECT c1.name AS city, code, c2.name AS country,\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4393,7 +4393,7 @@ pd.read_sql("SELECT region, AVG(gdp_percapita) AS avg_gdp\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4493,7 +4493,7 @@ pd.read_sql("SELECT cities.name AS city, languages.name AS language\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4593,7 +4593,7 @@ pd.read_sql("SELECT cities.name AS city, countries.name AS country, languages.na
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4721,7 +4721,7 @@ pd.read_sql("SELECT name AS country, region, basic_unit\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4789,7 +4789,7 @@ pd.read_sql("SELECT name AS country, basic_unit\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4888,7 +4888,7 @@ pd.read_sql("SELECT c.name as country, region, p.life_expectancy\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4958,7 +4958,7 @@ pd.read_sql('SELECT * FROM economies2010', engine2)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5075,7 +5075,7 @@ pd.read_sql('SELECT * FROM economies2015', engine2)
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5199,7 +5199,7 @@ pd.read_sql("SELECT *\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5321,7 +5321,7 @@ pd.read_sql("SELECT country_code\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5409,7 +5409,7 @@ pd.read_sql("SELECT code, year\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5509,7 +5509,7 @@ pd.read_sql("SELECT code, year\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5606,7 +5606,7 @@ pd.read_sql("SELECT c1.name\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5659,7 +5659,7 @@ pd.read_sql("SELECT c1.name as city_not_capitals\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5747,7 +5747,7 @@ pd.read_sql("SELECT capital\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5837,7 +5837,7 @@ pd.read_sql("SELECT DISTINCT name\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -5959,7 +5959,7 @@ pd.read_sql("SELECT name\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -6027,7 +6027,7 @@ pd.read_sql("SELECT *\
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
