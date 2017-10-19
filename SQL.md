@@ -6152,7 +6152,7 @@ pd.read_sql("SELECT name, urbanarea_pop\
 
 
 
-<table font-size="80%">
+<table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -6219,5 +6219,5 @@ pd.read_sql("SELECT name, urbanarea_pop\
   </tbody>
 </table>
 <p>66 rows × 2 columns</p>
-</div>
+
 
