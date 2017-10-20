@@ -1,4 +1,4 @@
-## About me
+<h2 align="center">&#10522; About me &#10521;</h2>	
 
 <img align="right" width="200" src="images/me.png">
 

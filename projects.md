@@ -1,4 +1,5 @@
-## Projects
+<h2 align="center">&#10522; Projects &#10521;</h2>	
+
 
 * [New York City Taxi Trip Duration](nyctaxi.md)
 
