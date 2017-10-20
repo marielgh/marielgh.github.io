@@ -1,4 +1,4 @@
-<h2 align="center">masterAbout me</h2>	
+<h2 align="center">About me</h2>	
 
 <img align="right" width="200" src="images/me.png">
 
