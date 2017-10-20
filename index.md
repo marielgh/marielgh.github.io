@@ -3,7 +3,7 @@
 <h1 align="center"><a href="projects.html">Projects</a></h1>	
 <hr>
 
-* [New York City Taxi Trip Duration](nyctaxi.md)
+* [New York City Taxi Trip Duration](nyctaxi.md) <span style="color:blue">some *blue* text</span>.
 
 * [Box-Plots for Education](boxplots.md)
 
