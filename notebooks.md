@@ -10,7 +10,7 @@
    
 * [Financial Data in Python](financial.html#bottom)
 
-   This notebook shows how to import financial data from Google Finance and other sources using pandas Datareader. Here we explore stock trends, compare stock exchanges and more. Plots are produced using the matplotlib and seaborn packages.
+   This notebook shows how to import financial data from Google Finance and other sources using pandas DataReader. Here we explore stock trends, compare stock exchanges and more. Plots are produced using the matplotlib and seaborn packages.
    
 * [Supervised Learning (with scikit-learn)](supervised_learning.html#bottom)
 
