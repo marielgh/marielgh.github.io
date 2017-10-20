@@ -1,6 +1,6 @@
 <a name="Home"></A>
 	
-<h2 align="center"><i class="fa fa-arrow-right"></i><a href="projects.html">Projects</a></h2>	
+<h2 align="center"><i class="fa fa-arrow-right"></i><a href="projects.html">Projects</a> &#10521;</h2>	
 <hr>
 
 * [New York City Taxi Trip Duration](nyctaxi.md)<span style="color:#BFBFBF">&nbsp;&nbsp;regression|feature engineering|Kaggle|XGBoost|clustering</span>
