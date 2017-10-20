@@ -1,6 +1,6 @@
 <a name="Home"></A>
 	
-<h2 align="center"><i class="fa fa-arrow-right"></i><a href="projects.html">Projects</a> &#10521;</h2>	
+<h2 align="center">&#10522; <a href="projects.html">Projects</a> &#10521;</h2>	
 <hr>
 
 * [New York City Taxi Trip Duration](nyctaxi.md)<span style="color:#BFBFBF">&nbsp;&nbsp;regression|feature engineering|Kaggle|XGBoost|clustering</span>
@@ -9,7 +9,7 @@
 
 * [Government Spending Contracts](gov.md)<span style="color:#BFBFBF">&nbsp;&nbsp;visualization|choropleth map|Plotly|timelapse</span>
 
-<h2 align="center"><a href="notebooks.html">Notebooks</a></h2>	
+<h2 align="center">&#10522; <a href="notebooks.html">Notebooks</a> &#10521;</h2>	
 <hr>
 
 * [Pandas](pandas.html#bottom)<span style="color:#BFBFBF">&nbsp;&nbsp;dataframe|time series|resampling</span>
