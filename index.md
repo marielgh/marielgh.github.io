@@ -12,7 +12,7 @@
 <h1 align="center"><a href="notebooks.html">Notebooks</a></h1>	
 <hr>
 
-* [Pandas](pandas.html#bottom)<span style="color:#C2C2C2">&nbsp;&nbsp;dataframe|time series</span>
+* [Pandas](pandas.html#bottom)<span style="color:#C2C2C2">&nbsp;&nbsp;dataframe|time series|resampling</span>
 
 * [Cleaning Data](cleaning_data.html#bottom)<span style="color:#C2C2C2">&nbsp;&nbsp;outliers|null values|pivoting|melting|regex</span>
 
@@ -22,4 +22,4 @@
 
 * [Unsupervised Learning](unsupervised_learning.html#bottom)<span style="color:#C2C2C2">&nbsp;&nbsp;clustering|PCA|t-SNE|NMF</span>
 
-* [SQL](SQL.md)<span style="color:#C2C2C2">&nbsp;queries|set theory|subqueries</span>
+* [SQL](SQL.md)<span style="color:#C2C2C2">&nbsp;queries|PostgreSQL|joins|set theory|subqueries</span>
