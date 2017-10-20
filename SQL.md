@@ -11,7 +11,7 @@ Table of Contents:
     Key words: INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, USING, INTO, CASE.
     
     
-3. [Set Theory Clauses](#set-theory-clauses)
+3. [Set Operations](#set-operations)
 
     Key words: UNION, UNION ALL, INTERSECTION, EXCEPT.
 
@@ -4934,7 +4934,7 @@ pd.read_sql("SELECT c.name as country, region, p.life_expectancy\
 
 
 
-## SET THEORY CLAUSES
+## SET OPERATIONS
 
 
 ```python
