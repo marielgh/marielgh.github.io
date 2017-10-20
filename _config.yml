@@ -2,3 +2,5 @@ theme: jekyll-theme-cayman
 title: Mariel García Huiman
 description: Welcome! Here you can find my projects, notebooks and some info about me
 google_analytics: UA-107124463-1
+plugins:
+  - jekyll-seo-tag
