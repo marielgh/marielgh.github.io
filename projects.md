@@ -1,12 +1,12 @@
 ## Projects
 
-* [New York City Taxi Trip Duration - Kaggle Competition](nyctaxi.md)
+* [New York City Taxi Trip Duration](nyctaxi.md)
 
-   Competition based on building a model that predicts the total ride duration of taxi trips in New York City. The dataset includes pickup time, geo-coordinates, number of passengers, and several other variables.
+   The goal is building a model that predicts the total ride duration of taxi trips in New York City. The dataset includes pickup time, geo-coordinates, number of passengers, and several other variables. This project was part of a competition hosted in Kaggle.
 
-* [Box-Plots for Education - DrivenData Competition](boxplots.md)
+* [Box-Plots for Education](boxplots.md)
 
-   This competition features a multi-class-multi-label classification problem. The goal is attaching canonical labels to the freeform text in school budget items, which helps to compare budget or expenditure data across districts.
+   This project features a multi-class-multi-label classification problem. The goal is attaching canonical labels to the freeform text in school budget items, which helps to compare budget or expenditure data across districts. This project was part of a competition hosted in DrivenData.
 
 * [Government Spending Contracts](gov.md)
 
