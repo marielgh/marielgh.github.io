@@ -1,4 +1,4 @@
-<h2 align="center">Notebook</h2>	
+<h2 align="center">Notebooks</h2>	
 
 * [Pandas](pandas.html#bottom)
    
