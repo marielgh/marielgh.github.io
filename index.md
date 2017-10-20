@@ -22,4 +22,4 @@
 
 * [Unsupervised Learning](unsupervised_learning.html#bottom)<span style="color:#AFAFAF">&nbsp;&nbsp;clustering|SVD|PCA|t-SNE|NMF</span>
 
-* [SQL](SQL.md)<span style="color:#AFAFAF">&nbsp;queries|joins|set theory|subqueries</span>
+* [SQL](SQL.md)<span style="color:#AFAFAF">&nbsp;queries|joins|set operations|subqueries</span>
