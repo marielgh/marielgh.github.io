@@ -22,6 +22,6 @@
    
 * [SQL](SQL.md)
 
-   Structured Query Language (SQL) is the standard language for relational database management systems. In this notebook I review basic types of queries and joins and more advanced topics such as set theory clauses and subqueries.
+   Structured Query Language (SQL) is the standard language for relational database management systems. In this notebook I review different types of queries using filtering, aggregate functions, sorting, grouping and joins and more advanced topics such as set operations and subqueries.
 	
 	
