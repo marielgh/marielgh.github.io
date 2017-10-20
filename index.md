@@ -20,6 +20,6 @@
 
 * [Supervised Learning](supervised_learning.html#bottom)<span style="color:#C2C2C2">&nbsp;&nbsp;scikit-learn|pipelines|hyperparameter tuning</span>
 
-* [Unsupervised Learning](unsupervised_learning.html#bottom)<span style="color:#C2C2C2">&nbsp;&nbsp;clustering|PCA|t-SNE|NMF</span>
+* [Unsupervised Learning](unsupervised_learning.html#bottom)<span style="color:#C2C2C2">&nbsp;&nbsp;clustering|SVD|PCA|t-SNE|NMF</span>
 
-* [SQL](SQL.md)<span style="color:#C2C2C2">&nbsp;queries|PostgreSQL|joins|set theory|subqueries</span>
+* [SQL](SQL.md)<span style="color:#C2C2C2">&nbsp;queries|joins|set theory|subqueries</span>
