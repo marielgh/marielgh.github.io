@@ -3,9 +3,9 @@
 <h1 align="center"><a href="projects.html">Projects</a></h1>	
 <hr>
 
-* [New York City Taxi Trip Duration](nyctaxi.md)<span style="color:#C2C2C2">&nbsp;&nbsp;regression|Kaggle|XGBoost|clustering</span>
+* [New York City Taxi Trip Duration](nyctaxi.md)<span style="color:#C2C2C2">&nbsp;&nbsp;regression|feature engineering|Kaggle|XGBoost|clustering</span>
 
-* [Box-Plots for Education](boxplots.md)<span style="color:#C2C2C2">&nbsp;&nbsp;multilabel classification|DrivenData|text classification|NLP|XGBoost</span>
+* [Box-Plots for Education](boxplots.md)<span style="color:#C2C2C2">&nbsp;&nbsp;multilabel classification|DrivenData|free-form text|NLP|bag of words|XGBoost</span>
 
 * [Government Spending Contracts](gov.md)<span style="color:#C2C2C2">&nbsp;&nbsp;visualization|choropleth map|Plotly|timelapse</span>
 
