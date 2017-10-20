@@ -595,7 +595,7 @@ pd.read_sql('SELECT DISTINCT state FROM census', engine)
 
 
 
-**AGGREGATING FUNCTIONS: COUNT, MIN, MAX, AVG, SUM**
+**AGGREGATE FUNCTIONS: COUNT, MIN, MAX, AVG, SUM**
 
 
 ```python
