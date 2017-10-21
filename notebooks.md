@@ -2,7 +2,7 @@
 
 * [Pandas](pandas.html#bottom)
    
-   Pandas is the most widely used package in Python to manage datasets. This notebook shows various examples on how to manage datasets in pandas (including time series data) and using different plotting methods. 
+   Pandas is the most widely used package in Python to manage datasets. This notebook shows various examples on how to manage datasets in pandas (including time series data) and produce different types of plots. 
 
 * [Cleaning Data in Python](cleaning_data.html#bottom)
 

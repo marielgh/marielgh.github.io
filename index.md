@@ -12,7 +12,7 @@
 <h2 align="center">&#10522; <a href="notebooks.html">Notebooks</a> &#10521;</h2>	
 <hr>
 
-* [Pandas](pandas.html#bottom)<span style="color:#AFAFAF">&nbsp;&nbsp;dataframe|time series|resampling</span>
+* [Pandas](pandas.html#bottom)<span style="color:#AFAFAF">&nbsp;&nbsp;dataframe|time series|resampling|matplotlib</span>
 
 * [Cleaning Data](cleaning_data.html#bottom)<span style="color:#AFAFAF">&nbsp;&nbsp;outliers|null values|pivoting|melting|regex</span>
 
