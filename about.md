@@ -2,7 +2,7 @@
 
 Hello there!
 
-<img align="right" width="200" src="images/me.png">
+<img align="left" width="200" src="images/me.png">
 
 My name is Mariel. I am a master's graduate in biophysics and during the last three years I have collaborated with different groups at universities and research institutes, applying computational tools to different fields. 
 
