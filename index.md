@@ -23,3 +23,5 @@
 * [Unsupervised Learning](unsupervised_learning.html#bottom)<span style="color:#AFAFAF">&nbsp;&nbsp;clustering|SVD|PCA|t-SNE|NMF</span>
 
 * [SQL](SQL.md)<span style="color:#AFAFAF">&nbsp;queries|joins|set operations|subqueries</span>
+
+* [Natural Language Processing](nlp.md)<span style="color:#AFAFAF">&nbsp;regex|tokenization|lemmatization|bag of words|tf-idf|Named Entity Recognition|NLTK|gensim|spaCy|polyglot</span>
