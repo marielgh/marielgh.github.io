@@ -1,6 +1,6 @@
 <h2 align="center">About me</h2>	
 
-<img align="left" width="200" src="images/me.png" hspace="10" vspace="10">
+<img align="left" width="200" src="images/me.png" hspace="20" vspace="10">
 
 Hello there!
 
