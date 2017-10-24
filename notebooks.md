@@ -26,3 +26,5 @@
 	
 	
 * [Natural Language Processing](NLP.md)
+
+   A lot of the world's data is in the form of text, that's why learning how to process and parse text is a key skill. In this notebook we explore some of the available tools and libraries in python for natural language processing.
