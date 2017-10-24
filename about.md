@@ -1,8 +1,8 @@
 <h2 align="center">About me</h2>	
 
-Hello there!
+<img align="left" width="200" src="images/me.png" hspace=10 vspace=10>
 
-<img align="left" width="200" src="images/me.png">
+Hello there!
 
 My name is Mariel. I am a master's graduate in biophysics and during the last three years I have collaborated with different groups at universities and research institutes, applying computational tools to different fields. 
 
