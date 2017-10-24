@@ -12,16 +12,16 @@
 <h2 align="center">&#10522; <a href="notebooks.html">Notebooks</a> &#10521;</h2>	
 <hr>
 
-* [Pandas](pandas.html#bottom)<span style="color:#AFAFAF;font-size:0.5em;">&nbsp;&nbsp;dataframe|time series|resampling|matplotlib</span>
+* [Pandas](pandas.html#bottom)<span style="color:#AFAFAF;font-size:0.8em;">&nbsp;&nbsp;dataframe|time series|resampling|matplotlib</span>
 
-* [Cleaning Data](cleaning_data.html#bottom)<span style="color:#AFAFAF;font-size:0.5em;">&nbsp;&nbsp;outliers|null values|pivoting|melting|regex</span>
+* [Cleaning Data](cleaning_data.html#bottom)<span style="color:#AFAFAF;font-size:0.8em;">&nbsp;&nbsp;outliers|null values|pivoting|melting|regex</span>
 
-* [Financial Data](financial.html#bottom)<span style="color:#AFAFAF;font-size:0.5em;">&nbsp;&nbsp;DataReader|Google Finance|stock trends|stock exchanges</span>
+* [Financial Data](financial.html#bottom)<span style="color:#AFAFAF;font-size:0.8em;">&nbsp;&nbsp;DataReader|Google Finance|stock trends|stock exchanges</span>
 
-* [Supervised Learning](supervised_learning.html#bottom)<span style="color:#AFAFAF;font-size:0.5em;">&nbsp;&nbsp;scikit-learn|pipelines|hyperparameter tuning</span>
+* [Supervised Learning](supervised_learning.html#bottom)<span style="color:#AFAFAF;font-size:0.8em;">&nbsp;&nbsp;scikit-learn|pipelines|hyperparameter tuning</span>
 
-* [Unsupervised Learning](unsupervised_learning.html#bottom)<span style="color:#AFAFAF;font-size:0.5em;">&nbsp;&nbsp;clustering|SVD|PCA|t-SNE|NMF</span>
+* [Unsupervised Learning](unsupervised_learning.html#bottom)<span style="color:#AFAFAF;font-size:0.8em;">&nbsp;&nbsp;clustering|SVD|PCA|t-SNE|NMF</span>
 
-* [SQL](SQL.md)<span style="color:#AFAFAF;font-size:0.5em;">&nbsp;queries|joins|set operations|subqueries</span>
+* [SQL](SQL.md)<span style="color:#AFAFAF;font-size:0.8em;">&nbsp;queries|joins|set operations|subqueries</span>
 
-* [Natural Language Processing](NLP.md)<span style="color:#AFAFAF;font-size:0.5em;">&nbsp;lemmatization|bag of words|tf-idf|NER|NLTK|gensim|spaCy|polyglot</span>
+* [Natural Language Processing](NLP.md)<span style="color:#AFAFAF;font-size:0.8em;">&nbsp;lemmatization|bag of words|tf-idf|NER|NLTK|gensim|spaCy|polyglot</span>
