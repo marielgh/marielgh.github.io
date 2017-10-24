@@ -24,4 +24,4 @@
 
 * [SQL](SQL.md)<span style="color:#AFAFAF">&nbsp;queries|joins|set operations|subqueries</span>
 
-* [Natural Language Processing](nlp.md)<span style="color:#AFAFAF">&nbsp;regex|tokenization|lemmatization|bag of words|tf-idf|Named Entity Recognition|NLTK|gensim|spaCy|polyglot</span>
+* [Natural Language Processing](nlp.md)<span style="color:#AFAFAF">&nbsp;lemmatization|bag of words|tf-idf|Named Entity Recognition|NLTK|gensim|spaCy|polyglot</span>
