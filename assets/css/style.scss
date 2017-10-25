@@ -44,15 +44,15 @@
   opacity: 0.7;
 
   @include large {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   @include medium {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   @include small {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
