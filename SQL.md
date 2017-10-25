@@ -4073,23 +4073,6 @@ pd.read_sql("SELECT country_code,\
 
 **INTO (DOUBLE QUERY)**
 
-```SQL
-SELECT country_code,
-       size,
-       CASE WHEN size > 50000000 THEN 'large'
-            WHEN size > 1000000 THEN 'medium'
-            ELSE 'small' END AS popsize_group
-INTO pop_plus
-FROM populations
-WHERE year = 2015;
-             
-SELECT name, continent, geosize_group, popsize_group
-FROM countries_plus as c
-INNER JOIN pop_plus as p
-ON c.code = p.country_code
-ORDER BY geosize_group;
-```
-
 
 ```python
 pd.read_sql("SELECT country_code,\
@@ -5896,26 +5879,10 @@ FROM languages
 INNER JOIN countries
 ON languages.code = countries.code
 WHERE region = 'Middle East'
-ORDER BY language;```SQL
+ORDER BY language;
 ```
 
 *Names of cities in countries that are included in either economies or currencies but not in populations:*
-
-```SQL
-SELECT name
-            FROM cities AS c1
-            WHERE country_code IN
-            (
-                SELECT e.code
-                FROM economies AS e
-                UNION
-                SELECT c.code
-                FROM currencies AS c
-                EXCEPT
-                SELECT p.country_code
-                FROM populations AS p
-            );
-```
 
 
 ```python
@@ -5933,8 +5900,6 @@ pd.read_sql("SELECT name\
                 FROM populations AS p\
             );",engine2)
 ```
-
-
 
 
 <div>
