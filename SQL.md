@@ -1,6 +1,6 @@
 # SQL
 
-<button onclick="#top" id="myBtn" title="Go to top">Top</button>
+<button href="#top" id="myBtn" title="Go to top">Top</button>
 
 Table of Contents:
 1. [Foundations](#foundations)
