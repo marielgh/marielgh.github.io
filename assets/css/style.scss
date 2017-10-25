@@ -40,7 +40,7 @@
 
 .project-tagline {
   margin-bottom: 2rem;
-  font-weight: normal;
+  font-weight: lighter !important;
   opacity: 0.7;
 
   @include large {
