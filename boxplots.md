@@ -1,6 +1,8 @@
 
 ## Box-Plots for Education
 
+<a href="#top" class="mybtn">Go to top</a>
+
 The objective is to build a model that attaches canonical labels to the freeform text in school budget items. This project consists of the following parts: 
 
 - [Problem description](#problem-description)

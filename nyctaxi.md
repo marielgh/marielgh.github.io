@@ -1,5 +1,7 @@
 ## New York City Taxi Trip Duration 
 
+<a href="#top" class="mybtn">Go to top</a>
+
 The objective is to build a model that predicts the total ride duration of taxi trips in New York City. The dataset was released by the NYC Taxi and Limousine Commission, which includes pickup time, geo-coordinates, number of passengers, and several other variables.
 
 This project consists of the following parts: 
