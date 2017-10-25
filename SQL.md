@@ -3068,15 +3068,7 @@ pd.read_sql('SELECT * FROM currencies', engine2)
 
 **INNER JOIN**
 
-![png](innerjoin.png)
-
-
-```python
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-```
-
-    /bin/sh: -c: line 0: syntax error near unexpected token `('
-    /bin/sh: -c: line 0: `[Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)'
+![png](images/sql/innerjoin.png)
 
 
 
@@ -4229,7 +4221,7 @@ pd.read_sql("SELECT country_code,\
 
 **LEFT JOIN**
 
-![png](leftjoin.png)
+![png](images/sql/leftjoin.png)
 
 
 ```python
@@ -4466,7 +4458,7 @@ pd.read_sql("SELECT region, AVG(gdp_percapita) AS avg_gdp\
 
 **RIGHT JOIN**
 
-![png](rightjoin.png)
+![png](images/sql/rightjoin.png)
 
 
 ```python
@@ -4692,7 +4684,7 @@ SELECT cities.name AS city, languages.name AS language, cities.country_code\
 
 **FULL JOIN**
 
-![png](fulljoin.png)
+![png](images/sql/fulljoin.png)
 
 
 ```python
@@ -5808,9 +5800,7 @@ pd.read_sql("SELECT capital\
 
 ## SUBQUERIES
 
-**SEMI-JOIN**
-
-Languages spoken in the Middle East:
+*Languages spoken in the Middle East:*
 
 
 ```python
@@ -5907,7 +5897,7 @@ WHERE region = 'Middle East'
 ORDER BY language;```SQL
 ```
 
-Names of cities in countries that are included in either economies or currencies but not in populations:
+*Names of cities in countries that are included in either economies or currencies but not in populations:*
 
 ```SQL
 SELECT name
@@ -5997,7 +5987,7 @@ pd.read_sql("SELECT name\
 
 
 
-Select all fields from populations with life expectancy at 2015 larger than 1.15 times the average of life_expectancy on the same year.
+*Select all fields from populations with life expectancy at 2015 larger than 1.15 times the average of life_expectancy on the same year.*
 
 
 ```python
@@ -6151,7 +6141,20 @@ pd.read_sql("SELECT name, urbanarea_pop\
 
 
 
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
 
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -6219,5 +6222,631 @@ pd.read_sql("SELECT name, urbanarea_pop\
   </tbody>
 </table>
 <p>66 rows × 2 columns</p>
+</div>
 
 
+
+*Select top nine countries in terms of number of cities appearing in the cities table:*
+
+
+```python
+pd.read_sql("SELECT countries.name AS country,\
+               (SELECT COUNT(*)\
+                FROM cities\
+                WHERE countries.code = cities.country_code) AS cities_num\
+             FROM countries\
+             ORDER BY cities_num DESC, country\
+             LIMIT 9;",engine2)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>cities_num</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>China</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>India</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Japan</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Brazil</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Pakistan</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>United States</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Indonesia</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Russian Federation</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>South Korea</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Same with inner join:
+
+```SQL
+SELECT countries.name AS country,
+  (SELECT COUNT(*)
+   FROM cities
+   WHERE countries.code = cities.country_code) AS cities_num
+FROM countries
+ORDER BY cities_num DESC, country
+LIMIT 9;
+```
+
+*Number of languages spoken for each country, identified by the country's local name:*
+
+
+```python
+pd.read_sql("SELECT local_name, lang_num\
+             FROM countries,\
+                (SELECT code, count(*) as lang_num\
+                FROM languages\
+                GROUP BY code) as subquery\
+             WHERE countries.code = subquery.code\
+             ORDER BY lang_num DESC, local_name;",engine2)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>local_name</th>
+      <th>lang_num</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Zambia</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>YeItyop´iya</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Zimbabwe</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bharat/India</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Nepal</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>Saint Kitts and Nevis</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>San Marino</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>Sverige</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>The Turks and Caicos Islands</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>United Kingdom</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>199 rows × 2 columns</p>
+</div>
+
+
+
+*For each of the six continents listed in 2015, identify which country had the maximum inflation rate and how high it was:*
+
+
+```python
+pd.read_sql("SELECT countries.name, continent, inflation_rate\
+             FROM countries\
+             INNER JOIN economies\
+             USING (code)\
+             WHERE year = 2015\
+                AND inflation_rate IN(\
+                SELECT max(inflation_rate) as max_inf\
+                FROM (SELECT countries.name, continent, inflation_rate\
+                FROM countries\
+                INNER JOIN economies\
+                ON countries.code = economies.code\
+                WHERE year = 2015) as subquery\
+                GROUP BY continent);",engine2)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>continent</th>
+      <th>inflation_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Haiti</td>
+      <td>North America</td>
+      <td>7.524</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Malawi</td>
+      <td>Africa</td>
+      <td>21.858</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nauru</td>
+      <td>Oceania</td>
+      <td>9.784</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ukraine</td>
+      <td>Europe</td>
+      <td>48.684</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Venezuela</td>
+      <td>South America</td>
+      <td>121.738</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Yemen</td>
+      <td>Asia</td>
+      <td>39.403</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+*Get the country code, the inflation rate and the unemployment rate for countries that do not have gov_form of "Constitutional Monarchy" or'Republic' in their gov_form:*
+
+
+```python
+pd.read_sql("SELECT code, inflation_rate, unemployment_rate\
+             FROM economies\
+             WHERE year = 2015 AND code NOT IN\
+            (SELECT code\
+             FROM countries\
+             WHERE (gov_form = 'Constitutional Monarchy' OR gov_form LIKE '%%Republic'))\
+             ORDER BY inflation_rate;",engine2)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>code</th>
+      <th>inflation_rate</th>
+      <th>unemployment_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFG</td>
+      <td>-1.549</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>CHE</td>
+      <td>-1.140</td>
+      <td>3.178</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>PRI</td>
+      <td>-0.751</td>
+      <td>12.000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ROU</td>
+      <td>-0.596</td>
+      <td>6.812</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BRN</td>
+      <td>-0.423</td>
+      <td>6.900</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>MAC</td>
+      <td>4.564</td>
+      <td>1.825</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>SWZ</td>
+      <td>4.960</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>BTN</td>
+      <td>6.336</td>
+      <td>3.200</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>LBY</td>
+      <td>9.839</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>SSD</td>
+      <td>52.813</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>26 rows × 3 columns</p>
+</div>
+
+
+
+*Get the country names and other 2015 data in the economies table and the countries table for Central American countries with an official language:*
+
+
+```python
+pd.read_sql("SELECT DISTINCT c.name, total_investment, imports\
+            FROM countries as c\
+            LEFT JOIN economies as e\
+            ON (c.code = e.code \
+                AND c.code IN (\
+                SELECT l.code\
+                FROM languages as l\
+                WHERE official = 'true'))\
+            WHERE c.region = 'Central America' AND e.year = 2015\
+            ORDER BY c.name;",engine2)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>total_investment</th>
+      <th>imports</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Belize</td>
+      <td>22.014</td>
+      <td>6.743</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Costa Rica</td>
+      <td>20.218</td>
+      <td>4.629</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>El Salvador</td>
+      <td>13.983</td>
+      <td>8.193</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Guatemala</td>
+      <td>13.433</td>
+      <td>15.124</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Honduras</td>
+      <td>24.633</td>
+      <td>9.353</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Nicaragua</td>
+      <td>31.862</td>
+      <td>11.665</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Panama</td>
+      <td>46.557</td>
+      <td>5.898</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+*Top 10 capital cities in Europe and the Americas in terms of the percentage of metro area population composed of city proper population:*
+
+
+```python
+pd.read_sql("SELECT cities.name, country_code, city_proper_pop, metroarea_pop,  \
+                   city_proper_pop / metroarea_pop * 100 AS city_perc\
+             FROM cities\
+             WHERE name IN\
+               (SELECT capital\
+                FROM countries\
+                WHERE (continent = 'Europe'\
+                   OR continent LIKE '%%America'))\
+                  AND metroarea_pop IS NOT NULL\
+             ORDER BY city_perc DESC\
+             LIMIT 10;",engine2) 
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>country_code</th>
+      <th>city_proper_pop</th>
+      <th>metroarea_pop</th>
+      <th>city_perc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Lima</td>
+      <td>PER</td>
+      <td>8852000.0</td>
+      <td>10750000.0</td>
+      <td>82.344186</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bogota</td>
+      <td>COL</td>
+      <td>7878780.0</td>
+      <td>9800000.0</td>
+      <td>80.395746</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Moscow</td>
+      <td>RUS</td>
+      <td>12197600.0</td>
+      <td>16170000.0</td>
+      <td>75.433493</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Vienna</td>
+      <td>AUT</td>
+      <td>1863880.0</td>
+      <td>2600000.0</td>
+      <td>71.687728</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Montevideo</td>
+      <td>URY</td>
+      <td>1305080.0</td>
+      <td>1947600.0</td>
+      <td>67.009616</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Caracas</td>
+      <td>VEN</td>
+      <td>1943900.0</td>
+      <td>2923960.0</td>
+      <td>66.481817</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Rome</td>
+      <td>ITA</td>
+      <td>2877220.0</td>
+      <td>4353780.0</td>
+      <td>66.085523</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Brasilia</td>
+      <td>BRA</td>
+      <td>2556150.0</td>
+      <td>3919860.0</td>
+      <td>65.210146</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>London</td>
+      <td>GBR</td>
+      <td>8673710.0</td>
+      <td>13879800.0</td>
+      <td>62.491822</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Budapest</td>
+      <td>HUN</td>
+      <td>1759410.0</td>
+      <td>2927940.0</td>
+      <td>60.090184</td>
+    </tr>
+  </tbody>
+</table>
+</div>
