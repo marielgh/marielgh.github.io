@@ -274,7 +274,8 @@ a.btn {
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
-	background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color)
+	background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+	opacity: 0.5;
 }
 
 a.btn:hover {
