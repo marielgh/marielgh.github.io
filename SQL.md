@@ -5050,7 +5050,9 @@ pd.read_sql('SELECT * FROM economies2010', engine2)
 pd.read_sql('SELECT * FROM economies2015', engine2)
 ```
 
+**UNION**
 
+Let's inspect the two tables we will combine with the union clause:
 
 
 <div>
@@ -5161,8 +5163,8 @@ pd.read_sql('SELECT * FROM economies2015', engine2)
 </div>
 
 
+To combine them:
 
-**UNION**
 
 
 ```python
