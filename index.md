@@ -1,5 +1,3 @@
-<a name="Home"></A>
-	
 <h2 align="center">&#10522; <a href="projects.html">Projects</a> &#10521;</h2>	
 <hr>
 
