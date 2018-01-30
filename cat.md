@@ -28,7 +28,7 @@ Before anything else, here's a quick summary of the key political events for som
 - **2 November 2017**: nine of Puigdemont's former ministers who did not leave with him are imprisoned.
 - **3 November 2017**: Spain issues arrest warrant for Puigdemont and his ministers.
 
-**Current situation**: despite the arrest warrant issued by Spain, the Belgian court has defered ruling on Carles Puidgemont extradition and the case will resume on 4 December. Puigdemont will repeat as his party's top candidate in the regional elections on 21 December.
+**Current situation (1 December 2017)**: despite the arrest warrant issued by Spain, the Belgian court has defered ruling on Carles Puidgemont extradition and the case will resume on 4 December. Puigdemont will repeat as his party's top candidate in the regional elections on 21 December.
 
 ### Scraping data from Twitter's website
 
