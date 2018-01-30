@@ -7,6 +7,8 @@
 
 * [Government Spending Contracts](gov.md)<span style="color:#AFAFAF;font-size:0.85em;">&nbsp;&nbsp;visualization|choropleth map|Plotly|timelapse</span>
 
+* [Catalonia's political crisis on Twitter](cat.md)<span style="color:#AFAFAF;font-size:0.85em;">&nbsp;&nbsp;NLP|sentiment analysis|word2vec</span>
+
 <h2 align="center">&#10522; <a href="notebooks.html">Notebooks</a> &#10521;</h2>	
 <hr>
 
