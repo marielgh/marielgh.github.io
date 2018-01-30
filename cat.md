@@ -261,8 +261,6 @@ We will set a threshold and filter out tweets with a confidence value below 90%.
  df = df[df.confidence>90]
  ```
 
-We will use the *plotly* package for producing our plots.
-
 <object type="text/html" data="images/cat/pieplot.html" width="100%" height="500"></object>
 
 
