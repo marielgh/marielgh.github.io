@@ -8,5 +8,5 @@ I am a scientist at heart, really curious about almost everything that surrounds
 
 Apart from the geeky stuff, I enjoy a lot travelling and getting to know new places, cultures and languages! My brain speaks a mixture of spanish, english, catalan, german, french and python.
 
-You can reach me at &#8594; &emsp;<a href="mailto:mgarciahuiman@gmail.com" class="fa fa-google"></a> &emsp; <a href="https://www.linkedin.com/in/mgarciahuiman/" class="fa fa-linkedin"></a><br>
+You can reach me at &#8594; &emsp;<a href="mailto:marielgahu@gmail.com" class="fa fa-google"></a> &emsp; <a href="https://www.linkedin.com/in/mgarciahuiman/" class="fa fa-linkedin"></a><br>
 My github account &#8594; &emsp;<a href="https://github.com/marielgh" class="fa fa-github"></a>
